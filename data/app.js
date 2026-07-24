@@ -335,7 +335,8 @@ function renderB3() {
   };
   const totPct=tot.pim>0?tot.dev/tot.pim*100:null;
   tfoot.innerHTML=`<tr>
-    <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
+    <td style="font-weight:800;font-family:'Barlow Condensed';text-align:center;color:var(--texto-mut)">—</td>
+    <td style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.pia)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.pim)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.cert)}</td>
@@ -378,7 +379,8 @@ function renderB4() {
   const totPIM=riesgo.reduce((s,r)=>s+r.pim,0);
   const totCert=riesgo.reduce((s,r)=>s+r.cert,0);
   tfoot.innerHTML=`<tr>
-    <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
+    <td style="font-weight:800;font-family:'Barlow Condensed';text-align:center;color:var(--texto-mut)">—</td>
+    <td style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totPIA)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totPIM)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totCert)}</td>

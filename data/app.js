@@ -14,6 +14,11 @@ function fmtNum(n) {
   if (n === null || n === undefined || isNaN(n)) return "—";
   return "S/ " + Math.round(n).toLocaleString("es-PE");
 }
+// Número sin prefijo S/ — para tablas (evitar redundancia con header)
+function fmtN(n) {
+  if (n === null || n === undefined || isNaN(n)) return "—";
+  return Math.round(n).toLocaleString("es-PE");
+}
 function fmtCompacto(n) {
   if (!n && n !== 0) return "—";
   if (Math.abs(n) >= 1e6) return "S/ " + (n/1e6).toFixed(1) + " M";
@@ -87,7 +92,7 @@ function detectarTipo(rows) {
     const d=(r[0]||"").trim();
     if (/^Rubro$/i.test(d))               return "rubro";
     if (/^Fuente de Financiamiento/i.test(d)) return "fuente";
-    if (/^Funci[oó]n/i.test(d))           return "funcion";
+    if (/^Funci/i.test(d))                return "funcion";
     if (/^Proyecto$/i.test(d))            return "proyecto";
     if (/^Categor/i.test(d))              return "categoria";
     if (/^Municipalidad$/i.test(d))       return "ranking";
@@ -254,7 +259,11 @@ function renderB2() {
 
   const muns=d.registros.map(r=>{
     const esMPL=r.desc.includes("140301-301238")||r.desc.toUpperCase().includes("PROVINCIAL DE LAMBAYEQUE");
-    return {...r,esMPL};
+    // Quitar código "140301-XXXXXX: " del inicio del nombre
+    let nombre=r.desc.replace(/^\d{6}-\d{6}:\s*/,"").replace(/^\d+-\d+:\s*/,"");
+    // Normalizar Ñ → N (encoding issues del MEF)
+    nombre=nombre.replace(/�/g,"N").replace(/Ñ/g,"N").replace(/ñ/g,"n");
+    return {...r,esMPL,nombre};
   });
   const sorted=[...muns].sort((a,b)=>(b.pct??-1)-(a.pct??-1));
   const mpl=sorted.find(m=>m.esMPL);
@@ -274,7 +283,7 @@ function renderB2() {
     const posStyle=pos<=3?'style="color:var(--dorado-osc);font-weight:800"':'style="font-weight:700"';
     return `<tr ${m.esMPL?'class="mpl-row"':''}>
       <td class="ctr" ${posStyle}>${pos}°</td>
-      <td style="font-size:.85em;font-weight:${m.esMPL?700:500}">${m.desc}</td>
+      <td style="font-size:.85em;font-weight:${m.esMPL?700:500}">${m.nombre}</td>
       <td class="num">${fmtNum(m.pia)}</td>
       <td class="num">${fmtNum(m.pim)}</td>
       <td class="num">${fmtNum(m.dev)}</td>
@@ -304,12 +313,12 @@ function renderB3() {
     return `<tr>
       <td class="ctr" style="font-weight:700;color:${i<3?"var(--dorado-osc)":"var(--texto-mut)"}">${i+1}</td>
       <td style="font-size:.8em;line-height:1.3">${nom}</td>
-      <td class="num">${fmtNum(r.pia)}</td>
-      <td class="num">${fmtNum(r.pim)}</td>
-      <td class="num">${fmtNum(r.cert)}</td>
-      <td class="num col-highlight" style="color:${porCert>0?"#92400e":"#aaa"}">${fmtNum(porCert)}</td>
-      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtNum(r.dev)}</td>
-      <td class="num col-highlight" style="color:${porDev>0?"#92400e":"#aaa"}">${fmtNum(porDev)}</td>
+      <td class="num">${fmtN(r.pia)}</td>
+      <td class="num">${fmtN(r.pim)}</td>
+      <td class="num">${fmtN(r.cert)}</td>
+      <td class="num col-highlight" style="color:${porCert>0?"#92400e":"#aaa"}">${fmtN(porCert)}</td>
+      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtN(r.dev)}</td>
+      <td class="num col-highlight" style="color:${porDev>0?"#92400e":"#aaa"}">${fmtN(porDev)}</td>
       <td>${barraHTML(r.pct)}</td>
     </tr>`;
   }).join("");
@@ -320,11 +329,11 @@ function renderB3() {
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
     <td class="num">—</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(tot.pim)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(tot.cert)}</td>
-    <td class="num col-highlight" style="color:#92400e;font-weight:800">${fmtNum(tot.pim-tot.cert)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(tot.dev)}</td>
-    <td class="num col-highlight" style="color:#92400e;font-weight:800">${fmtNum(tot.pim-tot.dev)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.pim)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.cert)}</td>
+    <td class="num col-highlight" style="color:#92400e;font-weight:800">${fmtN(tot.pim-tot.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.dev)}</td>
+    <td class="num col-highlight" style="color:#92400e;font-weight:800">${fmtN(tot.pim-tot.dev)}</td>
     <td>${barraHTML(totPct)}</td>
   </tr>`;
 }
@@ -348,12 +357,12 @@ function renderB4() {
     return `<tr class="riesgo-row">
       <td class="ctr" style="font-weight:700">${i+1}</td>
       <td style="font-size:.8em;line-height:1.3">${nom}</td>
-      <td class="num">${fmtNum(r.pia)}</td>
-      <td class="num">${fmtNum(r.pim)}</td>
-      <td class="num">${fmtNum(r.cert)}</td>
+      <td class="num">${fmtN(r.pia)}</td>
+      <td class="num">${fmtN(r.pim)}</td>
+      <td class="num">${fmtN(r.cert)}</td>
       <td class="num">${pctCertStr}</td>
-      <td class="num dev-cero">0</td>
-      <td class="num pim-sin-ej">${fmtNum(r.pim)}</td>
+      <td class="num" style="font-weight:800;color:#374151">0</td>
+      <td class="num pim-sin-ej">${fmtN(r.pim)}</td>
     </tr>`;
   }).join("");
 
@@ -361,11 +370,11 @@ function renderB4() {
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
     <td class="num">—</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(totPIM)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(totCert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totPIM)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totCert)}</td>
     <td class="num">${totPIM>0?(totCert/totPIM*100).toFixed(1)+"%":"—"}</td>
-    <td class="num dev-cero">S/ 0</td>
-    <td class="num pim-sin-ej">${fmtNum(totPIM)}</td>
+    <td class="num" style="font-weight:800;color:#374151">0</td>
+    <td class="num pim-sin-ej">${fmtN(totPIM)}</td>
   </tr>`;
 }
 
@@ -456,16 +465,16 @@ function renderB5() {
     return `<tr>
       <td class="cod">${cod}</td>
       <td style="font-size:.83em">${nom}</td>
-      <td class="num">${fmtNum(r.pia)}</td>
-      <td class="num">${fmtNum(r.pim)}</td>
+      <td class="num">${fmtN(r.pia)}</td>
+      <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>
-      <td class="num">${fmtNum(r.cert)}</td>
+      <td class="num">${fmtN(r.cert)}</td>
       <td class="num" style="color:#1e7e34">${fmtPct(r.pctCert)}</td>
-      <td class="num col-highlight">${fmtNum(porCert)}</td>
-      <td class="num">${fmtNum(r.comp)}</td>
+      <td class="num col-highlight">${fmtN(porCert)}</td>
+      <td class="num">${fmtN(r.comp)}</td>
       <td class="num" style="color:var(--dorado-osc)">${fmtPct(r.pctComp)}</td>
-      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtNum(r.dev)}</td>
-      <td class="num">${fmtNum(porDev)}</td>
+      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtN(r.dev)}</td>
+      <td class="num">${fmtN(porDev)}</td>
       <td>${barraHTML(r.pct)}</td>
     </tr>`;
   }).join("");
@@ -473,16 +482,16 @@ function renderB5() {
   const totPct=d.pim>0?d.dev/d.pim*100:null;
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">TOTAL</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pia)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pim)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pia)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pim)}</td>
     <td class="num">100%</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.cert)}</td>
     <td class="num" style="color:#1e7e34;font-weight:800">${fmtPct(d.pim>0?d.cert/d.pim*100:null)}</td>
-    <td class="num col-highlight" style="font-weight:800">${fmtNum(d.pim-d.cert)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.comp)}</td>
+    <td class="num col-highlight" style="font-weight:800">${fmtN(d.pim-d.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.comp)}</td>
     <td class="num" style="font-weight:800">${fmtPct(d.pim>0?d.comp/d.pim*100:null)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.dev)}</td>
-    <td class="num" style="font-weight:800">${fmtNum(d.pim-d.dev)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.dev)}</td>
+    <td class="num" style="font-weight:800">${fmtN(d.pim-d.dev)}</td>
     <td>${barraHTML(totPct)}</td>
   </tr>`;
 }
@@ -505,16 +514,16 @@ function renderB6() {
     return `<tr>
       <td class="cod">${cod}</td>
       <td style="font-size:.83em">${nom}</td>
-      <td class="num">${fmtNum(r.pia)}</td>
-      <td class="num">${fmtNum(r.pim)}</td>
+      <td class="num">${fmtN(r.pia)}</td>
+      <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>
-      <td class="num">${fmtNum(r.cert)}</td>
+      <td class="num">${fmtN(r.cert)}</td>
       <td class="num" style="color:#1e7e34">${fmtPct(r.pctCert)}</td>
-      <td class="num col-highlight">${fmtNum(porCert)}</td>
-      <td class="num">${fmtNum(r.comp)}</td>
+      <td class="num col-highlight">${fmtN(porCert)}</td>
+      <td class="num">${fmtN(r.comp)}</td>
       <td class="num" style="color:var(--dorado-osc)">${fmtPct(r.pctComp)}</td>
-      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtNum(r.dev)}</td>
-      <td class="num">${fmtNum(porDev)}</td>
+      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtN(r.dev)}</td>
+      <td class="num">${fmtN(porDev)}</td>
       <td>${barraHTML(r.pct)}</td>
     </tr>`;
   }).join("");
@@ -522,16 +531,16 @@ function renderB6() {
   const totPct=d.pim>0?d.dev/d.pim*100:null;
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">TOTAL MPL</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pia)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pim)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pia)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pim)}</td>
     <td class="num">100%</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.cert)}</td>
     <td class="num" style="color:#1e7e34;font-weight:800">${fmtPct(d.pim>0?d.cert/d.pim*100:null)}</td>
-    <td class="num col-highlight" style="font-weight:800">${fmtNum(d.pim-d.cert)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.comp)}</td>
+    <td class="num col-highlight" style="font-weight:800">${fmtN(d.pim-d.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.comp)}</td>
     <td class="num" style="font-weight:800">${fmtPct(d.pim>0?d.comp/d.pim*100:null)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.dev)}</td>
-    <td class="num" style="font-weight:800">${fmtNum(d.pim-d.dev)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.dev)}</td>
+    <td class="num" style="font-weight:800">${fmtN(d.pim-d.dev)}</td>
     <td>${barraHTML(totPct)}</td>
   </tr>`;
 }
@@ -551,15 +560,15 @@ function renderB7() {
     const nom=m?m[2]:r.desc;
     return `<tr>
       <td style="font-size:.83em;font-weight:600">${nom}</td>
-      <td class="num">${fmtNum(r.pia)}</td>
-      <td class="num">${fmtNum(r.pim)}</td>
+      <td class="num">${fmtN(r.pia)}</td>
+      <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>
-      <td class="num">${fmtNum(r.cert)}</td>
+      <td class="num">${fmtN(r.cert)}</td>
       <td class="num" style="color:#1e7e34">${fmtPct(r.pctCert)}</td>
-      <td class="num">${fmtNum(r.comp)}</td>
+      <td class="num">${fmtN(r.comp)}</td>
       <td class="num" style="color:var(--dorado-osc)">${fmtPct(r.pctComp)}</td>
-      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtNum(r.dev)}</td>
-      <td class="num">${fmtNum(porDev)}</td>
+      <td class="num" style="color:var(--rojo-osc);font-weight:700">${fmtN(r.dev)}</td>
+      <td class="num">${fmtN(porDev)}</td>
       <td>${barraHTML(r.pct)}</td>
     </tr>`;
   }).join("");
@@ -567,15 +576,15 @@ function renderB7() {
   const totPct=d.pim>0?d.dev/d.pim*100:null;
   tfoot.innerHTML=`<tr>
     <td style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">TOTAL</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pia)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.pim)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pia)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.pim)}</td>
     <td class="num">100%</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.cert)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.cert)}</td>
     <td class="num" style="color:#1e7e34;font-weight:800">${fmtPct(d.pim>0?d.cert/d.pim*100:null)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.comp)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.comp)}</td>
     <td class="num" style="font-weight:800">${fmtPct(d.pim>0?d.comp/d.pim*100:null)}</td>
-    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtNum(d.dev)}</td>
-    <td class="num" style="font-weight:800">${fmtNum(d.pim-d.dev)}</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(d.dev)}</td>
+    <td class="num" style="font-weight:800">${fmtN(d.pim-d.dev)}</td>
     <td>${barraHTML(totPct)}</td>
   </tr>`;
 }

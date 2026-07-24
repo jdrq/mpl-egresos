@@ -24,12 +24,16 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
-  font-family:"Barlow",system-ui,sans-serif;
+  font-family:"Barlow",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   color:var(--texto);background:var(--bg);
-  line-height:1.45;-webkit-font-smoothing:antialiased;font-weight:500;
+  line-height:1.5;-webkit-font-smoothing:antialiased;font-weight:400;
+  font-size:13px;
 }
-h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;letter-spacing:.01em}
-.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+h1,h2,h3,.cond{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  letter-spacing:.02em;font-weight:800;
+}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
 
 /* ════════════════════════════════════════════════════
    HEADER  (igual al de ingresos)
@@ -43,17 +47,19 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;letter-spacin
 .escudo{width:46px;height:46px;flex:0 0 auto;object-fit:contain;
         filter:drop-shadow(0 1px 3px rgba(0,0,0,.12))}
 .brand-inst{
-  font-family:"Barlow Condensed";font-weight:700;font-size:16px;
-  color:var(--texto);letter-spacing:.02em;text-transform:uppercase
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:18px;
+  color:var(--texto);letter-spacing:.03em;text-transform:uppercase
 }
 .alcalde-box{text-align:right}
 .alcalde-box .alc-nombre{
-  font-family:"Barlow Condensed";font-weight:800;font-size:13px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:14px;
   color:var(--rojo);letter-spacing:.06em;line-height:1
 }
 .alcalde-box .alc-cargo{
   font-size:10px;color:var(--texto-mut);text-transform:uppercase;
-  letter-spacing:.04em;font-weight:600;line-height:1.4
+  letter-spacing:.05em;font-weight:600;line-height:1.6
 }
 
 /* BANDA TÍTULO */
@@ -63,13 +69,17 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;letter-spacin
   justify-content:space-between;gap:12px
 }
 .titleband h1{
-  color:#fff;font-weight:800;font-size:26px;
-  text-transform:uppercase;letter-spacing:.03em;margin:0
+  color:#fff;font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:28px;
+  text-transform:uppercase;letter-spacing:.04em;margin:0
 }
 .update-pill{
   background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;padding:5px 14px;font-size:12px;color:#fff;
-  font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:5px
+  border-radius:999px;padding:6px 16px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:12.5px;color:#fff;font-weight:700;
+  white-space:nowrap;display:flex;align-items:center;gap:6px;
+  letter-spacing:.02em;
 }
 .update-pill span{color:var(--dorado);font-weight:800}
 .yellowband{background:var(--dorado);height:10px}
@@ -84,8 +94,10 @@ h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;letter-spacin
 .btn-pdf{
   display:inline-flex;align-items:center;gap:7px;
   background:var(--rojo-osc);color:#fff;border:none;border-radius:8px;
-  padding:9px 20px;font-family:"Barlow Condensed";font-weight:700;font-size:14px;
-  text-transform:uppercase;letter-spacing:.05em;cursor:pointer;
+  padding:10px 22px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:700;font-size:15px;
+  text-transform:uppercase;letter-spacing:.06em;cursor:pointer;
   box-shadow:0 2px 8px rgba(122,18,25,.25);transition:background .15s
 }
 .btn-pdf:hover{background:var(--rojo)}
@@ -172,17 +184,22 @@ main{padding:20px 0 60px}
   flex:0 0 auto
 }
 .slide-titulo{
-  color:#fff;font-family:"Barlow Condensed";font-weight:800;
-  font-size:16px;text-transform:uppercase;letter-spacing:.05em;
+  color:#fff;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:17px;
+  text-transform:uppercase;letter-spacing:.05em;
   display:flex;align-items:center;gap:8px
 }
 .slide-titulo .slide-num{
   background:rgba(255,255,255,.18);border-radius:5px;
-  padding:1px 7px;font-size:13px;font-weight:700;letter-spacing:.02em
+  padding:2px 8px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:13px;font-weight:700;letter-spacing:.03em
 }
 .slide-meta{
-  font-size:11px;color:rgba(255,255,255,.72);
-  font-weight:600;text-align:right;letter-spacing:.02em;white-space:nowrap
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:11.5px;color:rgba(255,255,255,.75);
+  font-weight:500;text-align:right;letter-spacing:.01em;white-space:nowrap
 }
 
 /* ── Banda subtítulo (franja dorada fina + label) ── */
@@ -194,12 +211,14 @@ main{padding:20px 0 60px}
   flex:0 0 auto
 }
 .slide-subband .sb-label{
-  font-family:"Barlow Condensed";font-size:11.5px;font-weight:700;
-  color:var(--texto-mut);text-transform:uppercase;letter-spacing:.06em;
-  border-left:3px solid var(--dorado);padding-left:8px
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:12px;font-weight:700;
+  color:var(--texto-mut);text-transform:uppercase;letter-spacing:.07em;
+  border-left:3px solid var(--dorado);padding-left:9px
 }
 .slide-subband .sb-fecha{
-  font-size:11px;color:var(--texto-mut);font-weight:600
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:11px;color:var(--texto-mut);font-weight:500
 }
 
 /* ── Cuerpo del slide ──────────────────────────── */
@@ -219,10 +238,15 @@ main{padding:20px 0 60px}
   flex:0 0 auto;
   background:#faf8f6
 }
-.slide-footer .sf-fuente{font-size:10px;color:var(--texto-mut);font-weight:500}
+.slide-footer .sf-fuente{
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:10px;color:var(--texto-mut);font-weight:400;
+  letter-spacing:.01em;
+}
 .slide-footer .sf-logo{
-  font-family:"Barlow Condensed";font-size:10px;font-weight:700;
-  color:var(--rojo-osc);letter-spacing:.06em;opacity:.6
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:11px;font-weight:700;
+  color:var(--rojo-osc);letter-spacing:.07em;opacity:.65
 }
 
 /* ════════════════════════════════════════════════════
@@ -242,15 +266,20 @@ main{padding:20px 0 60px}
 .kpi-card.pct    {border-left-color:var(--verde)}
 .kpi-card.pordev {border-left-color:var(--rojo-s)}
 .kpi-label{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
   font-size:10px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.07em;color:var(--texto-mut);margin-bottom:6px;line-height:1.3
+  letter-spacing:.08em;color:var(--texto-mut);margin-bottom:6px;line-height:1.3
 }
 .kpi-value{
-  font-family:"Barlow Condensed";font-weight:800;font-size:24px;
-  color:var(--texto);line-height:1
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:25px;
+  color:var(--texto);line-height:1.05
 }
 .kpi-value.pct-val{color:var(--dorado-osc)}
-.kpi-sub{font-size:11px;color:var(--texto-mut);margin-top:4px}
+.kpi-sub{
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:11px;color:var(--texto-mut);margin-top:5px;font-weight:400;
+}
 
 /* ════════════════════════════════════════════════════
    TABLAS
@@ -259,8 +288,10 @@ main{padding:20px 0 60px}
 .pdf-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .pdf-table thead tr{background:var(--rojo-osc);color:#fff}
 .pdf-table thead th{
-  padding:8px 10px;font-family:"Barlow Condensed";font-weight:700;
-  font-size:12px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap
+  padding:9px 10px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:700;font-size:11.5px;
+  text-transform:uppercase;letter-spacing:.05em;white-space:nowrap
 }
 .pdf-table thead th.num{text-align:right}
 .pdf-table thead th.left{text-align:left}
@@ -268,21 +299,36 @@ main{padding:20px 0 60px}
 .pdf-table tbody tr:nth-child(even){background:#faf8f6}
 .pdf-table tbody tr:hover{background:#f5eded}
 .pdf-table tbody td{
-  padding:7px 10px;border-bottom:1px solid var(--linea);font-size:12px
+  padding:7px 10px;border-bottom:1px solid var(--linea);
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:12.5px;font-weight:400;
+  line-height:1.4;
 }
 .pdf-table tbody td.num{
-  text-align:right;font-family:"Barlow Condensed";font-size:12.5px;font-weight:700
+  text-align:right;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:13px;font-weight:700
 }
 .pdf-table tbody td.cod{
-  text-align:center;font-family:"Barlow Condensed";
+  text-align:center;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
   font-weight:700;font-size:12px;color:var(--texto-mut)
 }
 .pdf-table tfoot tr{background:#f0ebe8;border-top:2px solid var(--rojo-osc)}
 .pdf-table tfoot td{
-  padding:8px 10px;font-family:"Barlow Condensed";font-weight:800;font-size:13px
+  padding:9px 10px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:13px;
+  text-transform:uppercase;letter-spacing:.02em;
 }
-.pdf-table tfoot td.num{text-align:right;font-size:13.5px;color:var(--rojo-osc)}
-.pdf-table td.vacio{padding:36px;text-align:center;color:#aaa;font-size:13px}
+.pdf-table tfoot td.num{
+  text-align:right;font-size:14px;color:var(--rojo-osc)
+}
+.pdf-table td.vacio{
+  padding:40px;text-align:center;
+  font-family:"Barlow",system-ui,sans-serif;
+  color:#bbb;font-size:13px;font-style:italic;
+}
 
 /* ════════════════════════════════════════════════════
    BARRAS SEMÁFORO
@@ -291,7 +337,8 @@ main{padding:20px 0 60px}
 .av-bar{flex:1;height:7px;border-radius:4px;background:#e8e2dc;overflow:hidden}
 .av-bar span{display:block;height:100%;border-radius:4px;transition:width .4s}
 .av-pct{
-  font-family:"Barlow Condensed";font-weight:800;font-size:12.5px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:800;font-size:13px;
   min-width:40px;text-align:right
 }
 
@@ -300,10 +347,15 @@ main{padding:20px 0 60px}
 ════════════════════════════════════════════════════ */
 .rank-highlight{
   background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
-  padding:10px 16px;font-size:12.5px;color:var(--oscuro);
-  line-height:1.6;flex:0 0 auto
+  padding:10px 16px;
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:13px;color:var(--oscuro);
+  line-height:1.6;flex:0 0 auto;
 }
-.rank-highlight strong{color:var(--rojo-osc)}
+.rank-highlight strong{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  color:var(--rojo-osc);font-weight:800;
+}
 .mpl-row td{background:#fef9ec !important;font-weight:700}
 
 /* ════════════════════════════════════════════════════
@@ -329,9 +381,14 @@ main{padding:20px 0 60px}
 ════════════════════════════════════════════════════ */
 .nota-bloque{
   background:#fffbeb;border:1px solid #fde68a;border-radius:7px;
-  padding:8px 13px;font-size:11px;color:#78350f;line-height:1.6;flex:0 0 auto
+  padding:9px 14px;
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:11.5px;color:#78350f;line-height:1.6;flex:0 0 auto
 }
-.nota-bloque strong{font-weight:700}
+.nota-bloque strong{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-weight:700;
+}
 
 /* ════════════════════════════════════════════════════
    PRINT  →  cada .slide = una hoja A4 landscape
@@ -358,8 +415,13 @@ main{padding:20px 0 60px}
   .slide-header,.pdf-table thead tr,.pdf-table tfoot tr{
     -webkit-print-color-adjust:exact;print-color-adjust:exact
   }
-  .pdf-table{font-size:11px}
-  .pdf-table tbody td,.pdf-table thead th,.pdf-table tfoot td{padding:5px 8px}
+  .pdf-table{font-size:10.5px}
+  .pdf-table thead th{font-size:10px;padding:5px 7px;letter-spacing:.03em}
+  .pdf-table tbody td{font-size:10.5px;padding:5px 7px}
+  .pdf-table tfoot td{font-size:11px;padding:6px 7px}
+  .slide-titulo{font-size:15px}
+  .b1-donut-pct{font-size:26px}
+  .b1-kpi-val{font-size:22px}
   @page{size:A4 landscape;margin:10mm}
 }
 
@@ -407,8 +469,9 @@ main{padding:20px 0 60px}
   margin-bottom:6px;
 }
 .b1-kpi-val{
-  font-family:"Barlow Condensed";font-size:22px;font-weight:800;
-  color:var(--texto);line-height:1.1;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:24px;font-weight:800;
+  color:var(--texto);line-height:1.05;
 }
 .b1-kpi-card.b1-pim   .b1-kpi-val { color:#92400e }
 .b1-kpi-card.b1-cert  .b1-kpi-val { color:#1e7e34 }
@@ -443,26 +506,7 @@ main{padding:20px 0 60px}
   position:absolute;inset:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;pointer-events:none;
 }
-.b1-donut-pct{
-  font-family:"Barlow Condensed";font-size:28px;font-weight:800;line-height:1;
-}
-.b1-donut-sub{
-  font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
-  color:var(--texto-mut);margin-top:2px;
-}
-.b1-donut-legend{
-  width:100%;display:flex;flex-direction:column;gap:5px;
-}
-.b1-leg-row{
-  display:flex;align-items:center;gap:7px;font-size:11.5px;
-}
-.b1-leg-dot{
-  width:11px;height:11px;border-radius:50%;flex:0 0 auto;
-}
-.b1-leg-name{flex:1;color:var(--texto-mut);font-weight:500}
-.b1-leg-val{
-  font-family:"Barlow Condensed";font-weight:700;font-size:12.5px;color:var(--texto);
-}
+
 
 @media(max-width:900px){
   .b1-kpi-row{grid-template-columns:repeat(2,1fr)}
@@ -475,16 +519,20 @@ main{padding:20px 0 60px}
 ════════════════════════════════════════════════════ */
 .b3-prom{
   display:flex;align-items:center;justify-content:flex-end;
-  font-family:"Barlow Condensed";font-size:13px;font-weight:700;
-  color:var(--texto-mut);flex:0 0 auto;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:13px;font-weight:600;
+  color:var(--texto-mut);flex:0 0 auto;letter-spacing:.02em;
 }
-.b3-prom strong{color:var(--rojo-osc);margin-left:5px;font-size:15px}
+.b3-prom strong{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  color:var(--rojo-osc);margin-left:6px;font-size:16px;font-weight:800;
+}
 
 /* ════════════════════════════════════════════════════
    BLOQUES 4 — Proyectos en Riesgo
 ════════════════════════════════════════════════════ */
 .riesgo-row td{ vertical-align:middle }
-.dev-cero{ color:#dfffff !important; font-weight:800 !important }
+.dev-cero{ color:#dc2626 !important; font-weight:800 !important }
 .pim-sin-ej{
   background:rgba(252,165,165,.18);
   color:#7f1d1d !important;font-weight:800 !important;
@@ -503,8 +551,9 @@ main{padding:20px 0 60px}
   gap:4px;min-width:100px;flex:1;
 }
 .rub-donut-label{
-  font-family:"Barlow Condensed";font-size:11px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;color:var(--texto-mut);
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--texto-mut);
   text-align:center;line-height:1.2;
 }
 .rub-donut-wrap{
@@ -514,21 +563,37 @@ main{padding:20px 0 60px}
   position:absolute;inset:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
 }
+.b1-donut-pct{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:30px;font-weight:800;line-height:1;
+}
+.b1-donut-sub{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:9px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--texto-mut);margin-top:3px;
+}
 .rub-donut-pct{
-  font-family:"Barlow Condensed";font-size:15px;font-weight:800;line-height:1;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:16px;font-weight:800;line-height:1;
 }
 .rub-donut-sub{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
   font-size:8px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.04em;color:var(--texto-mut);
+  letter-spacing:.05em;color:var(--texto-mut);margin-top:1px;
 }
 .rub-donut-pim{
-  font-size:10px;color:var(--texto-mut);font-weight:600;text-align:center;
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:10px;color:var(--texto-mut);font-weight:400;text-align:center;
 }
 /* Donut total grande a la derecha */
 .rub-donut-card.total-card .rub-donut-wrap{width:110px;height:110px}
-.rub-donut-card.total-card .rub-donut-pct{font-size:20px}
+.rub-donut-card.total-card .rub-donut-pct{
+  font-size:22px;font-weight:800;
+}
 .rub-donut-card.total-card .rub-donut-label{
-  color:var(--rojo-osc);font-size:12px;font-weight:800
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  color:var(--rojo-osc);font-size:12px;font-weight:800;
+  letter-spacing:.06em;
 }
 
 /* ════════════════════════════════════════════════════
@@ -547,15 +612,20 @@ main{padding:20px 0 60px}
   background:#fef3c7;border-color:#fbbf24;border-top-color:#f59e0b;
 }
 .hist-label{
+  font-family:"Barlow Condensed",system-ui,sans-serif;
   font-size:10px;color:#6b7280;font-weight:700;
-  text-transform:uppercase;letter-spacing:.04em;
+  text-transform:uppercase;letter-spacing:.06em;
 }
 .hist-val{
-  font-family:"Barlow Condensed";font-size:18px;font-weight:800;
-  color:#1f2937;margin-top:3px;
+  font-family:"Barlow Condensed",system-ui,sans-serif;
+  font-size:20px;font-weight:800;
+  color:#1f2937;margin-top:4px;
 }
 .hist-card.cur .hist-val{color:#92400e}
-.hist-var{font-size:10px;margin-top:2px}
+.hist-var{
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:10.5px;margin-top:3px;font-weight:500;
+}
 
 /* Tabla columnas con fondo resaltado */
 .col-highlight{ background:rgba(255,200,120,.15) }
@@ -574,6 +644,7 @@ main{padding:20px 0 60px}
       </div>
       <div class="alcalde-box">
         <div class="alc-nombre">MG.C.P.C LUIS MARTIN ESPINOZA SUAREZ</div>
+        <div class="alc-cargo">Alcalde Provincial</div>
       </div>
     </div>
   </div>

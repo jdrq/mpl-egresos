@@ -33,7 +33,7 @@ h1,h2,h3,.cond{
   font-family:"Barlow Condensed",system-ui,sans-serif;
   letter-spacing:.02em;font-weight:800;
 }
-.wrap{max-width:1280px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
 
 /* ════════════════════════════════════════════════════
    HEADER  (igual al de ingresos)
@@ -54,7 +54,7 @@ h1,h2,h3,.cond{
 .alcalde-box{text-align:right}
 .alcalde-box .alc-nombre{
   font-family:"Barlow Condensed",system-ui,sans-serif;
-  font-weight:800;font-size:20px;
+  font-weight:800;font-size:14px;
   color:var(--rojo);letter-spacing:.06em;line-height:1
 }
 .alcalde-box .alc-cargo{
@@ -186,7 +186,7 @@ main{padding:20px 0 60px}
 .slide-titulo{
   color:#fff;
   font-family:"Barlow Condensed",system-ui,sans-serif;
-  font-weight:800;font-size:17px;
+  font-weight:800;font-size:20px;
   text-transform:uppercase;letter-spacing:.05em;
   display:flex;align-items:center;gap:8px
 }
@@ -194,7 +194,7 @@ main{padding:20px 0 60px}
   background:rgba(255,255,255,.18);border-radius:5px;
   padding:2px 8px;
   font-family:"Barlow Condensed",system-ui,sans-serif;
-  font-size:13px;font-weight:700;letter-spacing:.03em
+  font-size:14px;font-weight:700;letter-spacing:.03em
 }
 .slide-meta{
   font-family:"Barlow",system-ui,sans-serif;
@@ -272,7 +272,7 @@ main{padding:20px 0 60px}
 }
 .kpi-value{
   font-family:"Barlow Condensed",system-ui,sans-serif;
-  font-weight:800;font-size:28px;
+  font-weight:800;font-size:25px;
   color:var(--texto);line-height:1.05
 }
 .kpi-value.pct-val{color:var(--dorado-osc)}
@@ -285,13 +285,13 @@ main{padding:20px 0 60px}
    TABLAS
 ════════════════════════════════════════════════════ */
 .tbl-wrap{overflow-x:auto;flex:1}
-.pdf-table{width:100%;border-collapse:collapse;font-size:13px}
+.pdf-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .pdf-table thead tr{background:var(--rojo-osc);color:#fff}
 .pdf-table thead th{
   padding:9px 10px;
   font-family:"Barlow Condensed",system-ui,sans-serif;
   font-weight:700;font-size:11.5px;
-  text-transform:uppercase;letter-spacing:.04em;white-space:nowrap
+  text-transform:uppercase;letter-spacing:.05em;white-space:nowrap
 }
 .pdf-table thead th.num{text-align:right}
 .pdf-table thead th.left{text-align:left}
@@ -299,9 +299,9 @@ main{padding:20px 0 60px}
 .pdf-table tbody tr:nth-child(even){background:#faf8f6}
 .pdf-table tbody tr:hover{background:#f5eded}
 .pdf-table tbody td{
-  padding:8px 10px;border-bottom:1px solid var(--linea);
+  padding:7px 10px;border-bottom:1px solid var(--linea);
   font-family:"Barlow",system-ui,sans-serif;
-  font-size:13px;font-weight:400;
+  font-size:12.5px;font-weight:400;
   line-height:1.4;
 }
 .pdf-table tbody td.num{
@@ -312,7 +312,7 @@ main{padding:20px 0 60px}
 .pdf-table tbody td.cod{
   text-align:center;
   font-family:"Barlow Condensed",system-ui,sans-serif;
-  font-weight:700;font-size:13px;color:var(--texto-mut)
+  font-weight:700;font-size:12px;color:var(--texto-mut)
 }
 .pdf-table tfoot tr{background:#f0ebe8;border-top:2px solid var(--rojo-osc)}
 .pdf-table tfoot td{
@@ -721,11 +721,11 @@ main{padding:20px 0 60px}
         <span class="slide-num">01</span>
         Resumen de Ejecución del Gasto
       </div>
-      <div class="slide-meta">Municipalidad Provincial de Lambayeque·<span id="b1fecha">2026</span></div>
+      <div class="slide-meta">Municipalidad Provincial de Lambayeque · <span id="b1fecha">—</span></div>
     </div>
     <div class="slide-subband">
-      <span class="sb-label">Solo Proyectos · Acumulado Enero–Julio 2026</span>
-      <span class="sb-fecha">Fuente: MEF Consulta Amigable de Gastos</span>
+      <span class="sb-label">Solo Proyectos · Consulta Amigable MEF</span>
+      <span class="sb-fecha" id="sb1fecha">—</span>
     </div>
     <div class="slide-body" style="gap:18px">
 
@@ -861,10 +861,13 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Por devengado en % · ordenado por avance</span>
-      <span class="sb-fecha">Solo Proyectos · Acumulado Enero–Julio 2026</span>
+      <span class="sb-fecha" id="sb2fecha">—</span>
     </div>
     <div class="slide-body">
-      <div class="rank-highlight" id="b2highlight">Carga ranking.xls para ver la posición de la MPL.</div>
+      <div class="rank-highlight" id="b2highlight" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <span id="b2hl-texto">Carga ranking.xls para ver la posición de la MPL.</span>
+        <span id="b2hl-avance" style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--rojo-osc);white-space:nowrap"></span>
+      </div>
       <div class="tbl-wrap">
         <table class="pdf-table">
           <thead><tr>
@@ -895,7 +898,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Top 10 proyectos con mayor devengado acumulado</span>
-      <span class="sb-fecha">Solo Proyectos · Acumulado Enero–Julio 2026</span>
+      <span class="sb-fecha" id="sb3fecha">—</span>
     </div>
     <div class="slide-body">
       <div class="b3-prom" id="b3prom"></div>
@@ -933,7 +936,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label" style="border-left-color:var(--rojo)">Top 10 proyectos con PIM asignado y 0% de devengado</span>
-      <span class="sb-fecha" id="b4total">Proyectos identificados: cargando…</span>
+      <span class="sb-fecha" id="sb4fecha">—</span>
     </div>
     <div class="slide-body">
       <div class="nota-bloque" style="background:#fff5f5;border-color:#fca5a5;color:#7f1d1d">
@@ -948,7 +951,7 @@ main{padding:20px 0 60px}
             <th class="num">PIM</th>
             <th class="num">Certificación</th>
             <th class="num">% Cert</th>
-            <th class="num" style="color:#fff">Devengado (S/)</th>
+            <th class="num" style="color:#dc2626">Devengado (S/)</th>
             <th class="num" style="background:rgba(252,165,165,.2)">PIM Sin Ejecutar (S/)</th>
           </tr></thead>
           <tbody id="b4tbody"><tr><td colspan="8" class="vacio">Carga proyecto.xls para ver los datos.</td></tr></tbody>
@@ -972,7 +975,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Clasificación por fuente de financiamiento del gasto</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+      <span class="sb-fecha" id="sb5fecha">—</span>
     </div>
     <div class="slide-body">
       <!-- Donuts por rubro -->
@@ -1016,7 +1019,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Clasificación por fuente de financiamiento</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+      <span class="sb-fecha" id="sb6fecha">—</span>
     </div>
     <div class="slide-body">
       <div class="rub-donuts-row" id="b6donuts"></div>
@@ -1058,7 +1061,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Ejecución presupuestal por función del gasto</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026 · Solo Proyectos</span>
+      <span class="sb-fecha" id="sb7fecha">—</span>
     </div>
     <div class="slide-body">
       <div class="tbl-wrap">
@@ -1097,7 +1100,7 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-subband">
       <span class="sb-label">Evolución del gasto acumulado enero–julio · Solo Proyectos</span>
-      <span class="sb-fecha">2021–2025: histórico anual · 2026: acumulado diario</span>
+      <span class="sb-fecha" id="sb8fecha">—</span>
     </div>
     <div class="slide-body">
       <div class="hist-kpis" id="b8kpis"></div>

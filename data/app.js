@@ -39,6 +39,14 @@ function fechaHoy() {
   ds=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
   return ds[d.getDay()]+", "+d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
 }
+// Rellena todos los spans de fecha en los subbands
+function rellenarFechas() {
+  const f = fechaHoy();
+  ["sb1fecha","sb2fecha","sb3fecha","sb4fecha",
+   "sb5fecha","sb6fecha","sb7fecha","sb8fecha"].forEach(id=>{
+    const el=$(id); if(el) el.textContent=f;
+  });
+}
 function semaforo(pct) {
   if (pct===null) return "#888";
   if (pct>=70) return "var(--verde)";
@@ -194,6 +202,7 @@ function render() {
   ["b2fecha","b3fecha","b4fecha","b5fecha","b6fecha","b7fecha"].forEach(id=>{
     const el=$(id); if(el) el.textContent=hoy;
   });
+  rellenarFechas();
   renderB1(); renderB2(); renderB3(); renderB4();
   renderB5(); renderB6(); renderB7(); renderB8();
 }
@@ -271,11 +280,21 @@ function renderB2() {
   const porMonto=[...muns].sort((a,b)=>b.dev-a.dev);
   const posMonto=mpl?porMonto.indexOf(mpl)+1:null;
 
-  if(mpl&&hl) {
-    hl.innerHTML=`&#128269; La <strong>Municipalidad Provincial de Lambayeque</strong> ocupa el puesto
-      <strong>${pos}° de ${muns.length}</strong> por % de avance (${fmtPct(mpl.pct)}).
-      Por monto devengado, se ubica en el puesto <strong>${posMonto}° de ${muns.length}</strong>
-      con ${fmtCompacto(mpl.dev)}.`;
+  // Highlight: fecha ya la pone rellenarFechas()
+  // Texto izquierdo: posición MPL  |  Derecha: % avance
+  const hlTexto=$("b2hl-texto"), hlAvance=$("b2hl-avance");
+  if(mpl){
+    if(hlTexto) hlTexto.innerHTML=
+      `&#128269; <strong>Municipalidad Provincial de Lambayeque</strong> — `+
+      `Puesto <strong>${pos}° de ${muns.length}</strong> por % de avance · `+
+      `Puesto <strong>${posMonto}° de ${muns.length}</strong> por monto devengado `+
+      `(${fmtCompacto(mpl.dev)})`;
+    if(hlAvance) {
+      const pctStr=mpl.pct!==null?mpl.pct.toFixed(1)+"%":"N/A";
+      const col=mpl.pct>=50?"var(--verde)":mpl.pct>=30?"var(--amarillo-s)":"var(--rojo-osc)";
+      hlAvance.textContent="Avance: "+pctStr;
+      hlAvance.style.color=col;
+    }
   }
 
   tbody.innerHTML=sorted.map((m,i)=>{
@@ -342,13 +361,13 @@ function renderB3() {
 // B4 — Proyectos con Ejecución en Riesgo (dev = 0)
 // ══════════════════════════════════════════════════════════════
 function renderB4() {
-  const d=datos.proyecto, tbody=$("b4tbody"), tfoot=$("b4tfoot"), total=$("b4total");
+  const d=datos.proyecto, tbody=$("b4tbody"), tfoot=$("b4tfoot");
   if(!tbody) return;
   if(!d){ tbody.innerHTML=`<tr><td colspan="8" class="vacio">Carga proyecto.xls para ver los datos.</td></tr>`; return; }
 
   const riesgo=d.registros.filter(r=>r.dev===0&&r.pim>0).sort((a,b)=>b.pim-a.pim).slice(0,10);
   const totalRiesgo=riesgo.reduce((s,r)=>s+r.pim,0);
-  if(total) total.textContent=`Proyectos identificados (Top 10): S/ ${Math.round(totalRiesgo).toLocaleString("es-PE")} en riesgo`;
+  // La fecha ya la rellena rellenarFechas() — el monto en riesgo va en la nota interna
 
   tbody.innerHTML=riesgo.map((r,i)=>{
     const m=r.desc.match(/^(\d+):\s*(.+)$/);
@@ -715,6 +734,7 @@ async function exportarPDF(){
 }
 
 // ── Inicio ────────────────────────────────────────────────────
+rellenarFechas(); // fechas inmediatas al cargar la página
 fetch("data/historico_egresos.json?"+Date.now())
   .then(r=>r.json())
   .then(data=>{B8_HIST=data;renderB8();})

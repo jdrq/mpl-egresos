@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Egresos Presupuestales · Municipalidad Provincial de Lambayeque</title>
+<link rel="icon" type="image/png" href="img/favicon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* ════════════════════════════════════════════════════
+   VARIABLES & RESET
+════════════════════════════════════════════════════ */
+:root{
+  --rojo:#9a1820; --rojo-osc:#7a1219; --dorado:#fcc21b; --dorado-osc:#d9a000;
+  --azul:#0067a6;  --oscuro:#212121;   --blanco:#ffffff; --bg:#f4f1ee;
+  --linea:#e0d8d0; --texto:#1a1010;   --texto-mut:#6b5b5b;
+  --verde:#1e7e34; --amarillo-s:#b38600; --rojo-s:#9a1820;
+  --sombra:0 1px 3px rgba(26,16,16,.07),0 6px 24px rgba(26,16,16,.07);
+  --slide-w:277mm; --slide-h:190mm;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Barlow",system-ui,sans-serif;
+  color:var(--texto);background:var(--bg);
+  line-height:1.45;-webkit-font-smoothing:antialiased;font-weight:500;
+}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",system-ui,sans-serif;letter-spacing:.01em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+
+/* ════════════════════════════════════════════════════
+   HEADER  (igual al de ingresos)
+════════════════════════════════════════════════════ */
+.topbar{background:var(--blanco);border-bottom:1px solid var(--linea)}
+.topbar .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:10px 28px
+}
+.brand{display:flex;align-items:center;gap:12px}
+.escudo{width:46px;height:46px;flex:0 0 auto;object-fit:contain;
+        filter:drop-shadow(0 1px 3px rgba(0,0,0,.12))}
+.brand-inst{
+  font-family:"Barlow Condensed";font-weight:700;font-size:16px;
+  color:var(--texto);letter-spacing:.02em;text-transform:uppercase
+}
+.alcalde-box{text-align:right}
+.alcalde-box .alc-nombre{
+  font-family:"Barlow Condensed";font-weight:800;font-size:13px;
+  color:var(--rojo);letter-spacing:.06em;line-height:1
+}
+.alcalde-box .alc-cargo{
+  font-size:10px;color:var(--texto-mut);text-transform:uppercase;
+  letter-spacing:.04em;font-weight:600;line-height:1.4
+}
+
+/* BANDA TÍTULO */
+.titleband{background:var(--rojo)}
+.titleband .wrap{
+  padding:14px 28px;display:flex;align-items:center;
+  justify-content:space-between;gap:12px
+}
+.titleband h1{
+  color:#fff;font-weight:800;font-size:26px;
+  text-transform:uppercase;letter-spacing:.03em;margin:0
+}
+.update-pill{
+  background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;padding:5px 14px;font-size:12px;color:#fff;
+  font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:5px
+}
+.update-pill span{color:var(--dorado);font-weight:800}
+.yellowband{background:var(--dorado);height:10px}
+
+/* ════════════════════════════════════════════════════
+   BARRA DE ACCIONES (PDF + admin)
+════════════════════════════════════════════════════ */
+.action-bar{
+  display:flex;justify-content:flex-end;align-items:center;
+  gap:10px;padding:14px 0 4px
+}
+.btn-pdf{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--rojo-osc);color:#fff;border:none;border-radius:8px;
+  padding:9px 20px;font-family:"Barlow Condensed";font-weight:700;font-size:14px;
+  text-transform:uppercase;letter-spacing:.05em;cursor:pointer;
+  box-shadow:0 2px 8px rgba(122,18,25,.25);transition:background .15s
+}
+.btn-pdf:hover{background:var(--rojo)}
+.btn-admin{
+  background:transparent;border:1px solid var(--linea);border-radius:6px;
+  width:30px;height:30px;cursor:pointer;font-size:15px;opacity:.4;
+  line-height:1;padding:0;transition:opacity .15s
+}
+.btn-admin:hover{opacity:.8}
+
+/* ════════════════════════════════════════════════════
+   PANEL TÉCNICO (oculto por defecto)
+════════════════════════════════════════════════════ */
+.loader-card{
+  background:var(--blanco);border:1px solid var(--linea);border-radius:14px;
+  box-shadow:var(--sombra);margin-bottom:20px;
+  display:grid;grid-template-columns:260px 1fr;overflow:hidden
+}
+.drop-col{
+  padding:20px;border-right:1px solid var(--linea);
+  display:flex;flex-direction:column;gap:10px;
+  background:linear-gradient(180deg,#fff,#faf8f6)
+}
+.dropzone{
+  border:2px dashed #d0c8c0;border-radius:10px;padding:18px 12px;
+  text-align:center;cursor:pointer;transition:all .15s
+}
+.dropzone:hover,.dropzone.drag{border-color:var(--rojo);background:#fdf5f5}
+.dz-title{
+  font-family:"Barlow Condensed";font-weight:700;font-size:14px;
+  color:var(--texto);text-transform:uppercase;margin-top:6px
+}
+.dz-hint{font-size:11px;color:var(--texto-mut);margin-top:3px}
+.btn-pick{
+  width:100%;background:var(--rojo);color:#fff;border:none;border-radius:7px;
+  padding:8px;font-family:"Barlow Condensed";font-weight:700;font-size:13px;
+  text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:background .15s
+}
+.btn-pick:hover{background:var(--rojo-osc)}
+.btn-clear{
+  width:100%;background:#888;color:#fff;border:none;border-radius:7px;
+  padding:8px;font-family:"Barlow Condensed";font-weight:700;font-size:13px;
+  text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:background .15s
+}
+.btn-clear:hover{background:#666}
+.status-col{padding:20px;display:flex;flex-direction:column;gap:8px}
+.status-title{
+  font-family:"Barlow Condensed";font-weight:700;font-size:12px;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--texto-mut);margin-bottom:4px
+}
+.file-list{display:flex;flex-direction:column;gap:5px}
+.file-item{
+  display:flex;align-items:center;gap:8px;padding:6px 10px;
+  border-radius:7px;background:#f9f7f5;border:1px solid var(--linea);font-size:12px
+}
+.file-item .fi-name{flex:1;font-weight:600;color:var(--texto)}
+.fi-ok{color:var(--verde);font-weight:700;font-size:14px}
+.fi-wait{color:var(--texto-mut);font-size:14px}
+
+/* ════════════════════════════════════════════════════
+   SLIDES  ← concepto nuevo: cada bloque es una diapositiva
+════════════════════════════════════════════════════ */
+main{padding:20px 0 60px}
+
+/* Envoltorio de cada bloque = slide */
+.slide{
+  background:var(--blanco);
+  border:1px solid var(--linea);
+  border-radius:14px;
+  box-shadow:var(--sombra);
+  margin-bottom:28px;
+  overflow:hidden;
+  /* Proporción A4 landscape aprox. para pantalla */
+  min-height:480px;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ── Cabecera del slide ─────────────────────────── */
+.slide-header{
+  background:var(--rojo-osc);
+  padding:11px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  flex:0 0 auto
+}
+.slide-titulo{
+  color:#fff;font-family:"Barlow Condensed";font-weight:800;
+  font-size:16px;text-transform:uppercase;letter-spacing:.05em;
+  display:flex;align-items:center;gap:8px
+}
+.slide-titulo .slide-num{
+  background:rgba(255,255,255,.18);border-radius:5px;
+  padding:1px 7px;font-size:13px;font-weight:700;letter-spacing:.02em
+}
+.slide-meta{
+  font-size:11px;color:rgba(255,255,255,.72);
+  font-weight:600;text-align:right;letter-spacing:.02em;white-space:nowrap
+}
+
+/* ── Banda subtítulo (franja dorada fina + label) ── */
+.slide-subband{
+  background:linear-gradient(90deg,#f5f0ea 0%,var(--blanco) 100%);
+  border-bottom:1px solid var(--linea);
+  padding:5px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex:0 0 auto
+}
+.slide-subband .sb-label{
+  font-family:"Barlow Condensed";font-size:11.5px;font-weight:700;
+  color:var(--texto-mut);text-transform:uppercase;letter-spacing:.06em;
+  border-left:3px solid var(--dorado);padding-left:8px
+}
+.slide-subband .sb-fecha{
+  font-size:11px;color:var(--texto-mut);font-weight:600
+}
+
+/* ── Cuerpo del slide ──────────────────────────── */
+.slide-body{
+  padding:20px 22px 22px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:14px
+}
+
+/* ── Footer del slide ──────────────────────────── */
+.slide-footer{
+  border-top:1px solid var(--linea);
+  padding:6px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex:0 0 auto;
+  background:#faf8f6
+}
+.slide-footer .sf-fuente{font-size:10px;color:var(--texto-mut);font-weight:500}
+.slide-footer .sf-logo{
+  font-family:"Barlow Condensed";font-size:10px;font-weight:700;
+  color:var(--rojo-osc);letter-spacing:.06em;opacity:.6
+}
+
+/* ════════════════════════════════════════════════════
+   KPIs  (Bloque 1)
+════════════════════════════════════════════════════ */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.kpi-grid-2{grid-template-columns:repeat(3,1fr)}  /* fila inferior */
+.kpi-card{
+  border-radius:10px;padding:15px 16px;
+  background:#fafaf9;border:1px solid var(--linea);
+  border-left:4px solid var(--linea)
+}
+.kpi-card.pia    {border-left-color:var(--texto-mut)}
+.kpi-card.pim    {border-left-color:var(--dorado-osc)}
+.kpi-card.cert   {border-left-color:#6d28d9}
+.kpi-card.dev    {border-left-color:var(--azul)}
+.kpi-card.pct    {border-left-color:var(--verde)}
+.kpi-card.pordev {border-left-color:var(--rojo-s)}
+.kpi-label{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--texto-mut);margin-bottom:6px;line-height:1.3
+}
+.kpi-value{
+  font-family:"Barlow Condensed";font-weight:800;font-size:24px;
+  color:var(--texto);line-height:1
+}
+.kpi-value.pct-val{color:var(--dorado-osc)}
+.kpi-sub{font-size:11px;color:var(--texto-mut);margin-top:4px}
+
+/* ════════════════════════════════════════════════════
+   TABLAS
+════════════════════════════════════════════════════ */
+.tbl-wrap{overflow-x:auto;flex:1}
+.pdf-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.pdf-table thead tr{background:var(--rojo-osc);color:#fff}
+.pdf-table thead th{
+  padding:8px 10px;font-family:"Barlow Condensed";font-weight:700;
+  font-size:12px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap
+}
+.pdf-table thead th.num{text-align:right}
+.pdf-table thead th.left{text-align:left}
+.pdf-table thead th.ctr{text-align:center}
+.pdf-table tbody tr:nth-child(even){background:#faf8f6}
+.pdf-table tbody tr:hover{background:#f5eded}
+.pdf-table tbody td{
+  padding:7px 10px;border-bottom:1px solid var(--linea);font-size:12px
+}
+.pdf-table tbody td.num{
+  text-align:right;font-family:"Barlow Condensed";font-size:12.5px;font-weight:700
+}
+.pdf-table tbody td.cod{
+  text-align:center;font-family:"Barlow Condensed";
+  font-weight:700;font-size:12px;color:var(--texto-mut)
+}
+.pdf-table tfoot tr{background:#f0ebe8;border-top:2px solid var(--rojo-osc)}
+.pdf-table tfoot td{
+  padding:8px 10px;font-family:"Barlow Condensed";font-weight:800;font-size:13px
+}
+.pdf-table tfoot td.num{text-align:right;font-size:13.5px;color:var(--rojo-osc)}
+.pdf-table td.vacio{padding:36px;text-align:center;color:#aaa;font-size:13px}
+
+/* ════════════════════════════════════════════════════
+   BARRAS SEMÁFORO
+════════════════════════════════════════════════════ */
+.av-wrap{display:flex;align-items:center;gap:8px;min-width:130px}
+.av-bar{flex:1;height:7px;border-radius:4px;background:#e8e2dc;overflow:hidden}
+.av-bar span{display:block;height:100%;border-radius:4px;transition:width .4s}
+.av-pct{
+  font-family:"Barlow Condensed";font-weight:800;font-size:12.5px;
+  min-width:40px;text-align:right
+}
+
+/* ════════════════════════════════════════════════════
+   RANKING
+════════════════════════════════════════════════════ */
+.rank-highlight{
+  background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
+  padding:10px 16px;font-size:12.5px;color:var(--oscuro);
+  line-height:1.6;flex:0 0 auto
+}
+.rank-highlight strong{color:var(--rojo-osc)}
+.mpl-row td{background:#fef9ec !important;font-weight:700}
+
+/* ════════════════════════════════════════════════════
+   HISTÓRICO (KPI mini cards + gráfico)
+════════════════════════════════════════════════════ */
+.hist-kpis{display:flex;gap:10px;flex-wrap:wrap;flex:0 0 auto}
+.hist-card{
+  background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;
+  padding:10px 14px;min-width:100px;flex:1
+}
+.hist-card.cur{background:#fef3c7;border-color:#fbbf24}
+.hist-label{font-size:10px;color:#6b7280;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.hist-val{
+  font-family:"Barlow Condensed";font-size:16px;font-weight:800;
+  color:#1f2937;margin-top:3px
+}
+.hist-card.cur .hist-val{color:#92400e}
+.hist-var{font-size:10.5px;margin-top:2px}
+.chart-wrap{flex:1;position:relative;min-height:200px}
+
+/* ════════════════════════════════════════════════════
+   NOTAS
+════════════════════════════════════════════════════ */
+.nota-bloque{
+  background:#fffbeb;border:1px solid #fde68a;border-radius:7px;
+  padding:8px 13px;font-size:11px;color:#78350f;line-height:1.6;flex:0 0 auto
+}
+.nota-bloque strong{font-weight:700}
+
+/* ════════════════════════════════════════════════════
+   PRINT  →  cada .slide = una hoja A4 landscape
+════════════════════════════════════════════════════ */
+@media print{
+  html,body{background:#fff !important;margin:0;padding:0}
+  .topbar,.yellowband,.titleband,.action-bar,#panelTecnico{display:none !important}
+  main{padding:0 !important}
+  .wrap{padding:0 !important;max-width:100%}
+  .slide{
+    page-break-before:always;
+    break-before:page;
+    page-break-inside:avoid;
+    break-inside:avoid;
+    box-shadow:none !important;
+    border:none !important;
+    border-radius:0 !important;
+    margin:0 !important;
+    min-height:100vh;
+    /* Forzar que ocupe la página completa */
+    height:100vh;
+  }
+  .slide:first-child{page-break-before:avoid;break-before:avoid}
+  .slide-header,.pdf-table thead tr,.pdf-table tfoot tr{
+    -webkit-print-color-adjust:exact;print-color-adjust:exact
+  }
+  .pdf-table{font-size:11px}
+  .pdf-table tbody td,.pdf-table thead th,.pdf-table tfoot td{padding:5px 8px}
+  @page{size:A4 landscape;margin:10mm}
+}
+
+/* ════════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════════ */
+@media(max-width:900px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .loader-card{grid-template-columns:1fr}
+  .drop-col{border-right:none;border-bottom:1px solid var(--linea)}
+}
+@media(max-width:580px){
+  .kpi-grid{grid-template-columns:1fr}
+  .wrap{padding:0 14px}
+  .titleband h1{font-size:20px}
+}
+
+/* ════════════════════════════════════════════════════
+   BLOQUE 1 — KPI cards + Donuts
+════════════════════════════════════════════════════ */
+
+/* Fila de 5 KPI cards */
+.b1-kpi-row{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  flex:0 0 auto;
+}
+.b1-kpi-card{
+  background:var(--blanco);
+  border:1px solid var(--linea);
+  border-radius:10px;
+  padding:14px 16px;
+  border-top:3px solid var(--linea);
+  box-shadow:0 1px 4px rgba(26,16,16,.06);
+}
+.b1-kpi-card.b1-pim   { border-top-color:#d9a000 }
+.b1-kpi-card.b1-cert  { border-top-color:#1e7e34 }
+.b1-kpi-card.b1-comp  { border-top-color:#f5c518 }
+.b1-kpi-card.b1-dev   { border-top-color:var(--rojo-osc) }
+.b1-kpi-card.b1-pordev{ border-top-color:#6b7280 }
+.b1-kpi-label{
+  font-family:"Barlow Condensed";font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;color:var(--texto-mut);
+  margin-bottom:6px;
+}
+.b1-kpi-val{
+  font-family:"Barlow Condensed";font-size:22px;font-weight:800;
+  color:var(--texto);line-height:1.1;
+}
+.b1-kpi-card.b1-pim   .b1-kpi-val { color:#92400e }
+.b1-kpi-card.b1-cert  .b1-kpi-val { color:#1e7e34 }
+.b1-kpi-card.b1-dev   .b1-kpi-val { color:var(--rojo-osc) }
+.b1-kpi-card.b1-pordev .b1-kpi-val{ color:#374151 }
+.b1-kpi-sub{
+  font-size:11px;color:var(--texto-mut);margin-top:4px;font-weight:500;
+}
+
+/* Sección donuts */
+.b1-donuts-section{flex:1;display:flex;flex-direction:column;gap:10px}
+.b1-donuts-title{
+  font-family:"Barlow Condensed";font-size:18px;font-weight:800;
+  color:var(--rojo-osc);text-align:center;letter-spacing:.04em;text-transform:uppercase;
+}
+.b1-donuts-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1;
+}
+.b1-donut-card{
+  background:var(--blanco);border:1px solid var(--linea);border-radius:12px;
+  padding:16px 20px 14px;display:flex;flex-direction:column;align-items:center;gap:10px;
+  box-shadow:0 1px 4px rgba(26,16,16,.05);
+}
+.b1-donut-label-top{
+  font-family:"Barlow Condensed";font-size:15px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.05em;
+}
+.b1-donut-wrap{
+  position:relative;width:160px;height:160px;flex:0 0 auto;
+}
+.b1-donut-center{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;pointer-events:none;
+}
+.b1-donut-pct{
+  font-family:"Barlow Condensed";font-size:28px;font-weight:800;line-height:1;
+}
+.b1-donut-sub{
+  font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--texto-mut);margin-top:2px;
+}
+.b1-donut-legend{
+  width:100%;display:flex;flex-direction:column;gap:5px;
+}
+.b1-leg-row{
+  display:flex;align-items:center;gap:7px;font-size:11.5px;
+}
+.b1-leg-dot{
+  width:11px;height:11px;border-radius:50%;flex:0 0 auto;
+}
+.b1-leg-name{flex:1;color:var(--texto-mut);font-weight:500}
+.b1-leg-val{
+  font-family:"Barlow Condensed";font-weight:700;font-size:12.5px;color:var(--texto);
+}
+
+@media(max-width:900px){
+  .b1-kpi-row{grid-template-columns:repeat(2,1fr)}
+  .b1-donuts-row{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<header>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <img class="escudo" src="img/escudo.png" alt="Escudo MPL"/>
+        <span class="brand-inst">Municipalidad Provincial de Lambayeque</span>
+      </div>
+      <div class="alcalde-box">
+        <div class="alc-nombre">MG.C.P.C LUIS MARTIN ESPINOZA SUAREZ</div>
+        <div class="alc-cargo">Alcalde Provincial</div>
+      </div>
+    </div>
+  </div>
+  <div class="titleband">
+    <div class="wrap">
+      <h1>Egresos Presupuestales</h1>
+      <div class="update-pill">
+        &#128197; Actualizado: <span id="fechaHeader">—</span>
+      </div>
+    </div>
+  </div>
+  <div class="yellowband"></div>
+</header>
+
+<!-- ════════════════ MAIN ════════════════ -->
+<main>
+<div class="wrap">
+
+  <!-- Barra de acciones -->
+  <div class="action-bar">
+    <button class="btn-pdf" onclick="exportarPDF()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg>
+      Exportar PDF
+    </button>
+    <button class="btn-admin" id="btnAdminToggle" title="Panel técnico">⚙</button>
+  </div>
+
+  <!-- Panel técnico (oculto por defecto) -->
+  <div id="panelTecnico" style="display:none">
+    <div class="loader-card" id="loaderCard">
+      <div class="drop-col">
+        <div class="dropzone" id="dropzone" tabindex="0" role="button">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+               stroke="var(--rojo)" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <div class="dz-title">Cargar archivos XLS</div>
+          <div class="dz-hint">Arrastra aquí o haz clic</div>
+        </div>
+        <input type="file" id="file" multiple accept=".xls,.xlsx" style="display:none"/>
+        <button class="btn-pick" id="pick">&#128193; Seleccionar archivos</button>
+        <button class="btn-clear" id="clear">&#10005; Limpiar</button>
+      </div>
+      <div class="status-col">
+        <div class="status-title">Archivos esperados</div>
+        <div class="file-list" id="fileList">
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">rubro.xls</span></div>
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">categoria.xls</span></div>
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">proyecto.xls</span></div>
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">ranking.xls</span></div>
+        </div>
+        <div style="font-size:11px;color:var(--texto-mut);margin-top:10px">
+          Carga los 4 archivos exportados desde Consulta Amigable MEF (Gastos · Solo Proyectos).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 1 — KPIs RESUMEN
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">01</span>
+        Resumen de Ejecución del Gasto
+      </div>
+      <div class="slide-meta">Municipalidad Provincial de Lambayeque · <span id="b1fecha">—</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Solo Proyectos · Acumulado Enero–Julio 2026</span>
+      <span class="sb-fecha">Fuente: MEF Consulta Amigable de Gastos</span>
+    </div>
+    <div class="slide-body" style="gap:18px">
+
+      <!-- ── FILA 1: 5 KPI cards horizontales ── -->
+      <div class="b1-kpi-row">
+
+        <div class="b1-kpi-card b1-pim">
+          <div class="b1-kpi-label">PIM CONSOLIDADO</div>
+          <div class="b1-kpi-val" id="kpi-pim">S/ —</div>
+          <div class="b1-kpi-sub" id="kpi-pim-sub">—</div>
+        </div>
+
+        <div class="b1-kpi-card b1-cert">
+          <div class="b1-kpi-label">CERTIFICADO</div>
+          <div class="b1-kpi-val" id="kpi-cert">S/ —</div>
+          <div class="b1-kpi-sub" id="kpi-cert-sub">—</div>
+        </div>
+
+        <div class="b1-kpi-card b1-comp">
+          <div class="b1-kpi-label">COMPROMISO</div>
+          <div class="b1-kpi-val" id="kpi-comp">S/ —</div>
+          <div class="b1-kpi-sub" id="kpi-comp-sub">—</div>
+        </div>
+
+        <div class="b1-kpi-card b1-dev">
+          <div class="b1-kpi-label">DEVENGADO</div>
+          <div class="b1-kpi-val" id="kpi-dev">S/ —</div>
+          <div class="b1-kpi-sub" id="kpi-dev-sub">—</div>
+        </div>
+
+        <div class="b1-kpi-card b1-pordev">
+          <div class="b1-kpi-label">POR DEVENGAR</div>
+          <div class="b1-kpi-val" id="kpi-pordev">S/ —</div>
+          <div class="b1-kpi-sub">PIM – Devengado</div>
+        </div>
+
+      </div>
+
+      <!-- ── FILA 2: título DEVENGADO + 3 donuts ── -->
+      <div class="b1-donuts-section">
+        <div class="b1-donuts-title">DEVENGADO</div>
+        <div class="b1-donuts-row">
+
+          <!-- Donut Certificado -->
+          <div class="b1-donut-card">
+            <div class="b1-donut-label-top" style="color:#1e7e34">CERTIFICADO</div>
+            <div class="b1-donut-wrap">
+              <canvas id="donutCert" width="160" height="160"></canvas>
+              <div class="b1-donut-center">
+                <div class="b1-donut-pct" id="donutCertPct" style="color:#1e7e34">—</div>
+                <div class="b1-donut-sub">CERTIFICADO</div>
+              </div>
+            </div>
+            <div class="b1-donut-legend">
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:#1e7e34"></span>
+                <span class="b1-leg-name">Certificado</span>
+                <span class="b1-leg-val" id="legCert">—</span>
+              </div>
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:#a8d5b0"></span>
+                <span class="b1-leg-name">Por certificar</span>
+                <span class="b1-leg-val" id="legPorCert">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Donut Devengado -->
+          <div class="b1-donut-card">
+            <div class="b1-donut-label-top" style="color:var(--rojo-osc)">DEVENGADO</div>
+            <div class="b1-donut-wrap">
+              <canvas id="donutDev" width="160" height="160"></canvas>
+              <div class="b1-donut-center">
+                <div class="b1-donut-pct" id="donutDevPct" style="color:var(--rojo-osc)">—</div>
+                <div class="b1-donut-sub">DEVENGADO</div>
+              </div>
+            </div>
+            <div class="b1-donut-legend">
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:var(--rojo-osc)"></span>
+                <span class="b1-leg-name">Devengado</span>
+                <span class="b1-leg-val" id="legDev">—</span>
+              </div>
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:#e8c5c7"></span>
+                <span class="b1-leg-name">Por devengar</span>
+                <span class="b1-leg-val" id="legPorDev">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Donut Compromiso -->
+          <div class="b1-donut-card">
+            <div class="b1-donut-label-top" style="color:var(--dorado-osc)">COMPROMISO</div>
+            <div class="b1-donut-wrap">
+              <canvas id="donutComp" width="160" height="160"></canvas>
+              <div class="b1-donut-center">
+                <div class="b1-donut-pct" id="donutCompPct" style="color:var(--dorado-osc)">—</div>
+                <div class="b1-donut-sub">COMPROMISO</div>
+              </div>
+            </div>
+            <div class="b1-donut-legend">
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:#f5c518"></span>
+                <span class="b1-leg-name">Compromiso</span>
+                <span class="b1-leg-val" id="legComp">—</span>
+              </div>
+              <div class="b1-leg-row">
+                <span class="b1-leg-dot" style="background:#faeab0"></span>
+                <span class="b1-leg-name">Por comprometer</span>
+                <span class="b1-leg-val" id="legPorComp">—</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 2 — RUBRO
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">02</span>
+        Ejecución por Rubro de Financiamiento
+      </div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b2fecha">2026</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Clasificación por fuente de financiamiento del gasto</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+    </div>
+    <div class="slide-body">
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="left" style="min-width:280px">Rubro</th>
+            <th class="num">PIA (S/)</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num">Por Devengar (S/)</th>
+            <th class="num" style="min-width:140px">% Avance</th>
+          </tr></thead>
+          <tbody id="b2tbody"><tr><td colspan="7" class="vacio">Carga rubro.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b2tfoot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 3 — CATEGORÍA PRESUPUESTAL
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">03</span>
+        Ejecución por Categoría Presupuestal
+      </div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b3fecha">2026</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Programas presupuestales y APNOP</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+    </div>
+    <div class="slide-body">
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="left" style="min-width:300px">Categoría Presupuestal</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">Comp. Anual (S/)</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num">Girado (S/)</th>
+            <th class="num" style="min-width:140px">% Avance</th>
+          </tr></thead>
+          <tbody id="b3tbody"><tr><td colspan="7" class="vacio">Carga categoria.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b3tfoot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 4 — PROYECTOS
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">04</span>
+        Proyectos de Inversión
+      </div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b4fecha">2026</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Detalle por proyecto · ordenado por devengado</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+    </div>
+    <div class="slide-body">
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="ctr" style="width:36px">N°</th>
+            <th class="left" style="width:70px">Código</th>
+            <th class="left" style="min-width:300px">Proyecto</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num" style="min-width:140px">% Avance</th>
+          </tr></thead>
+          <tbody id="b4tbody"><tr><td colspan="7" class="vacio">Carga proyecto.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b4tfoot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 5 — RANKING MUNICIPALIDADES
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">05</span>
+        Ranking de Municipalidades — Dpto. Lambayeque
+      </div>
+      <div class="slide-meta" id="b5meta">38 municipalidades · ordenado por % avance · 2026</div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Comparativo de ejecución a nivel departamental</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026 · Solo Proyectos</span>
+    </div>
+    <div class="slide-body">
+      <div class="rank-highlight" id="b5highlight">
+        Carga ranking.xls para ver la posición de la Municipalidad Provincial de Lambayeque.
+      </div>
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="ctr" style="width:44px">#</th>
+            <th class="left" style="min-width:280px">Municipalidad</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num" style="min-width:150px">% Avance</th>
+          </tr></thead>
+          <tbody id="b5tbody"><tr><td colspan="5" class="vacio">Carga ranking.xls para ver los datos.</td></tr></tbody>
+        </table>
+      </div>
+      <div class="nota-bloque" id="b5nota" style="display:none">
+        <strong>Nota:</strong> El ranking incluye únicamente proyectos de inversión (Solo Proyectos). Fuente: MEF Consulta Amigable de Gastos, Dpto. Lambayeque.
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos · Dpto. Lambayeque</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 6 — HISTÓRICO ENE–JUL
+  ══════════════════════════════════════ -->
+  <div class="slide" id="b6bloque">
+    <div class="slide-header">
+      <div class="slide-titulo">
+        <span class="slide-num">06</span>
+        Comparativo Histórico — Devengado Ene–Jul
+      </div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · 2021–2026</div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Evolución del gasto acumulado enero–julio · Solo Proyectos</span>
+      <span class="sb-fecha">2021–2025: histórico anual · 2026: acumulado diario</span>
+    </div>
+    <div class="slide-body">
+      <div class="hist-kpis" id="b6kpis"></div>
+      <div class="chart-wrap">
+        <canvas id="b6chart"></canvas>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: Consulta Amigable MEF 2021–2025: acumulado Ene–Jul extraído de registros históricos · 2026: acumulado diario</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+</main>
+
+<script>
+// Fecha en header
+(function(){
+  var d=new Date(),m=["enero","febrero","marzo","abril","mayo","junio",
+  "julio","agosto","setiembre","octubre","noviembre","diciembre"],
+  ds=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  var el=document.getElementById("fechaHeader");
+  if(el) el.textContent=ds[d.getDay()]+", "+d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
+})();
+
+// Toggle panel técnico
+(function(){
+  var panel=document.getElementById("panelTecnico");
+  var btn=document.getElementById("btnAdminToggle");
+  if(new URLSearchParams(location.search).get("admin")==="1") panel.style.display="";
+  btn.addEventListener("click",function(){
+    panel.style.display=panel.style.display==="none"?"":"none";
+  });
+})();
+</script>
+<script src="data/app.js"></script>
+</body>
+</html>

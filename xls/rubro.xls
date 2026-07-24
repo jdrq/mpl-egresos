@@ -1,0 +1,439 @@
+<style type="text/css">
+	
+body
+{
+	font-weight: normal;
+	font-size: 0.7em;
+	word-spacing: normal;
+	text-transform: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	letter-spacing: normal;
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	left: 0px;
+	right: 0px;
+	border: 0px;
+}
+
+/* Panel Historial */
+#PnlHistory
+{    
+    background-color: #ffffff;
+}
+
+.History
+{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: solid 1px #dddddd;
+}
+
+.History tr
+{
+    height: 20px;
+}
+
+.History tr.alt
+{
+}
+
+.History td
+{
+    border-left: solid 1px #dddddd;
+    border-right: solid 1px #dddddd;
+}
+/* Panel Historial - Fin */
+
+/* Panel Datos */
+#PnlData
+{
+    background-color: #ffffff;
+}
+
+.MapTable
+{
+    background-color: #3a6ea5;
+    color: #ffffff;
+    border-collapse: collapse;
+    border-width: 0px;
+}
+
+.MapTable tr
+{
+    height: 18px;
+}
+
+.MapTable td
+{
+    border: solid 1px #dddddd;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.Data
+{    
+    width: 100%;
+    border-collapse: collapse;
+    border-width: 0px;
+}
+
+.Data tr
+{
+    cursor: pointer;    
+    height: 22px;
+    text-align: right;
+}
+
+.Data tr.alt
+{
+}
+
+.Data tr.More
+{
+    text-align: left;
+    height: auto;
+    background-color: #f1f1f1;    
+}
+
+.Data tr.More td
+{
+    padding-left: 4px;
+}
+
+.Data td
+{
+    border: solid 1px #dddddd;
+}
+/* Panel Datos - Fin */
+
+/* Cabecera */
+#hd
+{
+    font-size: 8pt;   
+}
+
+#hd .title
+{
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+#hd .subtitle
+{
+    font-size: 8pt;
+    font-family: Verdana;
+}
+
+#hd .fecha
+{
+    font-size: 8pt;
+}
+
+#hd span.value
+{
+    font-size: 10pt;
+}
+
+/* Cabecera - End */
+</style><body>
+	<table id="hd">
+		<tr>
+			<td colspan="9"><div class='title'><img src='../Images/Transparencia.gif' alt='' height='40' /><br /><br />Consulta Amigable</div><div class='subtitle'>Consulta de Ejecución del Gasto</div><br /><div class='fecha'>Fecha de la Consulta: 23-julio-2026</div><br /><b>Año de Ejecución: <span class='value'>2026</span><br />Incluye: <span class='value'>Sólo Proyectos</span></b></td>
+		</tr>
+	</table>
+	
+                    <table class="History" cellspacing="0" cellpadding="1">
+                
+                    <tr align="right">
+                        
+                        <td align="left" style="font-size: 7pt; width: auto">
+                            Gob.Loc./Mancom. M: MUNICIPALIDADES
+                            
+                            
+                            
+                            
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            14,579,409,942
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            28,145,482,833
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            21,224,249,428
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            14,795,581,940
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            12,789,091,017
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            10,304,556,188
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            9,691,242,216
+                        </td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;36.6</td>
+                    </tr>
+                
+                    <tr align="right" class="alt">
+                        
+                        <td align="left" style="font-size: 7pt; width: auto" tabindex="9">
+                            Departamento 14: LAMBAYEQUE
+                            
+                            
+                            
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="10">
+                            188,653,665
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="11">
+                            515,704,381
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="12">
+                            390,343,909
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="13">
+                            264,258,900
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="14">
+                            182,362,819
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="15">
+                            154,798,867
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="16">
+                            150,864,716
+                        </td>
+                        <td align="right" style="width: 50px; white-space: nowrap" tabindex="17">&nbsp;30.0</td>
+                    </tr>
+                
+                    <tr align="right">
+                        
+                        <td align="left" style="font-size: 7pt; width: auto">
+                            Municipalidad 140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
+                            
+                            
+                            
+                            
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            28,913,173
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            52,600,714
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            41,579,952
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            31,481,275
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            10,932,489
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            10,431,933
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            10,160,759
+                        </td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;19.8</td>
+                    </tr>
+                
+                    </table>
+                <table id="ctl00_CPH1_Mt0" class="MapTable" style="width:100%;">
+		<tr id="ctl00_CPH1_Mt0_Row0">
+			<td id="ctl00_CPH1_Mt0_td1" title="Concepto" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td1&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="cursor:hand;">Rubro</td><td id="ctl00_CPH1_Mt0_td2" title="Presupuesto Institucional de Apertura" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td2&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIA</td><td id="ctl00_CPH1_Mt0_td3" title="Presupuesto Institucional Modificado" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td3&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIM</td><td id="ctl00_CPH1_Mt0_td9" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td9&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Certificación</td><td id="ctl00_CPH1_Mt0_td4" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td4&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Compromiso Anual</td><td id="ctl00_CPH1_Mt0_TableCell1" title="Ejecución de Gastos en las diferentes fases" colspan="3">
+                                Ejecución
+                                </td><td id="ctl00_CPH1_Mt0_td8" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td8&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:50px;cursor:hand;">Avance %&nbsp;
+                            </td>
+		</tr><tr id="ctl00_CPH1_Mt0_Row1">
+			<td id="ctl00_CPH1_Mt0_td5" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td5&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Atención de Compromiso Mensual&nbsp;
+                            </td><td id="ctl00_CPH1_Mt0_td6" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td6&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">Devengado&nbsp;
+                            </td><td id="ctl00_CPH1_Mt0_td7" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td7&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">Girado&nbsp;
+                            </td>
+		</tr>
+	</table>
+                            <table class="Data" cellspacing="0" cellpadding="1">
+                        
+                            <tr id="tr0" onclick='kCod="00";tr_clk(0, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left" style="width: auto">
+                                    00: RECURSOS ORDINARIOS
+                                    
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,376,148
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,376,148
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,172,240
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,172,240
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,166,103
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,166,003
+                                </td>
+                                <td style="white-space: nowrap; width: 100px">
+                                    2,166,003
+                                </td>
+                                <td style="white-space: nowrap; width: 50px">&nbsp;
+                                    91.2
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr1" onclick='kCod="07";tr_clk(1, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    07: FONDO DE COMPENSACION MUNICIPAL
+                                    
+                                </td>
+                                <td>
+                                    22,303,405
+                                </td>
+                                <td>
+                                    37,358,770
+                                </td>
+                                <td>
+                                    32,909,467
+                                </td>
+                                <td>
+                                    22,810,855
+                                </td>
+                                <td>
+                                    6,105,464
+                                </td>
+                                <td>
+                                    5,609,008
+                                </td>
+                                <td>
+                                    5,337,835
+                                </td>
+                                <td>&nbsp;
+                                    15.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr2" onclick='kCod="09";tr_clk(2, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    09: RECURSOS DIRECTAMENTE RECAUDADOS
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr3" onclick='kCod="13";tr_clk(3, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    13: DONACIONES Y TRANSFERENCIAS
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    2,163,072
+                                </td>
+                                <td>
+                                    2,163,072
+                                </td>
+                                <td>
+                                    2,163,072
+                                </td>
+                                <td>&nbsp;
+                                    36.1
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr4" onclick='kCod="18";tr_clk(4, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    18: CANON Y SOBRECANON, REGALIAS, RENTA DE ADUANAS Y PARTICIPACIONES
+                                    
+                                </td>
+                                <td>
+                                    4,233,620
+                                </td>
+                                <td>
+                                    6,858,796
+                                </td>
+                                <td>
+                                    491,245
+                                </td>
+                                <td>
+                                    491,180
+                                </td>
+                                <td>
+                                    490,849
+                                </td>
+                                <td>
+                                    486,849
+                                </td>
+                                <td>
+                                    486,849
+                                </td>
+                                <td>&nbsp;
+                                    7.1
+                                </td>
+                            </tr>
+                            
+                        
+                            </table>
+                        
+</body>

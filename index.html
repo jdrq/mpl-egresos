@@ -469,6 +469,97 @@ main{padding:20px 0 60px}
   .b1-donuts-row{grid-template-columns:1fr}
 }
 
+
+/* ════════════════════════════════════════════════════
+   BLOQUE 2 — Ranking  /  BLOQUE 3 — Top Proyectos
+════════════════════════════════════════════════════ */
+.b3-prom{
+  display:flex;align-items:center;justify-content:flex-end;
+  font-family:"Barlow Condensed";font-size:13px;font-weight:700;
+  color:var(--texto-mut);flex:0 0 auto;
+}
+.b3-prom strong{color:var(--rojo-osc);margin-left:5px;font-size:15px}
+
+/* ════════════════════════════════════════════════════
+   BLOQUES 4 — Proyectos en Riesgo
+════════════════════════════════════════════════════ */
+.riesgo-row td{ vertical-align:middle }
+.dev-cero{ color:#dc2626 !important; font-weight:800 !important }
+.pim-sin-ej{
+  background:rgba(252,165,165,.18);
+  color:#7f1d1d !important;font-weight:800 !important;
+}
+
+/* ════════════════════════════════════════════════════
+   BLOQUES 5 y 6 — Donuts de Rubro / Fuente
+════════════════════════════════════════════════════ */
+.rub-donuts-row{
+  display:flex;gap:12px;flex-wrap:nowrap;
+  justify-content:space-around;
+  flex:0 0 auto;padding:4px 0 8px;
+}
+.rub-donut-card{
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;min-width:100px;flex:1;
+}
+.rub-donut-label{
+  font-family:"Barlow Condensed";font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--texto-mut);
+  text-align:center;line-height:1.2;
+}
+.rub-donut-wrap{
+  position:relative;width:90px;height:90px;flex:0 0 auto;
+}
+.rub-donut-center{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+.rub-donut-pct{
+  font-family:"Barlow Condensed";font-size:15px;font-weight:800;line-height:1;
+}
+.rub-donut-sub{
+  font-size:8px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--texto-mut);
+}
+.rub-donut-pim{
+  font-size:10px;color:var(--texto-mut);font-weight:600;text-align:center;
+}
+/* Donut total grande a la derecha */
+.rub-donut-card.total-card .rub-donut-wrap{width:110px;height:110px}
+.rub-donut-card.total-card .rub-donut-pct{font-size:20px}
+.rub-donut-card.total-card .rub-donut-label{
+  color:var(--rojo-osc);font-size:12px;font-weight:800
+}
+
+/* ════════════════════════════════════════════════════
+   BLOQUE 8 — Histórico mejorado
+════════════════════════════════════════════════════ */
+.hist-kpis{
+  display:flex;gap:10px;flex-wrap:nowrap;
+  flex:0 0 auto;overflow-x:auto;
+}
+.hist-card{
+  background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;
+  padding:10px 14px;min-width:110px;flex:1;
+  border-top:3px solid #e5e7eb;
+}
+.hist-card.cur{
+  background:#fef3c7;border-color:#fbbf24;border-top-color:#f59e0b;
+}
+.hist-label{
+  font-size:10px;color:#6b7280;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;
+}
+.hist-val{
+  font-family:"Barlow Condensed";font-size:18px;font-weight:800;
+  color:#1f2937;margin-top:3px;
+}
+.hist-card.cur .hist-val{color:#92400e}
+.hist-var{font-size:10px;margin-top:2px}
+
+/* Tabla columnas con fondo resaltado */
+.col-highlight{ background:rgba(255,200,120,.15) }
+
 </style>
 </head>
 <body>
@@ -542,6 +633,8 @@ main{padding:20px 0 60px}
           <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">categoria.xls</span></div>
           <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">proyecto.xls</span></div>
           <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">ranking.xls</span></div>
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">fuente.xls</span></div>
+          <div class="file-item"><span class="fi-wait">○</span><span class="fi-name">funcion.xls</span></div>
         </div>
         <div style="font-size:11px;color:var(--texto-mut);margin-top:10px">
           Carga los 4 archivos exportados desde Consulta Amigable MEF (Gastos · Solo Proyectos).
@@ -690,71 +783,67 @@ main{padding:20px 0 60px}
   </div>
 
   <!-- ══════════════════════════════════════
-       SLIDE 2 — RUBRO
+       SLIDE 2 — RANKING DEPARTAMENTAL
   ══════════════════════════════════════ -->
   <div class="slide">
     <div class="slide-header">
-      <div class="slide-titulo">
-        <span class="slide-num">02</span>
-        Ejecución por Rubro de Financiamiento
-      </div>
-      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b2fecha">2026</span></div>
+      <div class="slide-titulo"><span class="slide-num">02</span>Ranking Departamental — Ejecución de Inversiones</div>
+      <div class="slide-meta">Gobiernos Locales · Dpto. Lambayeque · <span id="b2fecha">2026</span></div>
     </div>
     <div class="slide-subband">
-      <span class="sb-label">Clasificación por fuente de financiamiento del gasto</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+      <span class="sb-label">Por devengado en % · ordenado por avance</span>
+      <span class="sb-fecha">Solo Proyectos · Acumulado Enero–Julio 2026</span>
     </div>
     <div class="slide-body">
+      <div class="rank-highlight" id="b2highlight">Carga ranking.xls para ver la posición de la MPL.</div>
       <div class="tbl-wrap">
         <table class="pdf-table">
           <thead><tr>
-            <th class="left" style="min-width:280px">Rubro</th>
+            <th class="ctr" style="width:44px">#</th>
+            <th class="left" style="min-width:260px">Municipalidad</th>
             <th class="num">PIA (S/)</th>
             <th class="num">PIM (S/)</th>
-            <th class="num">Certificación (S/)</th>
             <th class="num">Devengado (S/)</th>
-            <th class="num">Por Devengar (S/)</th>
-            <th class="num" style="min-width:140px">% Avance</th>
+            <th class="num" style="min-width:160px">Avance %</th>
           </tr></thead>
-          <tbody id="b2tbody"><tr><td colspan="7" class="vacio">Carga rubro.xls para ver los datos.</td></tr></tbody>
-          <tfoot id="b2tfoot"></tfoot>
+          <tbody id="b2tbody"><tr><td colspan="6" class="vacio">Carga ranking.xls para ver los datos.</td></tr></tbody>
         </table>
       </div>
     </div>
     <div class="slide-footer">
-      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos · Dpto. Lambayeque</span>
       <span class="sf-logo">MPL · EGRESOS 2026</span>
     </div>
   </div>
 
   <!-- ══════════════════════════════════════
-       SLIDE 3 — CATEGORÍA PRESUPUESTAL
+       SLIDE 3 — TOP PROYECTOS POR DEVENGADO
   ══════════════════════════════════════ -->
   <div class="slide">
     <div class="slide-header">
-      <div class="slide-titulo">
-        <span class="slide-num">03</span>
-        Ejecución por Categoría Presupuestal
-      </div>
+      <div class="slide-titulo"><span class="slide-num">03</span>Top Proyectos por Devengado</div>
       <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b3fecha">2026</span></div>
     </div>
     <div class="slide-subband">
-      <span class="sb-label">Programas presupuestales y APNOP</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+      <span class="sb-label">Top 10 proyectos con mayor devengado acumulado</span>
+      <span class="sb-fecha">Solo Proyectos · Acumulado Enero–Julio 2026</span>
     </div>
     <div class="slide-body">
+      <div class="b3-prom" id="b3prom"></div>
       <div class="tbl-wrap">
         <table class="pdf-table">
           <thead><tr>
-            <th class="left" style="min-width:300px">Categoría Presupuestal</th>
+            <th class="ctr" style="width:32px">N°</th>
+            <th class="left" style="min-width:320px">Proyecto</th>
+            <th class="num">PIA (S/)</th>
             <th class="num">PIM (S/)</th>
             <th class="num">Certificación (S/)</th>
-            <th class="num">Comp. Anual (S/)</th>
+            <th class="num" style="background:rgba(255,220,180,.25)">Por Certif. (S/)</th>
             <th class="num">Devengado (S/)</th>
-            <th class="num">Girado (S/)</th>
-            <th class="num" style="min-width:140px">% Avance</th>
+            <th class="num" style="background:rgba(255,220,180,.25)">Por Dev. (S/)</th>
+            <th class="num" style="min-width:140px">Avance %</th>
           </tr></thead>
-          <tbody id="b3tbody"><tr><td colspan="7" class="vacio">Carga categoria.xls para ver los datos.</td></tr></tbody>
+          <tbody id="b3tbody"><tr><td colspan="9" class="vacio">Carga proyecto.xls para ver los datos.</td></tr></tbody>
           <tfoot id="b3tfoot"></tfoot>
         </table>
       </div>
@@ -766,33 +855,34 @@ main{padding:20px 0 60px}
   </div>
 
   <!-- ══════════════════════════════════════
-       SLIDE 4 — PROYECTOS
+       SLIDE 4 — PROYECTOS EN RIESGO
   ══════════════════════════════════════ -->
   <div class="slide">
-    <div class="slide-header">
-      <div class="slide-titulo">
-        <span class="slide-num">04</span>
-        Proyectos de Inversión
-      </div>
-      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b4fecha">2026</span></div>
+    <div class="slide-header" style="background:#5c1a1a">
+      <div class="slide-titulo"><span class="slide-num" style="background:rgba(255,255,255,.15)">04</span>Proyectos con Ejecución en Riesgo</div>
+      <div class="slide-meta">Mayor PIM asignado sin devengar · <span id="b4fecha">2026</span></div>
     </div>
     <div class="slide-subband">
-      <span class="sb-label">Detalle por proyecto · ordenado por devengado</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+      <span class="sb-label" style="border-left-color:var(--rojo)">Top 10 proyectos con PIM asignado y 0% de devengado</span>
+      <span class="sb-fecha" id="b4total">Proyectos identificados: cargando…</span>
     </div>
     <div class="slide-body">
+      <div class="nota-bloque" style="background:#fff5f5;border-color:#fca5a5;color:#7f1d1d">
+        ⚠ <strong>Alerta de gestión:</strong> Proyectos con presupuesto (PIM) asignado y 0% de devengado a la fecha. Requieren seguimiento prioritario.
+      </div>
       <div class="tbl-wrap">
         <table class="pdf-table">
           <thead><tr>
-            <th class="ctr" style="width:36px">N°</th>
-            <th class="left" style="width:70px">Código</th>
-            <th class="left" style="min-width:300px">Proyecto</th>
+            <th class="ctr" style="width:32px">N°</th>
+            <th class="left" style="min-width:320px">Proyecto</th>
+            <th class="num">PIA (S/)</th>
             <th class="num">PIM (S/)</th>
             <th class="num">Certificación (S/)</th>
-            <th class="num">Devengado (S/)</th>
-            <th class="num" style="min-width:140px">% Avance</th>
+            <th class="num">% Cert</th>
+            <th class="num" style="color:#dc2626">Devengado (S/)</th>
+            <th class="num" style="background:rgba(252,165,165,.2)">PIM Sin Ejecutar (S/)</th>
           </tr></thead>
-          <tbody id="b4tbody"><tr><td colspan="7" class="vacio">Carga proyecto.xls para ver los datos.</td></tr></tbody>
+          <tbody id="b4tbody"><tr><td colspan="8" class="vacio">Carga proyecto.xls para ver los datos.</td></tr></tbody>
           <tfoot id="b4tfoot"></tfoot>
         </table>
       </div>
@@ -804,55 +894,136 @@ main{padding:20px 0 60px}
   </div>
 
   <!-- ══════════════════════════════════════
-       SLIDE 5 — RANKING MUNICIPALIDADES
+       SLIDE 5 — RUBRO (donuts + tabla)
   ══════════════════════════════════════ -->
   <div class="slide">
     <div class="slide-header">
-      <div class="slide-titulo">
-        <span class="slide-num">05</span>
-        Ranking de Municipalidades — Dpto. Lambayeque
-      </div>
-      <div class="slide-meta" id="b5meta">38 municipalidades · ordenado por % avance · 2026</div>
+      <div class="slide-titulo"><span class="slide-num">05</span>Ejecución Presupuestal por Rubro</div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b5fecha">2026</span></div>
     </div>
     <div class="slide-subband">
-      <span class="sb-label">Comparativo de ejecución a nivel departamental</span>
-      <span class="sb-fecha">Acumulado Enero–Julio 2026 · Solo Proyectos</span>
+      <span class="sb-label">Clasificación por fuente de financiamiento del gasto</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
     </div>
     <div class="slide-body">
-      <div class="rank-highlight" id="b5highlight">
-        Carga ranking.xls para ver la posición de la Municipalidad Provincial de Lambayeque.
-      </div>
+      <!-- Donuts por rubro -->
+      <div class="rub-donuts-row" id="b5donuts"></div>
+      <!-- Tabla rubro -->
       <div class="tbl-wrap">
         <table class="pdf-table">
           <thead><tr>
-            <th class="ctr" style="width:44px">#</th>
-            <th class="left" style="min-width:280px">Municipalidad</th>
+            <th class="ctr" style="width:36px">Cód.</th>
+            <th class="left" style="min-width:220px">Rubro</th>
+            <th class="num">PIA (S/)</th>
             <th class="num">PIM (S/)</th>
+            <th class="num">% PIM</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">% Cert</th>
+            <th class="num" style="background:rgba(255,220,180,.25)">Por Certif.</th>
+            <th class="num">Compromiso (S/)</th>
+            <th class="num">% Comp</th>
             <th class="num">Devengado (S/)</th>
-            <th class="num" style="min-width:150px">% Avance</th>
+            <th class="num">Por Devengar (S/)</th>
+            <th class="num" style="min-width:120px">Avance %</th>
           </tr></thead>
-          <tbody id="b5tbody"><tr><td colspan="5" class="vacio">Carga ranking.xls para ver los datos.</td></tr></tbody>
+          <tbody id="b5tbody"><tr><td colspan="13" class="vacio">Carga rubro.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b5tfoot"></tfoot>
         </table>
-      </div>
-      <div class="nota-bloque" id="b5nota" style="display:none">
-        <strong>Nota:</strong> El ranking incluye únicamente proyectos de inversión (Solo Proyectos). Fuente: MEF Consulta Amigable de Gastos, Dpto. Lambayeque.
       </div>
     </div>
     <div class="slide-footer">
-      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos · Dpto. Lambayeque</span>
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
       <span class="sf-logo">MPL · EGRESOS 2026</span>
     </div>
   </div>
 
   <!-- ══════════════════════════════════════
-       SLIDE 6 — HISTÓRICO ENE–JUL
+       SLIDE 6 — FUENTE (donuts + tabla)
   ══════════════════════════════════════ -->
-  <div class="slide" id="b6bloque">
+  <div class="slide">
     <div class="slide-header">
-      <div class="slide-titulo">
-        <span class="slide-num">06</span>
-        Comparativo Histórico — Devengado Ene–Jul
+      <div class="slide-titulo"><span class="slide-num">06</span>Ejecución Presupuestal por Fuente de Financiamiento</div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b6fecha">2026</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Clasificación por fuente de financiamiento</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026</span>
+    </div>
+    <div class="slide-body">
+      <div class="rub-donuts-row" id="b6donuts"></div>
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="ctr" style="width:36px">Cód.</th>
+            <th class="left" style="min-width:220px">Fuente de Financiamiento</th>
+            <th class="num">PIA (S/)</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">% PIM</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">% Cert</th>
+            <th class="num" style="background:rgba(255,220,180,.25)">Por Certif.</th>
+            <th class="num">Compromiso (S/)</th>
+            <th class="num">% Comp</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num">Por Devengar (S/)</th>
+            <th class="num" style="min-width:120px">Avance %</th>
+          </tr></thead>
+          <tbody id="b6tbody"><tr><td colspan="13" class="vacio">Carga fuente.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b6tfoot"></tfoot>
+        </table>
       </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 7 — FUNCIONES A NIVEL PLIEGO
+  ══════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div class="slide-titulo"><span class="slide-num">07</span>Funciones a Nivel Pliego</div>
+      <div class="slide-meta">Mun. Prov. Lambayeque · <span id="b7fecha">2026</span></div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label">Ejecución presupuestal por función del gasto</span>
+      <span class="sb-fecha">Acumulado Enero–Julio 2026 · Solo Proyectos</span>
+    </div>
+    <div class="slide-body">
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="left" style="min-width:260px">Función</th>
+            <th class="num">PIA (S/)</th>
+            <th class="num">PIM (S/)</th>
+            <th class="num">% PIM</th>
+            <th class="num">Certificación (S/)</th>
+            <th class="num">% Cert</th>
+            <th class="num">Compromiso (S/)</th>
+            <th class="num">% Comp</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="num">Por Devengar (S/)</th>
+            <th class="num" style="min-width:130px">Avance %</th>
+          </tr></thead>
+          <tbody id="b7tbody"><tr><td colspan="11" class="vacio">Carga funcion.xls para ver los datos.</td></tr></tbody>
+          <tfoot id="b7tfoot"></tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 8 — HISTÓRICO ENE–JUL
+  ══════════════════════════════════════ -->
+  <div class="slide" id="b8bloque">
+    <div class="slide-header">
+      <div class="slide-titulo"><span class="slide-num">08</span>Comparativo Histórico — Devengado Ene–Jul</div>
       <div class="slide-meta">Mun. Prov. Lambayeque · 2021–2026</div>
     </div>
     <div class="slide-subband">
@@ -860,9 +1031,9 @@ main{padding:20px 0 60px}
       <span class="sb-fecha">2021–2025: histórico anual · 2026: acumulado diario</span>
     </div>
     <div class="slide-body">
-      <div class="hist-kpis" id="b6kpis"></div>
-      <div class="chart-wrap">
-        <canvas id="b6chart"></canvas>
+      <div class="hist-kpis" id="b8kpis"></div>
+      <div class="chart-wrap" style="flex:1;min-height:220px">
+        <canvas id="b8chart"></canvas>
       </div>
     </div>
     <div class="slide-footer">
@@ -870,6 +1041,7 @@ main{padding:20px 0 60px}
       <span class="sf-logo">MPL · EGRESOS 2026</span>
     </div>
   </div>
+
 
 </div><!-- /wrap -->
 </main>

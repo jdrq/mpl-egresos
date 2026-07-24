@@ -262,7 +262,7 @@ function renderB1() {
 // B2 — Ranking Departamental
 // ══════════════════════════════════════════════════════════════
 function renderB2() {
-  const d=datos.ranking, tbody=$("b2tbody"), hl=$("b2highlight");
+  const d=datos.ranking, tbody=$("b2tbody");
   if(!tbody) return;
   if(!d){ tbody.innerHTML=`<tr><td colspan="6" class="vacio">Carga ranking.xls para ver los datos.</td></tr>`; return; }
 
@@ -280,22 +280,7 @@ function renderB2() {
   const porMonto=[...muns].sort((a,b)=>b.dev-a.dev);
   const posMonto=mpl?porMonto.indexOf(mpl)+1:null;
 
-  // Highlight: fecha ya la pone rellenarFechas()
-  // Texto izquierdo: posición MPL  |  Derecha: % avance
-  const hlTexto=$("b2hl-texto"), hlAvance=$("b2hl-avance");
-  if(mpl){
-    if(hlTexto) hlTexto.innerHTML=
-      `&#128269; <strong>Municipalidad Provincial de Lambayeque</strong> — `+
-      `Puesto <strong>${pos}° de ${muns.length}</strong> por % de avance · `+
-      `Puesto <strong>${posMonto}° de ${muns.length}</strong> por monto devengado `+
-      `(${fmtCompacto(mpl.dev)})`;
-    if(hlAvance) {
-      const pctStr=mpl.pct!==null?mpl.pct.toFixed(1)+"%":"N/A";
-      const col=mpl.pct>=50?"var(--verde)":mpl.pct>=30?"var(--amarillo-s)":"var(--rojo-osc)";
-      hlAvance.textContent="Avance: "+pctStr;
-      hlAvance.style.color=col;
-    }
-  }
+  // Bloque highlight eliminado por diseño
 
   tbody.innerHTML=sorted.map((m,i)=>{
     const pos=i+1;
@@ -342,12 +327,16 @@ function renderB3() {
     </tr>`;
   }).join("");
 
-  const tot={pim:top10.reduce((s,r)=>s+r.pim,0), cert:top10.reduce((s,r)=>s+r.cert,0),
-             dev:top10.reduce((s,r)=>s+r.dev,0)};
+  const tot={
+    pia:top10.reduce((s,r)=>s+r.pia,0),
+    pim:top10.reduce((s,r)=>s+r.pim,0),
+    cert:top10.reduce((s,r)=>s+r.cert,0),
+    dev:top10.reduce((s,r)=>s+r.dev,0)
+  };
   const totPct=tot.pim>0?tot.dev/tot.pim*100:null;
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
-    <td class="num">—</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.pia)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.pim)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(tot.cert)}</td>
     <td class="num col-highlight" style="color:#92400e;font-weight:800">${fmtN(tot.pim-tot.cert)}</td>
@@ -385,10 +374,12 @@ function renderB4() {
     </tr>`;
   }).join("");
 
-  const totPIM=riesgo.reduce((s,r)=>s+r.pim,0), totCert=riesgo.reduce((s,r)=>s+r.cert,0);
+  const totPIA=riesgo.reduce((s,r)=>s+r.pia,0);
+  const totPIM=riesgo.reduce((s,r)=>s+r.pim,0);
+  const totCert=riesgo.reduce((s,r)=>s+r.cert,0);
   tfoot.innerHTML=`<tr>
     <td colspan="2" style="font-weight:800;font-family:'Barlow Condensed';text-transform:uppercase">Total Top 10</td>
-    <td class="num">—</td>
+    <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totPIA)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totPIM)}</td>
     <td class="num" style="color:var(--rojo-osc);font-weight:800">${fmtN(totCert)}</td>
     <td class="num">${totPIM>0?(totCert/totPIM*100).toFixed(1)+"%":"—"}</td>

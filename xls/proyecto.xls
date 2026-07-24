@@ -144,11 +144,76 @@ body
 </style><body>
 	<table id="hd">
 		<tr>
-			<td colspan="9"><div class='title'><img src='../Images/Transparencia.gif' alt='' height='40' /><br /><br />Consulta Amigable</div><div class='subtitle'>Consulta de Ejecución del Gasto</div><br /><div class='fecha'>Fecha de la Consulta: 23-julio-2026</div><br /><b>Año de Ejecución: <span class='value'>2026</span><br />Incluye: <span class='value'>Sólo Proyectos</span></b></td>
+			<td colspan="9"><div class='title'><img src='../Images/Transparencia.gif' alt='' height='40' /><br /><br />Consulta Amigable</div><div class='subtitle'>Consulta de Ejecución del Gasto</div><br /><div class='fecha'>Fecha de la Consulta: 24-julio-2026</div><br /><b>Año de Ejecución: <span class='value'>2026</span><br />Incluye: <span class='value'>Sólo Proyectos</span></b></td>
 		</tr>
 	</table>
 	
                     <table class="History" cellspacing="0" cellpadding="1">
+                
+                    <tr align="right">
+                        
+                        <td align="left" style="font-size: 7pt; width: auto">
+                            TOTAL
+                            
+                            
+                            
+                            
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            48,594,496,937
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            67,707,662,655
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            53,874,824,014
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            41,983,550,744
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            35,107,065,474
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            30,172,954,750
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap">
+                            28,643,378,306
+                        </td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;44.6</td>
+                    </tr>
+                
+                    <tr align="right" class="alt">
+                        
+                        <td align="left" style="font-size: 7pt; width: auto" tabindex="9">
+                            Nivel de Gobierno M: GOBIERNOS LOCALES
+                            
+                            
+                            
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="10">
+                            14,579,409,942
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="11">
+                            28,514,643,012
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="12">
+                            21,313,959,933
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="13">
+                            14,833,035,998
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="14">
+                            12,832,381,552
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="15">
+                            10,345,749,161
+                        </td>
+                        <td align="right" style="width: 100px; white-space: nowrap" tabindex="16">
+                            9,724,754,157
+                        </td>
+                        <td align="right" style="width: 50px; white-space: nowrap" tabindex="17">&nbsp;36.3</td>
+                    </tr>
                 
                     <tr align="right">
                         
@@ -163,24 +228,24 @@ body
                             14,579,409,942
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            28,145,482,833
+                            28,511,998,891
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            21,224,249,428
+                            21,311,560,712
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            14,795,581,940
+                            14,832,964,826
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            12,789,091,017
+                            12,832,310,380
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            10,304,556,188
+                            10,345,731,013
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            9,691,242,216
+                            9,724,736,008
                         </td>
-                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;36.6</td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;36.3</td>
                     </tr>
                 
                     <tr align="right" class="alt">
@@ -201,57 +266,24 @@ body
                             390,343,909
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap" tabindex="13">
-                            264,258,900
+                            264,805,423
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap" tabindex="14">
-                            182,362,819
+                            182,339,437
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap" tabindex="15">
-                            154,798,867
+                            154,854,566
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap" tabindex="16">
-                            150,864,716
+                            150,869,716
                         </td>
                         <td align="right" style="width: 50px; white-space: nowrap" tabindex="17">&nbsp;30.0</td>
-                    </tr>
-                
-                    <tr align="right">
-                        
-                        <td align="left" style="font-size: 7pt; width: auto">
-                            Municipalidad 140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
-                            
-                            
-                            
-                            
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            28,913,173
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            52,600,714
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            41,579,952
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            31,481,275
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            10,932,489
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            10,431,933
-                        </td>
-                        <td align="right" style="width: 100px; white-space: nowrap">
-                            10,160,759
-                        </td>
-                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;19.8</td>
                     </tr>
                 
                     </table>
                 <table id="ctl00_CPH1_Mt0" class="MapTable" style="width:100%;">
 		<tr id="ctl00_CPH1_Mt0_Row0">
-			<td id="ctl00_CPH1_Mt0_td1" title="Concepto" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td1&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="cursor:hand;">Proyecto</td><td id="ctl00_CPH1_Mt0_td2" title="Presupuesto Institucional de Apertura" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td2&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIA</td><td id="ctl00_CPH1_Mt0_td3" title="Presupuesto Institucional Modificado" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td3&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIM</td><td id="ctl00_CPH1_Mt0_td9" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td9&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Certificación</td><td id="ctl00_CPH1_Mt0_td4" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td4&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Compromiso Anual</td><td id="ctl00_CPH1_Mt0_TableCell1" title="Ejecución de Gastos en las diferentes fases" colspan="3">
+			<td id="ctl00_CPH1_Mt0_td1" title="Concepto" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td1&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="cursor:hand;">Municipalidad</td><td id="ctl00_CPH1_Mt0_td2" title="Presupuesto Institucional de Apertura" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td2&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIA</td><td id="ctl00_CPH1_Mt0_td3" title="Presupuesto Institucional Modificado" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td3&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;white-space:nowrap;cursor:hand;">PIM</td><td id="ctl00_CPH1_Mt0_td9" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td9&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Certificación</td><td id="ctl00_CPH1_Mt0_td4" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td4&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:100px;cursor:hand;">Compromiso Anual</td><td id="ctl00_CPH1_Mt0_TableCell1" title="Ejecución de Gastos en las diferentes fases" colspan="3">
                                 Ejecución
                                 </td><td id="ctl00_CPH1_Mt0_td8" rowspan="2" onclick="__doPostBack(&#39;ctl00$CPH1$Mt0$td8&#39;,&#39;&#39;)" onmouseover="this.style.backgroundColor = &#39;#568AC1&#39;;" onmouseout="this.style.backgroundColor = &#39;&#39;;" style="width:50px;cursor:hand;">Avance %&nbsp;
                             </td>
@@ -264,883 +296,339 @@ body
 	</table>
                             <table class="Data" cellspacing="0" cellpadding="1">
                         
-                            <tr id="tr0" onclick='kCod="2001621";tr_clk(0, this)'
+                            <tr id="tr0" onclick='kCod="301212";tr_clk(0, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left" style="width: auto">
-                                    2001621: ESTUDIOS DE PRE-INVERSION
+                                    140101-301212: MUNICIPALIDAD PROVINCIAL DE CHICLAYO
                                     
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    16,542,871
+                                    24,788,128
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    839,864
+                                    36,464,141
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    396,882
+                                    32,156,887
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    396,882
+                                    29,616,278
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    396,882
+                                    18,849,658
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    188,413
+                                    18,574,646
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    188,413
+                                    18,570,614
                                 </td>
                                 <td style="white-space: nowrap; width: 50px">&nbsp;
-                                    22.4
+                                    50.9
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr1" onclick='kCod="2160704";tr_clk(1, this)'
+                            <tr class="alt" id="tr1" onclick='kCod="301213";tr_clk(1, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2160704: MEJORAMIENTO E IMPLEMENTACION DE COMPLEJO DEPORTIVO SAN JUAN MASIAS DEL PUEBLO JOVEN SAN MARTIN DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140102-301213: MUNICIPALIDAD DISTRITAL DE CHONGOYAPE
                                     
                                 </td>
                                 <td>
-                                    0
+                                    100,000
                                 </td>
                                 <td>
-                                    10,729,799
+                                    2,230,795
                                 </td>
                                 <td>
-                                    10,665,651
+                                    1,326,314
                                 </td>
                                 <td>
-                                    9,653,756
+                                    574,429
                                 </td>
                                 <td>
-                                    0
+                                    574,429
                                 </td>
                                 <td>
-                                    0
+                                    371,437
                                 </td>
                                 <td>
-                                    0
+                                    371,437
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    16.7
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr2" onclick='kCod="2217896";tr_clk(2, this)'
+                            <tr class="alt" id="tr2" onclick='kCod="301214";tr_clk(2, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2217896: CONSTRUCCION DE PUENTES DE CONCRETO EN DESAGUADERO COCODRILO, CHEPITO LAGUNA, DESAGUADERO SAN FRANCISCO CASERIO LOS POSITOS DISTRITO DE TUCUME, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140103-301214: MUNICIPALIDAD DISTRITAL DE ETEN
                                     
                                 </td>
                                 <td>
-                                    0
+                                    162,606
                                 </td>
                                 <td>
-                                    3,362
+                                    10,423,461
                                 </td>
                                 <td>
-                                    3,362
+                                    9,929,848
                                 </td>
                                 <td>
-                                    0
+                                    9,848,886
                                 </td>
                                 <td>
-                                    0
+                                    4,040,056
                                 </td>
                                 <td>
-                                    0
+                                    4,019,996
                                 </td>
                                 <td>
-                                    0
+                                    4,019,996
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    38.6
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr3" onclick='kCod="2255797";tr_clk(3, this)'
+                            <tr class="alt" id="tr3" onclick='kCod="301215";tr_clk(3, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2255797: CREACION DEL SERVICIO DE LA CAPACIDAD OPERATIVA DEL POOL DE MAQUINARIA PESADA PARA EL INSTITUTO VIAL PROV. MUNICIPAL DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140104-301215: MUNICIPALIDAD DISTRITAL DE ETEN PUERTO
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    673,990
+                                    2,737,039
                                 </td>
                                 <td>
-                                    673,990
+                                    552,413
                                 </td>
                                 <td>
-                                    673,990
+                                    552,413
                                 </td>
                                 <td>
-                                    673,990
+                                    552,413
                                 </td>
                                 <td>
-                                    673,990
+                                    252,570
                                 </td>
                                 <td>
-                                    673,990
+                                    252,570
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    9.2
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr4" onclick='kCod="2274699";tr_clk(4, this)'
+                            <tr class="alt" id="tr4" onclick='kCod="301216";tr_clk(4, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2274699: CREACION DEL PARQUE PRINCIPAL EN LA URBANIZACION LOS ROSALES DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140105-301216: MUNICIPALIDAD DISTRITAL DE JOSE LEONARDO ORTIZ
                                     
                                 </td>
                                 <td>
-                                    0
+                                    5,071,821
                                 </td>
                                 <td>
-                                    4,220
+                                    38,440,673
                                 </td>
                                 <td>
-                                    4,220
+                                    35,238,844
                                 </td>
                                 <td>
-                                    4,220
+                                    32,132,566
                                 </td>
                                 <td>
-                                    4,220
+                                    16,646,056
                                 </td>
                                 <td>
-                                    4,220
+                                    16,161,174
                                 </td>
                                 <td>
-                                    4,220
+                                    16,161,174
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    42.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr5" onclick='kCod="2282780";tr_clk(5, this)'
+                            <tr class="alt" id="tr5" onclick='kCod="301217";tr_clk(5, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2282780: MEJORAMIENTO DEL AGUA PARA RIEGO DE LOS CANALES LA MADRID - GRAU, LA MADRID Y GRAU LAMBAYEQUE, LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140106-301217: MUNICIPALIDAD DISTRITAL DE LA VICTORIA
                                     
                                 </td>
                                 <td>
-                                    0
+                                    16,707,627
                                 </td>
                                 <td>
-                                    8,000
+                                    36,704,019
                                 </td>
                                 <td>
-                                    8,000
+                                    26,383,919
                                 </td>
                                 <td>
-                                    8,000
+                                    25,394,093
                                 </td>
                                 <td>
-                                    8,000
+                                    25,326,301
                                 </td>
                                 <td>
-                                    8,000
+                                    17,335,698
                                 </td>
                                 <td>
-                                    8,000
+                                    15,232,949
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    47.2
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr6" onclick='kCod="2320360";tr_clk(6, this)'
+                            <tr class="alt" id="tr6" onclick='kCod="301218";tr_clk(6, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2320360: AMPLIACION DE REDES SECUNDARIAS 440220V CONEXIONES DOMICILIARIAS DE LOS SECTORES VALLEJOS Y SANDOVAL DEL CASERIO BRICEÑO, DISTRITO DE MOTUPE - LAMBAYEQUE - LAMBAYEQUE
+                                    140107-301218: MUNICIPALIDAD DISTRITAL DE LAGUNAS
                                     
                                 </td>
                                 <td>
-                                    0
+                                    9,356,561
                                 </td>
                                 <td>
-                                    38,638
+                                    17,045,361
                                 </td>
                                 <td>
-                                    38,637
+                                    16,372,280
                                 </td>
                                 <td>
-                                    38,637
+                                    6,330,117
                                 </td>
                                 <td>
-                                    38,637
+                                    6,330,117
                                 </td>
                                 <td>
-                                    38,637
+                                    6,330,115
                                 </td>
                                 <td>
-                                    38,637
+                                    6,330,115
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    37.1
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr7" onclick='kCod="2332453";tr_clk(7, this)'
+                            <tr class="alt" id="tr7" onclick='kCod="301219";tr_clk(7, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2332453: MEJORAMIENTO DEL SERVICIO DE AGUA PARA RIEGO DE LOS CANALES CADAPE, LA LADRILLERA Y LA COLORADA, DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    140108-301219: MUNICIPALIDAD DISTRITAL DE MONSEFU
                                     
                                 </td>
                                 <td>
-                                    0
+                                    2,660,787
                                 </td>
                                 <td>
-                                    8,000
+                                    4,104,554
                                 </td>
                                 <td>
-                                    8,000
+                                    3,270,670
                                 </td>
                                 <td>
-                                    8,000
+                                    2,919,995
                                 </td>
                                 <td>
-                                    8,000
+                                    2,787,058
                                 </td>
                                 <td>
-                                    8,000
+                                    2,538,658
                                 </td>
                                 <td>
-                                    8,000
+                                    2,538,658
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    61.9
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr8" onclick='kCod="2371968";tr_clk(8, this)'
+                            <tr class="alt" id="tr8" onclick='kCod="301220";tr_clk(8, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2371968: CREACION DEL LOCAL PARA USOS MULTIPLES, EN EL PUEBLO JOVEN FEDERICO VILLARREAL - DISTRITO DE TUCUME - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    140109-301220: MUNICIPALIDAD DISTRITAL DE NUEVA ARICA
                                     
                                 </td>
                                 <td>
-                                    0
+                                    902,164
                                 </td>
                                 <td>
-                                    7,000
+                                    7,777,859
                                 </td>
                                 <td>
-                                    7,000
+                                    7,344,839
                                 </td>
                                 <td>
-                                    7,000
+                                    881,437
                                 </td>
                                 <td>
-                                    7,000
+                                    881,437
                                 </td>
                                 <td>
-                                    7,000
+                                    881,437
                                 </td>
                                 <td>
-                                    7,000
+                                    881,437
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    11.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr9" onclick='kCod="2427167";tr_clk(9, this)'
+                            <tr class="alt" id="tr9" onclick='kCod="301221";tr_clk(9, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2427167: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA POTABLE Y SANEAMIENTO BASICO EN EL CASERIO SECTOR CINCO SIALUPE SIALUPE HUAMANTANGA SECTOR 05 DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    140110-301221: MUNICIPALIDAD DISTRITAL DE OYOTUN
                                     
                                 </td>
                                 <td>
-                                    0
+                                    613,463
                                 </td>
                                 <td>
-                                    3,235,069
+                                    15,678,562
                                 </td>
                                 <td>
-                                    24,600
+                                    12,497,132
                                 </td>
                                 <td>
-                                    24,600
+                                    12,496,972
                                 </td>
                                 <td>
-                                    24,600
+                                    12,496,972
                                 </td>
                                 <td>
-                                    24,600
+                                    9,203,505
                                 </td>
                                 <td>
-                                    24,600
-                                </td>
-                                <td>&nbsp;
-                                    0.8
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr10" onclick='kCod="2456608";tr_clk(10, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2456608: REPARACION DE VIAS VECINALES; EN EL(LA) TRAMO MARAVILLAS - TEPO - PAVA - HACIENDA VIEJA DISTRITO DE MOCHUMI, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    58,431
-                                </td>
-                                <td>
-                                    58,431
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr11" onclick='kCod="2456728";tr_clk(11, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2456728: MEJORAMIENTO DE PISTA Y VEREDA; EN EL (LA) PUEBLO JOVEN SANTA ROSA - A.H. EL ROSARIO - A.H. SANTO TORIBIO DE MOGROVEJO Y A.H. NAZARENO CAUTIIVO DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    2,172,240
-                                </td>
-                                <td>
-                                    10,546,561
-                                </td>
-                                <td>
-                                    10,546,560
-                                </td>
-                                <td>
-                                    10,294,103
-                                </td>
-                                <td>
-                                    6,330,277
-                                </td>
-                                <td>
-                                    6,330,177
-                                </td>
-                                <td>
-                                    6,330,177
-                                </td>
-                                <td>&nbsp;
-                                    60.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr12" onclick='kCod="2459073";tr_clk(12, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2459073: MEJORAMIENTO DEL SERVICIO DE EDUCACION INICIAL EN LA IEI N° 474 LA TINA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    145,477
-                                </td>
-                                <td>
-                                    145,477
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr13" onclick='kCod="2463027";tr_clk(13, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2463027: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN LA CARRETERA LAMBAYEQUE-SAN JOSE, TRAMO LAMBAYEQUE CRUCE CARRETERA CHICLAYO-SAN JOSE DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    466,593
-                                </td>
-                                <td>
-                                    466,592
-                                </td>
-                                <td>
-                                    466,592
-                                </td>
-                                <td>
-                                    466,592
-                                </td>
-                                <td>
-                                    466,592
-                                </td>
-                                <td>
-                                    466,592
-                                </td>
-                                <td>&nbsp;
-                                    100.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr14" onclick='kCod="2502688";tr_clk(14, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2502688: MEJORAMIENTO DEL SERVICIO DE ORNATO PUBLICO EN LOS OVALOS DE INGRESO PANAMERICANA NORTE A LA CIUDAD DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    2,778,477
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr15" onclick='kCod="2510496";tr_clk(15, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2510496: MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN EL CAMINO DE HERRADURA INICIA PANAMERICANA NORTE TERMINA CRUCE LAS JUNTAS DEL CASERIO LAS JUNTAS DEL DISTRITO DE PACORA - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    608,072
-                                </td>
-                                <td>
-                                    608,072
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr16" onclick='kCod="2538962";tr_clk(16, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2538962: CREACION DEL SERVICIO DE ESPACIOS PUBLICOS VERDES, PARQUE EN LA HABILITACION URBANA SAN FRANCISCO DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    679,806
-                                </td>
-                                <td>
-                                    35,642
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr17" onclick='kCod="2545314";tr_clk(17, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2545314: CREACION DEL SERVICIO DE AGUA POTABLE Y SANEAMIENTO BASICO AAHH. CESAR A. VALLEJO MENDOZA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    2,226,823
-                                </td>
-                                <td>
-                                    159,834
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr18" onclick='kCod="2559357";tr_clk(18, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2559357: CREACION DEL SERVICIO DE PRACTICA DEPORTIVA Y/O RECREATIVA EN EL C.P. CAPILLA SANTA ROSA SIALUPE BACA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    984,377
-                                </td>
-                                <td>
-                                    232,804
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr19" onclick='kCod="2562807";tr_clk(19, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2562807: CREACION DEL SERVICIO DE HABITABILIDAD INSTITUCIONAL EN EL LOCAL MUNICIPAL DEL CENTRO POBLADO CORRAL DE PIEDRA DEL DISTRITO DE SALAS - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE CORRAL DE PIEDRA DEL DISTRITO DE SALAS - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    370,897
-                                </td>
-                                <td>
-                                    370,896
-                                </td>
-                                <td>
-                                    353,828
-                                </td>
-                                <td>
-                                    182,426
-                                </td>
-                                <td>
-                                    163,078
-                                </td>
-                                <td>
-                                    163,078
-                                </td>
-                                <td>&nbsp;
-                                    44.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr20" onclick='kCod="2598972";tr_clk(20, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2598972: MEJORAMIENTO DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS RURALES EN PTO4 LOS CORONADOS PALO PARADO MUYFINCA SIALUPE BACA SECT HEREDIA SECT MARIPOSA PUEBLO NUEVO PTO 1 PARADERO MUYFINCA LA PIEDRA HUAMANTANGA SECT V SR DE LOS MILAGROS RAMA PEREZ SAN ANTONIO LOS CHIROQUE DISTRITO DE MOCHUMI DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    3,157,081
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr21" onclick='kCod="2605101";tr_clk(21, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2605101: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS RURALES EN LOS CASERIOS VI ETAPA DEL DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    5,756,750
-                                </td>
-                                <td>
-                                    5,756,750
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr22" onclick='kCod="2607525";tr_clk(22, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2607525: CONSTRUCCION DE AMBIENTE DE RESIDENCIA Y VESTUARIOS Y/O SSHH DE USUARIOS; EN EL(LA) COMISARIA RURAL SAN MARTIN DE PORRES, DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>
-                                    3,717
-                                </td>
-                                <td>&nbsp;
-                                    100.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr23" onclick='kCod="2612932";tr_clk(23, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2612932: CONSTRUCCION DE PAVIMENTO, VEREDA Y SARDINEL; EN EL(LA) CALLE SANTA ROSA ENTRE CALLE SANTA CECILIA Y CALLE MICAELA BASTIDAS DE OLMOS, DISTRITO DE OLMOS, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    1,796,505
-                                </td>
-                                <td>
-                                    1,796,504
-                                </td>
-                                <td>
-                                    1,712,131
-                                </td>
-                                <td>
-                                    160,252
-                                </td>
-                                <td>
-                                    160,252
-                                </td>
-                                <td>
-                                    160,252
-                                </td>
-                                <td>&nbsp;
-                                    8.9
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr24" onclick='kCod="2627349";tr_clk(24, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2627349: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VIAL INTERURBANA EN EL CAMINO VECINAL LA-568 SECTOR MI PERÙ EN EL TRAMO DE LA PROGRESIVA 0+000 KM AL 3+595.82 KM, UBICADO EN EL CASERIO LOS BANCES DISTRITO DE PACORA DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    1,380,139
-                                </td>
-                                <td>
-                                    16,160
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr25" onclick='kCod="2647798";tr_clk(25, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2647798: REPARACION DE VIAS DE ACCESO; EN EL(LA) PRINCIPALES CALLES DEL PUEBLO JOVEN SAN MARTIN DEL DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    2,052,312
-                                </td>
-                                <td>
-                                    1,597,098
-                                </td>
-                                <td>
-                                    1,510,415
-                                </td>
-                                <td>
-                                    1,447,436
-                                </td>
-                                <td>
-                                    1,205,273
-                                </td>
-                                <td>
-                                    1,175,353
+                                    9,196,506
                                 </td>
                                 <td>&nbsp;
                                     58.7
@@ -1148,546 +636,954 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr26" onclick='kCod="2653025";tr_clk(26, this)'
+                            <tr class="alt" id="tr10" onclick='kCod="301222";tr_clk(10, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2653025: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE URBANO Y MEJORAMIENTO DEL SERVICIO DE ALCANTARILLADO EN LA ASOCIACION PRO VIVIENDA VIRGEN DE FATIMA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140111-301222: MUNICIPALIDAD DISTRITAL DE PICSI
                                     
                                 </td>
                                 <td>
-                                    0
+                                    3,542,772
                                 </td>
                                 <td>
-                                    1,752,530
+                                    5,191,255
                                 </td>
                                 <td>
-                                    1,752,529
+                                    4,408,529
                                 </td>
                                 <td>
-                                    1,659,254
+                                    4,343,938
                                 </td>
                                 <td>
-                                    0
+                                    3,749,727
                                 </td>
                                 <td>
-                                    0
+                                    3,088,629
                                 </td>
                                 <td>
-                                    0
+                                    3,079,032
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    59.5
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr27" onclick='kCod="2655230";tr_clk(27, this)'
+                            <tr class="alt" id="tr11" onclick='kCod="301223";tr_clk(11, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2655230: REPARACION DE CELDAS PARA RESIDUOS; EN EL(LA) CIUDAD DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140112-301223: MUNICIPALIDAD DISTRITAL DE PIMENTEL
                                     
                                 </td>
                                 <td>
-                                    0
+                                    9,882,594
                                 </td>
                                 <td>
-                                    491,246
+                                    19,669,472
                                 </td>
                                 <td>
-                                    491,245
+                                    17,946,436
                                 </td>
                                 <td>
-                                    491,180
+                                    9,006,721
                                 </td>
                                 <td>
-                                    490,849
+                                    1,980,449
                                 </td>
                                 <td>
-                                    486,849
+                                    1,784,319
                                 </td>
                                 <td>
-                                    486,849
+                                    1,784,319
                                 </td>
                                 <td>&nbsp;
-                                    99.1
+                                    9.1
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr28" onclick='kCod="2656036";tr_clk(28, this)'
+                            <tr class="alt" id="tr12" onclick='kCod="301224";tr_clk(12, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2656036: REPARACION DE LOSA DEPORTIVA Y SARDINEL; ADQUISICION DE JUEGOS INFANTILES E INCLUSIVOS; CONSTRUCCION DE VEREDA; ADEMAS DE OTROS ACTIVOS EN EL(LA) PARQUE PRINCIPAL DEL PUEBLO JOVEN SAN MARTIN DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140113-301224: MUNICIPALIDAD DISTRITAL DE REQUE
                                     
                                 </td>
                                 <td>
-                                    449,183
+                                    245,852
                                 </td>
                                 <td>
-                                    1,198,443
+                                    1,474,988
                                 </td>
                                 <td>
-                                    32,000
+                                    775,429
                                 </td>
                                 <td>
-                                    32,000
+                                    424,278
                                 </td>
                                 <td>
-                                    32,000
+                                    404,345
                                 </td>
                                 <td>
-                                    32,000
+                                    232,220
                                 </td>
                                 <td>
-                                    32,000
+                                    232,220
                                 </td>
                                 <td>&nbsp;
-                                    2.7
+                                    15.7
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr29" onclick='kCod="2664884";tr_clk(29, this)'
+                            <tr class="alt" id="tr13" onclick='kCod="301225";tr_clk(13, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2664884: CREACION DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS URBANAS EN AA.HH. LA ESTANCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140114-301225: MUNICIPALIDAD DISTRITAL DE SANTA ROSA
                                     
                                 </td>
                                 <td>
-                                    248,806
+                                    333,498
                                 </td>
                                 <td>
-                                    248,806
+                                    2,959,150
                                 </td>
                                 <td>
-                                    0
+                                    2,363,445
                                 </td>
                                 <td>
-                                    0
+                                    2,340,882
                                 </td>
                                 <td>
-                                    0
+                                    1,551,863
                                 </td>
                                 <td>
-                                    0
+                                    1,435,265
                                 </td>
                                 <td>
-                                    0
+                                    1,326,610
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    48.5
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr30" onclick='kCod="2666562";tr_clk(30, this)'
+                            <tr class="alt" id="tr14" onclick='kCod="301226";tr_clk(14, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2666562: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE URBANO Y MEJORAMIENTO DEL SERVICIO DE ALCANTARILLADO EN A.A.H.H. LA ESTANCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140115-301226: MUNICIPALIDAD DISTRITAL DE ZAÑA
                                     
                                 </td>
                                 <td>
-                                    373,287
+                                    2,078,222
                                 </td>
                                 <td>
-                                    441,121
+                                    11,414,146
                                 </td>
                                 <td>
-                                    398,391
+                                    10,772,612
                                 </td>
                                 <td>
-                                    0
+                                    5,686,030
                                 </td>
                                 <td>
-                                    0
+                                    5,686,030
                                 </td>
                                 <td>
-                                    0
+                                    5,611,650
                                 </td>
                                 <td>
-                                    0
+                                    5,598,630
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    49.2
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr31" onclick='kCod="2682628";tr_clk(31, this)'
+                            <tr class="alt" id="tr15" onclick='kCod="301227";tr_clk(15, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2682628: CONSTRUCCION DE VESTUARIOS Y/O SSHH DE USUARIOS Y TOPICO DE EMERGENCIA; REMODELACION DE COBERTURA Y SALA DE TALLER; ADEMAS DE OTROS ACTIVOS EN EL(LA) COMPAÑIA DE BOMBEROS SALVADORA LAMBAYEQUE N°88 DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140116-301227: MUNICIPALIDAD DISTRITAL DE CAYALTI
                                     
                                 </td>
                                 <td>
-                                    265,184
+                                    614,068
                                 </td>
                                 <td>
-                                    286,484
+                                    6,377,123
                                 </td>
                                 <td>
-                                    21,300
+                                    5,782,088
                                 </td>
                                 <td>
-                                    21,300
+                                    5,191,971
                                 </td>
                                 <td>
-                                    21,300
+                                    1,786,750
                                 </td>
                                 <td>
-                                    21,300
+                                    1,483,138
                                 </td>
                                 <td>
-                                    21,300
+                                    1,483,138
                                 </td>
                                 <td>&nbsp;
-                                    7.4
+                                    23.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr32" onclick='kCod="2686876";tr_clk(32, this)'
+                            <tr class="alt" id="tr16" onclick='kCod="301228";tr_clk(16, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2686876: ADQUISICION DE TRIMOVIL; EN EL(LA) MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE PARA EL ABASTECIMIENTO DE AGUA POTABLE (TRIMOVIL CISTERNA), EN LOS DIFERENTES CENTROS POBLADOS RURALES DE LA PROVINCIA DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140117-301228: MUNICIPALIDAD DISTRITAL DE PATAPO
                                     
                                 </td>
                                 <td>
-                                    0
+                                    1,136,559
                                 </td>
                                 <td>
-                                    768,000
+                                    17,043,988
                                 </td>
                                 <td>
-                                    768,000
+                                    14,546,728
                                 </td>
                                 <td>
-                                    0
+                                    2,908,587
                                 </td>
                                 <td>
-                                    0
+                                    2,866,812
                                 </td>
                                 <td>
-                                    0
+                                    2,852,390
                                 </td>
                                 <td>
-                                    0
+                                    2,852,390
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    16.7
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr33" onclick='kCod="2687760";tr_clk(33, this)'
+                            <tr class="alt" id="tr17" onclick='kCod="301229";tr_clk(17, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2687760: MEJORAMIENTO DEL SERVICIO DE MOVILIDAD URBANA EN LA UNIDAD VECINAL LA ESPERANZA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140118-301229: MUNICIPALIDAD DISTRITAL DE POMALCA
                                     
                                 </td>
                                 <td>
-                                    0
+                                    357,270
                                 </td>
                                 <td>
-                                    2,727,426
+                                    1,294,746
                                 </td>
                                 <td>
-                                    2,727,425
+                                    148,466
                                 </td>
                                 <td>
-                                    2,591,054
+                                    148,466
                                 </td>
                                 <td>
-                                    238,371
+                                    148,432
                                 </td>
                                 <td>
-                                    238,371
+                                    116,432
                                 </td>
                                 <td>
-                                    238,371
+                                    116,432
                                 </td>
                                 <td>&nbsp;
-                                    8.7
+                                    9.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr34" onclick='kCod="2689944";tr_clk(34, this)'
+                            <tr class="alt" id="tr18" onclick='kCod="301230";tr_clk(18, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2689944: MEJORAMIENTO DE LOS SERVICIOS OPERATIVOS O MISIONALES INSTITUCIONALES EN EL ASENTAMIENTO HUMANO TORIBIA CASTRO CON LOCAL DE USOS MULTIPLES EN LA MZA A LOTE 13 DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140119-301230: MUNICIPALIDAD DISTRITAL DE PUCALA
                                     
                                 </td>
                                 <td>
-                                    0
+                                    1,501,188
                                 </td>
                                 <td>
-                                    28,400
+                                    5,084,818
                                 </td>
                                 <td>
-                                    28,400
+                                    4,073,531
                                 </td>
                                 <td>
-                                    28,400
+                                    3,826,605
                                 </td>
                                 <td>
-                                    28,400
+                                    3,737,424
                                 </td>
                                 <td>
-                                    28,400
+                                    3,734,887
                                 </td>
                                 <td>
-                                    28,400
+                                    3,734,887
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    73.5
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr35" onclick='kCod="2691828";tr_clk(35, this)'
+                            <tr class="alt" id="tr19" onclick='kCod="301231";tr_clk(19, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2691828: MEJORAMIENTO DE LOS SERVICIOS OPERATIVOS O MISIONALES INSTITUCIONALES EN EL ASENTAMIENTO HUMANO TORIBIA CASTRO CON LOCAL COMUNAL EN LA MZA I LOTE 18 DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140120-301231: MUNICIPALIDAD DISTRITAL DE TUMAN
                                     
                                 </td>
                                 <td>
-                                    0
+                                    3,260,838
                                 </td>
                                 <td>
-                                    857,635
+                                    4,167,623
                                 </td>
                                 <td>
-                                    788,857
+                                    2,849,025
                                 </td>
                                 <td>
-                                    28,300
+                                    2,706,844
                                 </td>
                                 <td>
-                                    28,300
+                                    2,706,844
                                 </td>
                                 <td>
-                                    28,300
+                                    2,596,114
                                 </td>
                                 <td>
-                                    28,300
+                                    2,596,114
                                 </td>
                                 <td>&nbsp;
-                                    3.3
+                                    62.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr36" onclick='kCod="2691829";tr_clk(36, this)'
+                            <tr class="alt" id="tr20" onclick='kCod="301232";tr_clk(20, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2691829: MEJORAMIENTO DEL SERVICIO DE HABITABILIDAD INSTITUCIONAL EN EL LOCAL MUNICIPAL DEL CENTRO POBLADO COLAYA DISTRITO DE SALAS DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140201-301232: MUNICIPALIDAD PROVINCIAL DE FERREÑAFE
                                     
                                 </td>
                                 <td>
-                                    0
+                                    5,960,338
                                 </td>
                                 <td>
-                                    386,216
+                                    24,908,713
                                 </td>
                                 <td>
-                                    386,216
+                                    21,992,608
                                 </td>
                                 <td>
-                                    386,203
+                                    13,951,702
                                 </td>
                                 <td>
-                                    68,486
+                                    8,576,247
                                 </td>
                                 <td>
-                                    42,010
+                                    8,043,214
                                 </td>
                                 <td>
-                                    42,010
+                                    7,250,031
                                 </td>
                                 <td>&nbsp;
-                                    10.9
+                                    32.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr37" onclick='kCod="2698879";tr_clk(37, this)'
+                            <tr class="alt" id="tr21" onclick='kCod="301233";tr_clk(21, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2698879: CREACION DEL SERVICIO DE AGUA POTABLE URBANO Y CREACION DEL SERVICIO DE ALCANTARILLADO EN LA H.U. SAN CARLOS DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140202-301233: MUNICIPALIDAD DISTRITAL DE KAÑARIS
                                     
                                 </td>
                                 <td>
-                                    0
+                                    2,100,216
                                 </td>
                                 <td>
-                                    875,083
+                                    4,490,039
                                 </td>
                                 <td>
-                                    875,082
+                                    3,579,884
                                 </td>
                                 <td>
-                                    781,774
+                                    2,597,420
                                 </td>
                                 <td>
-                                    241,253
+                                    2,597,420
                                 </td>
                                 <td>
-                                    241,253
+                                    2,083,700
                                 </td>
                                 <td>
-                                    0
+                                    2,083,699
                                 </td>
                                 <td>&nbsp;
-                                    27.6
+                                    46.4
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr38" onclick='kCod="2701100";tr_clk(38, this)'
+                            <tr class="alt" id="tr22" onclick='kCod="301234";tr_clk(22, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2701100: ADQUISICION DE CAMION COMPACTADOR; EN EL(LA) SUB GERENCIA DE GESTION AMBIENTAL DE LA MUNICIPALIDAD DISTRITAL DE ILLIMO DISTRITO DE ILLIMO, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140203-301234: MUNICIPALIDAD DISTRITAL DE INCAHUASI
                                     
                                 </td>
                                 <td>
-                                    0
+                                    4,748,912
                                 </td>
                                 <td>
-                                    620,000
+                                    8,685,970
                                 </td>
                                 <td>
-                                    0
+                                    7,716,820
                                 </td>
                                 <td>
-                                    0
+                                    5,568,258
                                 </td>
                                 <td>
-                                    0
+                                    3,244,450
                                 </td>
                                 <td>
-                                    0
+                                    2,287,765
                                 </td>
                                 <td>
-                                    0
+                                    2,263,530
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    26.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr39" onclick='kCod="2704562";tr_clk(39, this)'
+                            <tr class="alt" id="tr23" onclick='kCod="301235";tr_clk(23, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2704562: RENOVACION DE OBRAS EXTERIORES, AREA VERDE, EQUIPO DEPORTIVO - RECREATIVO Y LUMINARIA; ADEMAS DE OTROS ACTIVOS EN EL(LA) PARQUE INFANTIL VICTORIA MEJIA DE GARCIA DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140204-301235: MUNICIPALIDAD DISTRITAL DE MANUEL ANTONIO MESONES MURO
                                     
                                 </td>
                                 <td>
-                                    0
+                                    888,814
                                 </td>
                                 <td>
-                                    288,882
+                                    2,393,929
                                 </td>
                                 <td>
-                                    288,881
+                                    756,983
                                 </td>
                                 <td>
-                                    274,437
+                                    756,983
                                 </td>
                                 <td>
-                                    0
+                                    756,983
                                 </td>
                                 <td>
-                                    0
+                                    714,483
                                 </td>
                                 <td>
-                                    0
+                                    714,483
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    29.8
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr40" onclick='kCod="2715379";tr_clk(40, this)'
+                            <tr class="alt" id="tr24" onclick='kCod="301236";tr_clk(24, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2715379: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE MOVILIDAD URBANA EN URBANIZACION PROCERES DE LA INDEPENDENCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    140205-301236: MUNICIPALIDAD DISTRITAL DE PITIPO
                                     
                                 </td>
                                 <td>
-                                    0
+                                    1,847,789
                                 </td>
                                 <td>
-                                    31,500
+                                    11,247,707
                                 </td>
                                 <td>
-                                    31,500
+                                    3,385,637
                                 </td>
                                 <td>
-                                    31,500
+                                    2,290,728
                                 </td>
                                 <td>
-                                    31,500
+                                    2,220,437
                                 </td>
                                 <td>
-                                    31,500
+                                    2,024,201
                                 </td>
                                 <td>
-                                    31,500
+                                    2,024,201
                                 </td>
                                 <td>&nbsp;
-                                    100.0
+                                    18.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr41" onclick='kCod="2729444";tr_clk(41, this)'
+                            <tr class="alt" id="tr25" onclick='kCod="301237";tr_clk(25, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2729444: REMODELACION DE LOSA Y SSHH DE ESPECTADORES; REPARACION DE COBERTURA DE INSTALACIONES DEPORTIVAS; ADQUISICION DE EQUIPO DEPORTIVO DE COMPETENCIA; ADEMAS DE OTROS ACTIVOS EN EL(LA) COLISEO CERRADO EDUARDO LACA BARRETO DEL DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    140206-301237: MUNICIPALIDAD DISTRITAL DE PUEBLO NUEVO
                                     
                                 </td>
                                 <td>
-                                    0
+                                    1,266,878
                                 </td>
                                 <td>
-                                    644,164
+                                    5,323,727
                                 </td>
                                 <td>
-                                    621,666
+                                    2,790,875
                                 </td>
                                 <td>
-                                    0
+                                    2,531,120
                                 </td>
                                 <td>
-                                    0
+                                    1,405,162
                                 </td>
                                 <td>
-                                    0
+                                    839,662
                                 </td>
                                 <td>
-                                    0
+                                    832,162
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    15.8
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr26" onclick='kCod="301238";tr_clk(26, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    28,913,173
+                                </td>
+                                <td>
+                                    52,600,714
+                                </td>
+                                <td>
+                                    41,579,952
+                                </td>
+                                <td>
+                                    31,481,275
+                                </td>
+                                <td>
+                                    10,932,489
+                                </td>
+                                <td>
+                                    10,431,933
+                                </td>
+                                <td>
+                                    10,160,759
+                                </td>
+                                <td>&nbsp;
+                                    19.8
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr27" onclick='kCod="301239";tr_clk(27, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140302-301239: MUNICIPALIDAD DISTRITAL DE CHOCHOPE
+                                    
+                                </td>
+                                <td>
+                                    347,335
+                                </td>
+                                <td>
+                                    1,657,965
+                                </td>
+                                <td>
+                                    1,378,089
+                                </td>
+                                <td>
+                                    928,236
+                                </td>
+                                <td>
+                                    928,236
+                                </td>
+                                <td>
+                                    928,236
+                                </td>
+                                <td>
+                                    925,236
+                                </td>
+                                <td>&nbsp;
+                                    56.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr28" onclick='kCod="301240";tr_clk(28, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140303-301240: MUNICIPALIDAD DISTRITAL DE ILLIMO
+                                    
+                                </td>
+                                <td>
+                                    7,574,242
+                                </td>
+                                <td>
+                                    22,260,573
+                                </td>
+                                <td>
+                                    18,653,964
+                                </td>
+                                <td>
+                                    11,157,957
+                                </td>
+                                <td>
+                                    4,044,271
+                                </td>
+                                <td>
+                                    3,650,234
+                                </td>
+                                <td>
+                                    3,650,234
+                                </td>
+                                <td>&nbsp;
+                                    16.4
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr29" onclick='kCod="301241";tr_clk(29, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140304-301241: MUNICIPALIDAD DISTRITAL DE JAYANCA
+                                    
+                                </td>
+                                <td>
+                                    5,422,809
+                                </td>
+                                <td>
+                                    7,844,324
+                                </td>
+                                <td>
+                                    3,434,348
+                                </td>
+                                <td>
+                                    3,434,346
+                                </td>
+                                <td>
+                                    3,333,623
+                                </td>
+                                <td>
+                                    2,663,419
+                                </td>
+                                <td>
+                                    2,625,578
+                                </td>
+                                <td>&nbsp;
+                                    34.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr30" onclick='kCod="301242";tr_clk(30, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140305-301242: MUNICIPALIDAD DISTRITAL DE MOCHUMI
+                                    
+                                </td>
+                                <td>
+                                    5,027,529
+                                </td>
+                                <td>
+                                    16,193,157
+                                </td>
+                                <td>
+                                    11,834,987
+                                </td>
+                                <td>
+                                    4,233,666
+                                </td>
+                                <td>
+                                    4,184,266
+                                </td>
+                                <td>
+                                    3,751,525
+                                </td>
+                                <td>
+                                    3,501,119
+                                </td>
+                                <td>&nbsp;
+                                    23.2
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr31" onclick='kCod="301243";tr_clk(31, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140306-301243: MUNICIPALIDAD DISTRITAL DE MORROPE
+                                    
+                                </td>
+                                <td>
+                                    8,609,506
+                                </td>
+                                <td>
+                                    25,136,884
+                                </td>
+                                <td>
+                                    17,796,429
+                                </td>
+                                <td>
+                                    5,495,094
+                                </td>
+                                <td>
+                                    5,419,983
+                                </td>
+                                <td>
+                                    2,860,580
+                                </td>
+                                <td>
+                                    2,856,630
+                                </td>
+                                <td>&nbsp;
+                                    11.4
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr32" onclick='kCod="301244";tr_clk(32, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140307-301244: MUNICIPALIDAD DISTRITAL DE MOTUPE
+                                    
+                                </td>
+                                <td>
+                                    7,087,545
+                                </td>
+                                <td>
+                                    11,408,581
+                                </td>
+                                <td>
+                                    7,459,395
+                                </td>
+                                <td>
+                                    6,227,127
+                                </td>
+                                <td>
+                                    6,194,435
+                                </td>
+                                <td>
+                                    3,995,277
+                                </td>
+                                <td>
+                                    3,944,528
+                                </td>
+                                <td>&nbsp;
+                                    35.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr33" onclick='kCod="301245";tr_clk(33, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140308-301245: MUNICIPALIDAD DISTRITAL DE OLMOS
+                                    
+                                </td>
+                                <td>
+                                    15,524,602
+                                </td>
+                                <td>
+                                    44,998,957
+                                </td>
+                                <td>
+                                    21,558,087
+                                </td>
+                                <td>
+                                    4,469,346
+                                </td>
+                                <td>
+                                    4,363,438
+                                </td>
+                                <td>
+                                    3,215,349
+                                </td>
+                                <td>
+                                    3,053,696
+                                </td>
+                                <td>&nbsp;
+                                    7.1
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr34" onclick='kCod="301246";tr_clk(34, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140309-301246: MUNICIPALIDAD DISTRITAL DE PACORA
+                                    
+                                </td>
+                                <td>
+                                    777,079
+                                </td>
+                                <td>
+                                    6,688,276
+                                </td>
+                                <td>
+                                    422,305
+                                </td>
+                                <td>
+                                    418,872
+                                </td>
+                                <td>
+                                    411,109
+                                </td>
+                                <td>
+                                    411,109
+                                </td>
+                                <td>
+                                    400,629
+                                </td>
+                                <td>&nbsp;
+                                    6.1
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr35" onclick='kCod="301247";tr_clk(35, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140310-301247: MUNICIPALIDAD DISTRITAL DE SALAS
+                                    
+                                </td>
+                                <td>
+                                    1,640,131
+                                </td>
+                                <td>
+                                    9,308,370
+                                </td>
+                                <td>
+                                    8,251,153
+                                </td>
+                                <td>
+                                    6,962,572
+                                </td>
+                                <td>
+                                    5,941,929
+                                </td>
+                                <td>
+                                    4,354,135
+                                </td>
+                                <td>
+                                    4,228,509
+                                </td>
+                                <td>&nbsp;
+                                    46.8
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr36" onclick='kCod="301248";tr_clk(36, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140311-301248: MUNICIPALIDAD DISTRITAL DE SAN JOSE
+                                    
+                                </td>
+                                <td>
+                                    1,829,512
+                                </td>
+                                <td>
+                                    5,147,063
+                                </td>
+                                <td>
+                                    2,660,970
+                                </td>
+                                <td>
+                                    1,882,110
+                                </td>
+                                <td>
+                                    1,594,686
+                                </td>
+                                <td>
+                                    1,313,679
+                                </td>
+                                <td>
+                                    1,313,679
+                                </td>
+                                <td>&nbsp;
+                                    25.5
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr37" onclick='kCod="301249";tr_clk(37, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    140312-301249: MUNICIPALIDAD DISTRITAL DE TUCUME
+                                    
+                                </td>
+                                <td>
+                                    5,771,237
+                                </td>
+                                <td>
+                                    9,125,659
+                                </td>
+                                <td>
+                                    6,351,987
+                                </td>
+                                <td>
+                                    3,087,102
+                                </td>
+                                <td>
+                                    3,087,102
+                                </td>
+                                <td>
+                                    2,681,787
+                                </td>
+                                <td>
+                                    2,681,787
+                                </td>
+                                <td>&nbsp;
+                                    29.4
                                 </td>
                             </tr>
                             

@@ -54,7 +54,7 @@ function semaforo(pct) {
   return "var(--rojo-s)";
 }
 function barraHTML(pct) {
-  if (pct===null) return '<span style="color:#aaa;font-size:.8em">—</span>';
+  if (pct===null) return '<span style="color:#aaa;font-size:.9em">—</span>';
   const col=semaforo(pct), w=Math.min(pct,100).toFixed(1);
   return `<div style="display:flex;align-items:center;gap:6px">
     <div style="flex:1;background:#e5e7eb;border-radius:4px;height:7px;min-width:55px">
@@ -287,7 +287,7 @@ function renderB2() {
     const posStyle=pos<=3?'style="color:var(--dorado-osc);font-weight:800"':'style="font-weight:700"';
     return `<tr ${m.esMPL?'class="mpl-row"':''}>
       <td class="ctr" ${posStyle}>${pos}°</td>
-      <td style="font-size:.85em;font-weight:${m.esMPL?700:500}">${m.nombre}</td>
+      <td style="font-size:.95em;font-weight:${m.esMPL?700:600}">${m.nombre}</td>
       <td class="num">${fmtNum(m.pia)}</td>
       <td class="num">${fmtNum(m.pim)}</td>
       <td class="num">${fmtNum(m.dev)}</td>
@@ -316,7 +316,7 @@ function renderB3() {
     const col=semaforo(r.pct);
     return `<tr>
       <td class="ctr" style="font-weight:700;color:${i<3?"var(--dorado-osc)":"var(--texto-mut)"}">${i+1}</td>
-      <td style="font-size:.8em;line-height:1.3">${nom}</td>
+      <td style="font-size:.93em;font-weight:600;line-height:1.3">${nom}</td>
       <td class="num">${fmtN(r.pia)}</td>
       <td class="num">${fmtN(r.pim)}</td>
       <td class="num">${fmtN(r.cert)}</td>
@@ -365,7 +365,7 @@ function renderB4() {
     const pctCertStr=r.pim>0?(r.cert/r.pim*100).toFixed(1)+"%":"0.0%";
     return `<tr class="riesgo-row">
       <td class="ctr" style="font-weight:700">${i+1}</td>
-      <td style="font-size:.8em;line-height:1.3">${nom}</td>
+      <td style="font-size:.93em;font-weight:600;line-height:1.3">${nom}</td>
       <td class="num">${fmtN(r.pia)}</td>
       <td class="num">${fmtN(r.pim)}</td>
       <td class="num">${fmtN(r.cert)}</td>
@@ -440,7 +440,7 @@ function renderDonutsSeccion(contenedorId, registros, totalPIM, totalDev) {
     <div class="rub-donut-wrap" style="width:110px;height:110px">
       <canvas id="${tidTotal}" width="110" height="110"></canvas>
       <div class="rub-donut-center">
-        <div class="rub-donut-pct" style="color:var(--rojo-osc);font-size:20px">${totPct.toFixed(1)}%</div>
+        <div class="rub-donut-pct" style="color:var(--rojo-osc);font-size:22px;font-weight:800">${totPct.toFixed(1)}%</div>
         <div class="rub-donut-sub">TOTAL</div>
       </div>
     </div>
@@ -476,7 +476,7 @@ function renderB5() {
     const cod=m?m[1]:"", nom=m?m[2]:r.desc;
     return `<tr>
       <td class="cod">${cod}</td>
-      <td style="font-size:.83em">${nom}</td>
+      <td style="font-size:.93em;font-weight:600">${nom}</td>
       <td class="num">${fmtN(r.pia)}</td>
       <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>
@@ -525,7 +525,7 @@ function renderB6() {
     const cod=m?m[1]:"", nom=m?m[2]:r.desc;
     return `<tr>
       <td class="cod">${cod}</td>
-      <td style="font-size:.83em">${nom}</td>
+      <td style="font-size:.93em;font-weight:600">${nom}</td>
       <td class="num">${fmtN(r.pia)}</td>
       <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>
@@ -571,7 +571,7 @@ function renderB7() {
     const m=r.desc.match(/^(\d+):\s*(.+)$/);
     const nom=m?m[2]:r.desc;
     return `<tr>
-      <td style="font-size:.83em;font-weight:600">${nom}</td>
+      <td style="font-size:.93em;font-weight:700">${nom}</td>
       <td class="num">${fmtN(r.pia)}</td>
       <td class="num">${fmtN(r.pim)}</td>
       <td class="num" style="color:var(--texto-mut)">${pctPIM.toFixed(1)}%</td>

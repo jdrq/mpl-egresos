@@ -109,6 +109,20 @@ h1,h2,h3,.cond{
 .btn-admin:hover{opacity:.8}
 
 /* ════════════════════════════════════════════════════
+   FOOTER GLOBAL
+════════════════════════════════════════════════════ */
+.global-footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 24px;
+  background:#f5f5f5;border-top:1px solid var(--linea);
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:12px;color:#888;
+}
+.gf-fuente a{color:#888;text-decoration:none;}
+.gf-fuente a:hover{color:var(--rojo-osc);text-decoration:underline;}
+@media print{.global-footer{display:none!important}}
+
+/* ════════════════════════════════════════════════════
    PANEL TÉCNICO (oculto por defecto)
 ════════════════════════════════════════════════════ */
 .loader-card{
@@ -674,7 +688,6 @@ main{padding:20px 0 60px}
       </svg>
       Exportar PDF
     </button>
-    <button class="btn-admin" id="btnAdminToggle" title="Panel técnico">⚙</button>
   </div>
 
   <!-- Panel técnico (oculto por defecto) -->
@@ -1106,6 +1119,15 @@ main{padding:20px 0 60px}
 </div><!-- /wrap -->
 </main>
 
+<!-- ════════════════ FOOTER GLOBAL ════════════════ -->
+<footer class="global-footer">
+  <span class="gf-fuente">
+    Fuente: SIAF — Consulta Amigable / Gasto Diario BI — MEF
+    · <a href="https://apps5.mineco.gob.pe" target="_blank" rel="noopener">apps5.mineco.gob.pe</a>
+  </span>
+  <button class="btn-admin" id="btnAdminToggle" title="Panel técnico">⚙</button>
+</footer>
+
 <script>
 // Fecha en header
 (function(){
@@ -1113,7 +1135,7 @@ main{padding:20px 0 60px}
   "julio","agosto","setiembre","octubre","noviembre","diciembre"],
   ds=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
   var el=document.getElementById("fechaHeader");
-  if(el) el.textContent=ds[d.getDay()]+", "+d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
+  if(el) el.textContent=d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
 })();
 
 // Toggle panel técnico

@@ -113,13 +113,18 @@ h1,h2,h3,.cond{
 ════════════════════════════════════════════════════ */
 .global-footer{
   display:flex;align-items:center;justify-content:space-between;
-  padding:10px 24px;
-  background:#f5f5f5;border-top:1px solid var(--linea);
+  padding:12px 24px;
+  background:var(--rojo-osc);border-top:3px solid var(--amarillo);
   font-family:"Barlow",system-ui,sans-serif;
-  font-size:12px;color:#888;
+  font-size:12px;color:rgba(255,255,255,.75);
 }
-.gf-fuente a{color:#888;text-decoration:none;}
-.gf-fuente a:hover{color:var(--rojo-osc);text-decoration:underline;}
+.gf-fuente strong{color:#fff;font-weight:700;}
+.gf-fuente a{color:rgba(255,255,255,.75);text-decoration:none;}
+.gf-fuente a:hover{color:#fff;text-decoration:underline;}
+.global-footer .btn-admin{
+  border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.6);
+}
+.global-footer .btn-admin:hover{opacity:1;color:#fff;border-color:rgba(255,255,255,.6);}
 @media print{.global-footer{display:none!important}}
 
 /* ════════════════════════════════════════════════════
@@ -1122,7 +1127,7 @@ main{padding:20px 0 60px}
 <!-- ════════════════ FOOTER GLOBAL ════════════════ -->
 <footer class="global-footer">
   <span class="gf-fuente">
-    Fuente: SIAF — Consulta Amigable / Gasto Diario BI — MEF
+    Fuente: <strong>SIAF</strong> — Consulta Amigable / Gasto Diario BI — <strong>MEF</strong>
     · <a href="https://apps5.mineco.gob.pe" target="_blank" rel="noopener">apps5.mineco.gob.pe</a>
   </span>
   <button class="btn-admin" id="btnAdminToggle" title="Panel técnico">⚙</button>

@@ -703,27 +703,70 @@ async function cargarLibsPDF(){
 }
 async function exportarPDF(){
   const btn=document.querySelector(".btn-pdf");
-  if(btn){btn.textContent="⏳ Generando...";btn.disabled=true;}
+  if(btn){btn.innerHTML='<span>⏳ Generando PDF...</span>';btn.disabled=true;}
   try{
     await cargarLibsPDF();
     const{jsPDF}=window.jspdf;
+
+    // A4 landscape en mm y en px a 96dpi
+    const PW_MM=297, PH_MM=210;
+    const MARGIN_MM=8;
+    const AREA_W=PW_MM-MARGIN_MM*2, AREA_H=PH_MM-MARGIN_MM*2;
+
     const pdf=new jsPDF({orientation:"landscape",unit:"mm",format:"a4"});
     const slides=document.querySelectorAll(".slide");
     let primera=true;
+
     for(const slide of slides){
-      const canvas=await html2canvas(slide,{scale:1.5,useCORS:true,logging:false});
-      const imgData=canvas.toDataURL("image/jpeg",0.92);
-      const pw=pdf.internal.pageSize.getWidth(), ph=pdf.internal.pageSize.getHeight();
-      const ratio=Math.min(pw/canvas.width,ph/canvas.height)*96;
-      const w=canvas.width*ratio, h=canvas.height*ratio;
-      if(!primera) pdf.addPage();
-      pdf.addImage(imgData,"JPEG",(pw-w)/2,(ph-h)/2,w,h);
+      // Capturar el slide a escala 2x para buena resolución
+      const canvas=await html2canvas(slide,{
+        scale:2,
+        useCORS:true,
+        logging:false,
+        backgroundColor:"#ffffff",
+        // Forzar el ancho del slide al ancho real del elemento
+        width:slide.scrollWidth,
+        height:slide.scrollHeight,
+        windowWidth:slide.scrollWidth,
+      });
+
+      const imgData=canvas.toDataURL("image/jpeg",0.93);
+
+      // Calcular dimensiones para ajustar el slide al área útil de la página
+      // manteniendo proporción y sin deformar
+      const imgW=canvas.width, imgH=canvas.height;
+      const scaleW=AREA_W/imgW, scaleH=AREA_H/imgH;
+      const scale=Math.min(scaleW,scaleH);
+      const drawW=imgW*scale, drawH=imgH*scale;
+
+      // Centrar en la página
+      const offsetX=MARGIN_MM+(AREA_W-drawW)/2;
+      const offsetY=MARGIN_MM+(AREA_H-drawH)/2;
+
+      if(!primera) pdf.addPage("a4","landscape");
+      pdf.addImage(imgData,"JPEG",offsetX,offsetY,drawW,drawH);
       primera=false;
     }
+
     const hoy=new Date();
-    pdf.save(`MPL_Egresos_${hoy.getFullYear()}${String(hoy.getMonth()+1).padStart(2,"0")}${String(hoy.getDate()).padStart(2,"0")}.pdf`);
-  }catch(e){console.error("PDF:",e);alert("Error al generar PDF.");}
-  finally{if(btn){btn.textContent="⬇ Exportar PDF";btn.disabled=false;}}
+    const fecha=`${hoy.getFullYear()}${String(hoy.getMonth()+1).padStart(2,"0")}${String(hoy.getDate()).padStart(2,"0")}`;
+    pdf.save(`MPL_Egresos_${fecha}.pdf`);
+
+  }catch(e){
+    console.error("PDF:",e);
+    alert("Error al generar el PDF. Intente nuevamente.");
+  }finally{
+    if(btn){
+      btn.innerHTML=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+      </svg> Exportar PDF`;
+      btn.disabled=false;
+    }
+  }
 }
 
 // ── Inicio ────────────────────────────────────────────────────

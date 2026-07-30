@@ -37,7 +37,7 @@ function fechaHoy() {
   const d=new Date(), m=["enero","febrero","marzo","abril","mayo","junio",
   "julio","agosto","setiembre","octubre","noviembre","diciembre"],
   ds=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
-  return ds[d.getDay()]+", "+d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
+  return d.getDate()+" de "+m[d.getMonth()]+" de "+d.getFullYear();
 }
 // Rellena todos los spans de fecha en los subbands
 function rellenarFechas() {

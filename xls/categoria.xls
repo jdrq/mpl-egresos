@@ -283,34 +283,34 @@ body
                     <tr align="right">
                         
                         <td align="left" style="font-size: 7pt; width: auto">
-                            Municipalidad 140101-301212: MUNICIPALIDAD PROVINCIAL DE CHICLAYO
+                            Municipalidad 140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
                             
                             
                             
                             
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            24,788,128
+                            28,913,173
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            36,464,141
+                            58,702,916
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            32,219,387
+                            47,596,109
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            30,108,584
+                            32,009,772
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,451,217
+                            14,413,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,004,199
+                            12,549,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            21,532,153
+                            12,503,656
                         </td>
-                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;60.3</td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;21.4</td>
                     </tr>
                 
                     </table>
@@ -329,41 +329,177 @@ body
 	</table>
                             <table class="Data" cellspacing="0" cellpadding="1">
                         
-                            <tr id="tr0" onclick='kCod="0082";tr_clk(0, this)'
+                            <tr id="tr0" onclick='kCod="0036";tr_clk(0, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left" style="width: auto">
-                                    0082: PROGRAMA NACIONAL DE SANEAMIENTO URBANO
+                                    0036: GESTION INTEGRAL DE RESIDUOS SOLIDOS
                                     
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    15,168,859
+                                    0
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    3,032,468
+                                    1,111,246
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    2,526,568
+                                    1,051,245
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    2,526,568
+                                    491,180
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    2,283,585
+                                    490,849
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    2,283,585
+                                    486,849
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    2,283,585
+                                    486,849
                                 </td>
                                 <td style="white-space: nowrap; width: 50px">&nbsp;
-                                    75.3
+                                    43.8
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr1" onclick='kCod="0083";tr_clk(1, this)'
+                            <tr class="alt" id="tr1" onclick='kCod="0042";tr_clk(1, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0042: APROVECHAMIENTO DE LOS RECURSOS HIDRICOS PARA USO AGRARIO
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>
+                                    16,000
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr2" onclick='kCod="0046";tr_clk(2, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0046: ACCESO Y USO DE LA ELECTRIFICACION RURAL
+                                    
+                                </td>
+                                <td>
+                                    248,806
+                                </td>
+                                <td>
+                                    10,054,309
+                                </td>
+                                <td>
+                                    5,795,387
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>&nbsp;
+                                    0.4
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr3" onclick='kCod="0068";tr_clk(3, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0068: REDUCCION DE VULNERABILIDAD Y ATENCION DE EMERGENCIAS POR DESASTRES
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>
+                                    673,990
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr4" onclick='kCod="0082";tr_clk(4, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0082: PROGRAMA NACIONAL DE SANEAMIENTO URBANO
+                                    
+                                </td>
+                                <td>
+                                    2,600,110
+                                </td>
+                                <td>
+                                    3,228,568
+                                </td>
+                                <td>
+                                    3,228,517
+                                </td>
+                                <td>
+                                    2,715,723
+                                </td>
+                                <td>
+                                    755,154
+                                </td>
+                                <td>
+                                    552,639
+                                </td>
+                                <td>
+                                    552,639
+                                </td>
+                                <td>&nbsp;
+                                    17.1
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr5" onclick='kCod="0083";tr_clk(5, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -371,33 +507,33 @@ body
                                     
                                 </td>
                                 <td>
-                                    1,348,833
-                                </td>
-                                <td>
                                     0
                                 </td>
                                 <td>
-                                    0
+                                    4,003,069
                                 </td>
                                 <td>
-                                    0
+                                    792,600
                                 </td>
                                 <td>
-                                    0
+                                    24,600
                                 </td>
                                 <td>
-                                    0
+                                    24,600
                                 </td>
                                 <td>
-                                    0
+                                    24,600
+                                </td>
+                                <td>
+                                    24,600
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    0.6
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr2" onclick='kCod="0090";tr_clk(2, this)'
+                            <tr class="alt" id="tr6" onclick='kCod="0090";tr_clk(6, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -405,44 +541,10 @@ body
                                     
                                 </td>
                                 <td>
-                                    1,049,994
+                                    145,477
                                 </td>
                                 <td>
-                                    11,051,536
-                                </td>
-                                <td>
-                                    10,743,120
-                                </td>
-                                <td>
-                                    10,607,559
-                                </td>
-                                <td>
-                                    10,418,132
-                                </td>
-                                <td>
-                                    10,314,759
-                                </td>
-                                <td>
-                                    10,314,759
-                                </td>
-                                <td>&nbsp;
-                                    93.3
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr3" onclick='kCod="0101";tr_clk(3, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    0101: INCREMENTO DE LA PRACTICA DE ACTIVIDADES FISICAS, DEPORTIVAS Y RECREATIVAS EN LA POBLACION PERUANA
-                                    
-                                </td>
-                                <td>
-                                    2,026,705
-                                </td>
-                                <td>
-                                    43,880
+                                    145,477
                                 </td>
                                 <td>
                                     0
@@ -465,7 +567,109 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr4" onclick='kCod="0146";tr_clk(4, this)'
+                            <tr class="alt" id="tr7" onclick='kCod="0101";tr_clk(7, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0101: INCREMENTO DE LA PRACTICA DE ACTIVIDADES FISICAS, DEPORTIVAS Y RECREATIVAS EN LA POBLACION PERUANA
+                                    
+                                </td>
+                                <td>
+                                    984,377
+                                </td>
+                                <td>
+                                    11,606,767
+                                </td>
+                                <td>
+                                    11,287,316
+                                </td>
+                                <td>
+                                    9,653,756
+                                </td>
+                                <td>
+                                    965,376
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr8" onclick='kCod="0109";tr_clk(8, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0109: NUESTRAS CIUDADES
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>
+                                    11,220
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr9" onclick='kCod="0138";tr_clk(9, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    0138: REDUCCION DEL COSTO, TIEMPO E INSEGURIDAD EN EL SISTEMA DE TRANSPORTE
+                                    
+                                </td>
+                                <td>
+                                    2,046,642
+                                </td>
+                                <td>
+                                    1,152,618
+                                </td>
+                                <td>
+                                    469,954
+                                </td>
+                                <td>
+                                    466,592
+                                </td>
+                                <td>
+                                    466,592
+                                </td>
+                                <td>
+                                    466,592
+                                </td>
+                                <td>
+                                    466,592
+                                </td>
+                                <td>&nbsp;
+                                    40.5
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr10" onclick='kCod="0146";tr_clk(10, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -473,33 +677,33 @@ body
                                     
                                 </td>
                                 <td>
-                                    160,819
+                                    2,172,240
                                 </td>
                                 <td>
-                                    135,743
+                                    15,269,186
                                 </td>
                                 <td>
-                                    18,571
+                                    14,710,325
                                 </td>
                                 <td>
-                                    18,571
+                                    10,546,560
                                 </td>
                                 <td>
-                                    18,571
+                                    7,456,381
                                 </td>
                                 <td>
-                                    12,706
+                                    7,456,281
                                 </td>
                                 <td>
-                                    12,706
+                                    7,456,281
                                 </td>
                                 <td>&nbsp;
-                                    9.4
+                                    48.8
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr5" onclick='kCod="0148";tr_clk(5, this)'
+                            <tr class="alt" id="tr11" onclick='kCod="0148";tr_clk(11, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -507,33 +711,33 @@ body
                                     
                                 </td>
                                 <td>
-                                    1,252,035
+                                    0
                                 </td>
                                 <td>
-                                    17,288,841
+                                    4,523,931
                                 </td>
                                 <td>
-                                    15,283,377
+                                    4,523,929
                                 </td>
                                 <td>
-                                    15,034,376
+                                    4,303,185
                                 </td>
                                 <td>
-                                    8,485,629
+                                    966,885
                                 </td>
                                 <td>
-                                    8,163,809
+                                    711,711
                                 </td>
                                 <td>
-                                    7,691,763
+                                    711,711
                                 </td>
                                 <td>&nbsp;
-                                    47.2
+                                    15.7
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr6" onclick='kCod="9002";tr_clk(6, this)'
+                            <tr class="alt" id="tr12" onclick='kCod="9002";tr_clk(12, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -541,28 +745,28 @@ body
                                     
                                 </td>
                                 <td>
-                                    3,780,883
+                                    20,715,521
                                 </td>
                                 <td>
-                                    4,911,673
+                                    6,906,535
                                 </td>
                                 <td>
-                                    3,647,751
+                                    5,035,625
                                 </td>
                                 <td>
-                                    1,921,510
+                                    3,068,328
                                 </td>
                                 <td>
-                                    1,245,301
+                                    2,547,344
                                 </td>
                                 <td>
-                                    1,229,341
+                                    2,110,508
                                 </td>
                                 <td>
-                                    1,229,341
+                                    2,065,136
                                 </td>
                                 <td>&nbsp;
-                                    25.0
+                                    30.6
                                 </td>
                             </tr>
                             

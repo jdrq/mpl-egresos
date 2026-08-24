@@ -283,34 +283,34 @@ body
                     <tr align="right">
                         
                         <td align="left" style="font-size: 7pt; width: auto">
-                            Municipalidad 140101-301212: MUNICIPALIDAD PROVINCIAL DE CHICLAYO
+                            Municipalidad 140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
                             
                             
                             
                             
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            24,788,128
+                            28,913,173
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            36,464,141
+                            58,702,916
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            32,219,387
+                            47,596,109
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            30,108,584
+                            32,009,772
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,451,217
+                            14,413,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,004,199
+                            12,549,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            21,532,153
+                            12,503,656
                         </td>
-                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;60.3</td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;21.4</td>
                     </tr>
                 
                     </table>
@@ -337,53 +337,53 @@ body
                                     
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    3,537,887
+                                    16,542,871
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    835,146
+                                    1,366,407
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    0
+                                    396,882
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    0
+                                    396,882
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    0
+                                    396,882
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    0
+                                    290,913
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    0
+                                    256,513
                                 </td>
                                 <td style="white-space: nowrap; width: 50px">&nbsp;
-                                    0.0
+                                    21.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr1" onclick='kCod="2211919";tr_clk(1, this)'
+                            <tr class="alt" id="tr1" onclick='kCod="2160704";tr_clk(1, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2211919: MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA CA. SERGIO BERMEJO QUIROGA TRAMO ENTRE LA CA, KARL WEISS O CA. 30 DE AGOSTO Y AV. GARCILAZO DE LA VEGA DEL DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO - LAMBAYEQUE
+                                    2160704: MEJORAMIENTO E IMPLEMENTACION DE COMPLEJO DEPORTIVO SAN JUAN MASIAS DEL PUEBLO JOVEN SAN MARTIN DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    112,405
+                                    10,729,799
                                 </td>
                                 <td>
-                                    0
+                                    10,665,651
                                 </td>
                                 <td>
-                                    0
+                                    9,653,756
                                 </td>
                                 <td>
-                                    0
+                                    965,376
                                 </td>
                                 <td>
                                     0
@@ -397,55 +397,21 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr2" onclick='kCod="2378560";tr_clk(2, this)'
+                            <tr class="alt" id="tr2" onclick='kCod="2217896";tr_clk(2, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2378560: REHABILITACION DE LA AVENIDA VICTOR ANDRES BELAUNDE ENTRE LA AVENIDA ZARUMILLA Y LA AVENIDA EL PROGRESO DEL DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO- LAMBAYEQUE
+                                    2217896: CONSTRUCCION DE PUENTES DE CONCRETO EN DESAGUADERO COCODRILO, CHEPITO LAGUNA, DESAGUADERO SAN FRANCISCO CASERIO LOS POSITOS DISTRITO DE TUCUME, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    101,727
-                                </td>
-                                <td>
-                                    101,727
-                                </td>
-                                <td>
                                     0
                                 </td>
                                 <td>
-                                    0
+                                    3,362
                                 </td>
                                 <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr3" onclick='kCod="2378573";tr_clk(3, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2378573: REHABILITACION DE LA AVENIDA PASEO DEL DEPORTE ENTRE LA AVENIDA ZARUMILLA Y LA CALLE EL VIRREY, DEL DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    141,269
-                                </td>
-                                <td>
-                                    141,269
-                                </td>
-                                <td>
-                                    0
+                                    3,362
                                 </td>
                                 <td>
                                     0
@@ -465,305 +431,33 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr4" onclick='kCod="2378597";tr_clk(4, this)'
+                            <tr class="alt" id="tr3" onclick='kCod="2255797";tr_clk(3, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2378597: REHABILITACION DE LA CALLE BOLIVAR DESDE LA CALLE MANUEL PARDO HASTA LA CALLE PEDRO RUIZ, DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
+                                    2255797: CREACION DEL SERVICIO DE LA CAPACIDAD OPERATIVA DEL POOL DE MAQUINARIA PESADA PARA EL INSTITUTO VIAL PROV. MUNICIPAL DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    1,938,316
+                                    673,990
                                 </td>
                                 <td>
-                                    1,921,510
+                                    673,990
                                 </td>
                                 <td>
-                                    1,921,510
+                                    673,990
                                 </td>
                                 <td>
-                                    1,245,301
+                                    673,990
                                 </td>
                                 <td>
-                                    1,229,341
+                                    673,990
                                 </td>
                                 <td>
-                                    1,229,341
-                                </td>
-                                <td>&nbsp;
-                                    63.4
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr5" onclick='kCod="2381620";tr_clk(5, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2381620: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN LA AVENIDA EL EJERCITO ENTRE AV. JUAN TOMIS STACK Y CALLE NACIONALISMO, DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO- LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    31,355
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr6" onclick='kCod="2410696";tr_clk(6, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2410696: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE Y ALCANTARILLADO DE LA URBANIZACION SANTA ELENA DEL DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    1,098,347
-                                </td>
-                                <td>
-                                    1,089,856
-                                </td>
-                                <td>
-                                    982,375
-                                </td>
-                                <td>
-                                    982,375
-                                </td>
-                                <td>
-                                    870,119
-                                </td>
-                                <td>
-                                    870,119
-                                </td>
-                                <td>
-                                    870,119
-                                </td>
-                                <td>&nbsp;
-                                    79.8
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr7" onclick='kCod="2411251";tr_clk(7, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2411251: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE Y ALCANTARILLADO SANITARIO DE LA URBANIZACION HIPOLITO UNANUE, DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    393,768
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr8" onclick='kCod="2412415";tr_clk(8, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2412415: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR Y PEATONAL EN EL P.J. SAN SEBASTIAN DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    429,043
-                                </td>
-                                <td>
-                                    429,043
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr9" onclick='kCod="2478042";tr_clk(9, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2478042: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE Y ALCANTARILLADO DEL PUEBLO JOVEN JORGE BASADRE DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    1,348,833
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr10" onclick='kCod="2483508";tr_clk(10, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2483508: REHABILITACION DE LA INFRAESTRUCTURA DE LA INSTITUCION EDUCATIVA INICIAL N°003 - LOS PASTORCITOS DE LA VIRGEN DE FATIMA (CODIGO LOCAL 275443), P.J. SAN ANTONIO, DISTRITO Y PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    328,768
-                                </td>
-                                <td>
-                                    141,951
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr11" onclick='kCod="2485725";tr_clk(11, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2485725: REHABILITACION DEL LOCAL ESCOLAR 10002 CON CODIGO LOCAL 275706, URB. EL PARAISO, DISTRITO Y PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    27,788
-                                </td>
-                                <td>
-                                    27,788
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr12" onclick='kCod="2486393";tr_clk(12, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2486393: REPARACION DE PAVIMENTO; EN EL(LA) AVENIDA ANGAMOS, AVENIDA BALTA, AVENIDA EL CARMEN, AVENIDA JOSE EUFEMIO LORA Y LORA, AVENIDA LUIS GONZALES, AVENIDA NACIONALISMO, AVENIDA PEDRO RUIZ, AVENIDA VICTOR RAUL HAYA DE LA TORRE, AVENIDA EL PROGRESO DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    12,706
-                                </td>
-                                <td>
-                                    12,706
-                                </td>
-                                <td>
-                                    12,706
-                                </td>
-                                <td>
-                                    12,706
-                                </td>
-                                <td>
-                                    12,706
-                                </td>
-                                <td>
-                                    12,706
+                                    673,990
                                 </td>
                                 <td>&nbsp;
                                     100.0
@@ -771,18 +465,222 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr13" onclick='kCod="2486395";tr_clk(13, this)'
+                            <tr class="alt" id="tr4" onclick='kCod="2274699";tr_clk(4, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2486395: REPARACION DE PAVIMENTO; EN EL(LA) CALLE ARICA, CALLE 07 DE ENERO, CALLE TUMBOS, CALLE JUAN FANNING, CALLE TARAPACA, CALLE LAS DIAMELAS DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
+                                    2274699: CREACION DEL PARQUE PRINCIPAL EN LA URBANIZACION LOS ROSALES DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    100,079
+                                    0
                                 </td>
                                 <td>
-                                    30,942
+                                    4,220
+                                </td>
+                                <td>
+                                    4,220
+                                </td>
+                                <td>
+                                    4,220
+                                </td>
+                                <td>
+                                    4,220
+                                </td>
+                                <td>
+                                    4,220
+                                </td>
+                                <td>
+                                    4,220
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr5" onclick='kCod="2282780";tr_clk(5, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2282780: MEJORAMIENTO DEL AGUA PARA RIEGO DE LOS CANALES LA MADRID - GRAU, LA MADRID Y GRAU LAMBAYEQUE, LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr6" onclick='kCod="2320360";tr_clk(6, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2320360: AMPLIACION DE REDES SECUNDARIAS 440220V CONEXIONES DOMICILIARIAS DE LOS SECTORES VALLEJOS Y SANDOVAL DEL CASERIO BRICEÑO, DISTRITO DE MOTUPE - LAMBAYEQUE - LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    38,638
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>
+                                    38,637
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr7" onclick='kCod="2332453";tr_clk(7, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2332453: MEJORAMIENTO DEL SERVICIO DE AGUA PARA RIEGO DE LOS CANALES CADAPE, LA LADRILLERA Y LA COLORADA, DISTRITO DE LAMBAYEQUE, PROVINCIA DE LAMBAYEQUE - LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>
+                                    8,000
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr8" onclick='kCod="2371968";tr_clk(8, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2371968: CREACION DEL LOCAL PARA USOS MULTIPLES, EN EL PUEBLO JOVEN FEDERICO VILLARREAL - DISTRITO DE TUCUME - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>
+                                    7,000
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr9" onclick='kCod="2427167";tr_clk(9, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2427167: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE AGUA POTABLE Y SANEAMIENTO BASICO EN EL CASERIO SECTOR CINCO SIALUPE SIALUPE HUAMANTANGA SECTOR 05 DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    3,235,069
+                                </td>
+                                <td>
+                                    24,600
+                                </td>
+                                <td>
+                                    24,600
+                                </td>
+                                <td>
+                                    24,600
+                                </td>
+                                <td>
+                                    24,600
+                                </td>
+                                <td>
+                                    24,600
+                                </td>
+                                <td>&nbsp;
+                                    0.8
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr10" onclick='kCod="2456608";tr_clk(10, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2456608: REPARACION DE VIAS VECINALES; EN EL(LA) TRAMO MARAVILLAS - TEPO - PAVA - HACIENDA VIEJA DISTRITO DE MOCHUMI, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    58,431
+                                </td>
+                                <td>
+                                    58,431
                                 </td>
                                 <td>
                                     0
@@ -805,18 +703,52 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr14" onclick='kCod="2492655";tr_clk(14, this)'
+                            <tr class="alt" id="tr11" onclick='kCod="2456728";tr_clk(11, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2492655: RECUPERACION DE LA INFRAESTRUCTURA DE INSTITUCION EDUCATIVA N°11631 EL EDEN CON CODIGO LOCAL 806734 EN EL PUEBLO JOVEN JESUS NAZARENO, EN EL DISTRITO Y PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
+                                    2456728: MEJORAMIENTO DE PISTA Y VEREDA; EN EL (LA) PUEBLO JOVEN SANTA ROSA - A.H. EL ROSARIO - A.H. SANTO TORIBIO DE MOGROVEJO Y A.H. NAZARENO CAUTIIVO DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    293,271
+                                    2,172,240
                                 </td>
                                 <td>
-                                    0
+                                    15,269,186
+                                </td>
+                                <td>
+                                    14,710,325
+                                </td>
+                                <td>
+                                    10,546,560
+                                </td>
+                                <td>
+                                    7,456,381
+                                </td>
+                                <td>
+                                    7,456,281
+                                </td>
+                                <td>
+                                    7,456,281
+                                </td>
+                                <td>&nbsp;
+                                    48.8
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr12" onclick='kCod="2459073";tr_clk(12, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2459073: MEJORAMIENTO DEL SERVICIO DE EDUCACION INICIAL EN LA IEI N° 474 LA TINA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    145,477
+                                </td>
+                                <td>
+                                    145,477
                                 </td>
                                 <td>
                                     0
@@ -839,355 +771,49 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr15" onclick='kCod="2496306";tr_clk(15, this)'
+                            <tr class="alt" id="tr13" onclick='kCod="2463027";tr_clk(13, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2496306: RECUPERACION DE LA INFRAESTRUCTURA DE LA INSTITUCION EDUCATIVA N°11151 MONSEÑOR AUGUSTO VARGAS (CODIGO LOCAL N° 276013) DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
+                                    2463027: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VEHICULAR EN LA CARRETERA LAMBAYEQUE-SAN JOSE, TRAMO LAMBAYEQUE CRUCE CARRETERA CHICLAYO-SAN JOSE DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    25,459
-                                </td>
-                                <td>
-                                    25,459
-                                </td>
-                                <td>
                                     0
                                 </td>
                                 <td>
-                                    0
+                                    466,593
                                 </td>
                                 <td>
-                                    0
+                                    466,592
                                 </td>
                                 <td>
-                                    0
+                                    466,592
                                 </td>
                                 <td>
-                                    0
+                                    466,592
+                                </td>
+                                <td>
+                                    466,592
+                                </td>
+                                <td>
+                                    466,592
                                 </td>
                                 <td>&nbsp;
-                                    0.0
+                                    100.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr16" onclick='kCod="2497830";tr_clk(16, this)'
+                            <tr class="alt" id="tr14" onclick='kCod="2502688";tr_clk(14, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2497830: REHABILITACION DEL LOCAL ESCOLAR Nº 11271 SIGLO XXI CON CODIGO LOCAL 277135, LOCALIDAD LUIS ALBERTO SANCHEZ, DISTRITO Y PROVINCIA DE CHICLAYO - LAMBAYEQUE
+                                    2502688: MEJORAMIENTO DEL SERVICIO DE ORNATO PUBLICO EN LOS OVALOS DE INGRESO PANAMERICANA NORTE A LA CIUDAD DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    62,670
-                                </td>
-                                <td>
-                                    13,440
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr17" onclick='kCod="2507404";tr_clk(17, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2507404: REHABILITACION DEL LOCAL ESCOLAR N° 10925 CESAR VALLEJO CON CODIGO LOCAL 275952 P.J. LOPEZ ALBUJAR, DISTRITO Y PROVINCIA DE CHICLAYO - LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    2,921,607
-                                </td>
-                                <td>
-                                    2,921,606
-                                </td>
-                                <td>
-                                    2,921,606
-                                </td>
-                                <td>
-                                    2,814,388
-                                </td>
-                                <td>
-                                    2,814,388
-                                </td>
-                                <td>
-                                    2,814,388
-                                </td>
-                                <td>&nbsp;
-                                    96.3
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr18" onclick='kCod="2509424";tr_clk(18, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2509424: REPARACION DE CALZADA Y VEREDA; EN EL(LA) URBANIZACION SANTA VICTORIA DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    243,304
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr19" onclick='kCod="2511819";tr_clk(19, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2511819: REPARACION DE PAVIMENTO, VEREDA Y SARDINEL; EN EL(LA) . URB CAJA DEPOSITO, URB. BANCARIOS Y URB. MAGISTERIAL DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    257,499
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr20" onclick='kCod="2515449";tr_clk(20, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2515449: RECUPERACION DE AMBIENTE DE ADMINISTRACION Y/O GESTION PEDAGOGICA Y DE MOBILIARIO DE AULA Y DE AULA DE EDUCACION PRIMARIA, EN EL(LA) 11015 COMANDANTE ELIAS AGUIRRE - CHICLAYO, DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    131,926
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr21" onclick='kCod="2519914";tr_clk(21, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2519914: RENOVACION DE VEREDA; ADQUISICION DE MOBILIARIO URBANO; EN EL(LA) AVENIDA BALTA ENTRE LA AV. PEDRO RUIZ Y LA AV. GARCILASO DE LA VEGA DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    322,189
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr22" onclick='kCod="2522186";tr_clk(22, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2522186: MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN EL PUEBLO JOVEN SAN NICOLAS DEL DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    736,916
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr23" onclick='kCod="2524615";tr_clk(23, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2524615: REHABILITACION DEL LOCAL ESCOLAR 11016 JUAN MEJIA BACA CON CODIGO LOCAL 275848, P.J. JOSE OLAYA - DISTRITO Y PROVINCIA DE CHICLAYO - DEPARTAMENTO LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    180,112
-                                </td>
-                                <td>
-                                    5,039,221
-                                </td>
-                                <td>
-                                    5,039,220
-                                </td>
-                                <td>
-                                    5,039,220
-                                </td>
-                                <td>
-                                    4,986,146
-                                </td>
-                                <td>
-                                    4,986,146
-                                </td>
-                                <td>
-                                    4,986,146
-                                </td>
-                                <td>&nbsp;
-                                    98.9
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr24" onclick='kCod="2539138";tr_clk(24, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2539138: REHABILITACION DEL LOCAL ESCOLAR N°10022 MIGUEL MURO ZAPATA CON CODIGO LOCAL 275725, URBANIZACION SAN EDUARDO, DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    2,882,070
-                                </td>
-                                <td>
-                                    2,782,293
-                                </td>
-                                <td>
-                                    2,646,733
-                                </td>
-                                <td>
-                                    2,617,597
-                                </td>
-                                <td>
-                                    2,514,224
-                                </td>
-                                <td>
-                                    2,514,224
-                                </td>
-                                <td>&nbsp;
-                                    87.2
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr25" onclick='kCod="2539924";tr_clk(25, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2539924: MEJORAMIENTO DE LOS SERVICIO DE AGUA POTABLE Y ALCANTARILLADO EN LA UPIS CRUZ DE LA ESPERANZA DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    2,263,759
+                                    2,778,477
                                 </td>
                                 <td>
                                     0
@@ -1213,18 +839,18 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr26" onclick='kCod="2540967";tr_clk(26, this)'
+                            <tr class="alt" id="tr15" onclick='kCod="2510496";tr_clk(15, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2540967: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE Y ALCANTARILLADO DEL PUEBLO JOVEN LA PRIMAVERA DEL DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
+                                    2510496: MEJORAMIENTO DE LA TRANSITABILIDAD VEHICULAR Y PEATONAL EN EL CAMINO DE HERRADURA INICIA PANAMERICANA NORTE TERMINA CRUCE LAS JUNTAS DEL CASERIO LAS JUNTAS DEL DISTRITO DE PACORA - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    2,890,520
+                                    608,072
                                 </td>
                                 <td>
-                                    0
+                                    608,072
                                 </td>
                                 <td>
                                     0
@@ -1247,52 +873,18 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr27" onclick='kCod="2544985";tr_clk(27, this)'
+                            <tr class="alt" id="tr16" onclick='kCod="2538962";tr_clk(16, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2544985: RECONSTRUCCION DEL TRAMO 1-1233 -AVENIDA TARAPACA Y EL TRAMO 1-1235-AVENIDA TARAPACA TRAMO DESDE CA. VICENTE DE LA VEGA HASTA CA. FRANSISCO CABRERA, DISTRITO DE CHICLAYO, PROVINCIA DE CHICLAYO, DEPARTAMENTO DE LAMBAYEQUE
+                                    2538962: CREACION DEL SERVICIO DE ESPACIOS PUBLICOS VERDES, PARQUE EN LA HABILITACION URBANA SAN FRANCISCO DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    60,740
+                                    679,806
                                 </td>
                                 <td>
-                                    60,740
-                                </td>
-                                <td>
-                                    5,865
-                                </td>
-                                <td>
-                                    5,865
-                                </td>
-                                <td>
-                                    5,865
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>
-                                    0
-                                </td>
-                                <td>&nbsp;
-                                    0.0
-                                </td>
-                            </tr>
-                            
-                        
-                            <tr class="alt" id="tr28" onclick='kCod="2551462";tr_clk(28, this)'
-                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
-                                
-                                <td align="left">
-                                    2551462: MEJORAMIENTO DE LOS SERVICIOS DE AGUA POTABLE Y ALCANTARILLADO EN LA URBANIZACION PRIMAVERA I Y II DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
-                                    
-                                </td>
-                                <td>
-                                    4,649
-                                </td>
-                                <td>
-                                    4,649
+                                    35,642
                                 </td>
                                 <td>
                                     0
@@ -1315,18 +907,52 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr29" onclick='kCod="2556833";tr_clk(29, this)'
+                            <tr class="alt" id="tr17" onclick='kCod="2545314";tr_clk(17, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2556833: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE Y ALCANTARILLADO DE LA URB. 03 DE OCTUBRE Y URB. SANTA LILA DEL DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
+                                    2545314: CREACION DEL SERVICIO DE AGUA POTABLE Y SANEAMIENTO BASICO AAHH. CESAR A. VALLEJO MENDOZA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    3,409,892
+                                    2,226,823
+                                </td>
+                                <td>
+                                    159,834
+                                </td>
+                                <td>
+                                    159,833
+                                </td>
+                                <td>
+                                    159,833
+                                </td>
+                                <td>
+                                    159,833
                                 </td>
                                 <td>
                                     0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr18" onclick='kCod="2559357";tr_clk(18, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2559357: CREACION DEL SERVICIO DE PRACTICA DEPORTIVA Y/O RECREATIVA EN EL C.P. CAPILLA SANTA ROSA SIALUPE BACA DEL DISTRITO DE LAMBAYEQUE - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    984,377
+                                </td>
+                                <td>
+                                    232,804
                                 </td>
                                 <td>
                                     0
@@ -1349,18 +975,52 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr30" onclick='kCod="2566052";tr_clk(30, this)'
+                            <tr class="alt" id="tr19" onclick='kCod="2562807";tr_clk(19, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2566052: MEJORAMIENTO DE LOS SERVICIOS DE AGUA POTABLE Y ALCANTARILLADO DE LOTIZACION PATAZCA DEL DISTRITO DE CHICLAYO - PROVINCIA DE CHICLAYO - DEPARTAMENTO DE LAMBAYEQUE
+                                    2562807: CREACION DEL SERVICIO DE HABITABILIDAD INSTITUCIONAL EN EL LOCAL MUNICIPAL DEL CENTRO POBLADO CORRAL DE PIEDRA DEL DISTRITO DE SALAS - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE CORRAL DE PIEDRA DEL DISTRITO DE SALAS - PROVINCIA DE LAMBAYEQUE - DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    5,501,692
+                                    0
+                                </td>
+                                <td>
+                                    370,897
+                                </td>
+                                <td>
+                                    370,896
+                                </td>
+                                <td>
+                                    353,828
+                                </td>
+                                <td>
+                                    268,492
+                                </td>
+                                <td>
+                                    258,144
+                                </td>
+                                <td>
+                                    258,144
+                                </td>
+                                <td>&nbsp;
+                                    69.6
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr20" onclick='kCod="2598972";tr_clk(20, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2598972: MEJORAMIENTO DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS RURALES EN PTO4 LOS CORONADOS PALO PARADO MUYFINCA SIALUPE BACA SECT HEREDIA SECT MARIPOSA PUEBLO NUEVO PTO 1 PARADERO MUYFINCA LA PIEDRA HUAMANTANGA SECT V SR DE LOS MILAGROS RAMA PEREZ SAN ANTONIO LOS CHIROQUE DISTRITO DE MOCHUMI DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
                                 </td>
                                 <td>
                                     0
+                                </td>
+                                <td>
+                                    4,010,115
                                 </td>
                                 <td>
                                     0
@@ -1383,18 +1043,120 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr31" onclick='kCod="2644850";tr_clk(31, this)'
+                            <tr class="alt" id="tr21" onclick='kCod="2605101";tr_clk(21, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2644850: MEJORAMIENTO DEL SERVICIO DE PRACTICA DEPORTIVA Y/O RECREATIVA EN LA LOSA DEPORTIVA DEL PUEBLO JOVEN SIMON BOLIVAR DEL DISTRITO DE CHICLAYO DE LA PROVINCIA DE CHICLAYO DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    2605101: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS RURALES EN LOS CASERIOS VI ETAPA DEL DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    2,026,705
+                                    0
                                 </td>
                                 <td>
-                                    43,880
+                                    5,756,750
+                                </td>
+                                <td>
+                                    5,756,750
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr22" onclick='kCod="2607525";tr_clk(22, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2607525: CONSTRUCCION DE AMBIENTE DE RESIDENCIA Y VESTUARIOS Y/O SSHH DE USUARIOS; EN EL(LA) COMISARIA RURAL SAN MARTIN DE PORRES, DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>
+                                    3,717
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr23" onclick='kCod="2612932";tr_clk(23, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2612932: CONSTRUCCION DE PAVIMENTO, VEREDA Y SARDINEL; EN EL(LA) CALLE SANTA ROSA ENTRE CALLE SANTA CECILIA Y CALLE MICAELA BASTIDAS DE OLMOS, DISTRITO DE OLMOS, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    1,796,505
+                                </td>
+                                <td>
+                                    1,796,504
+                                </td>
+                                <td>
+                                    1,712,131
+                                </td>
+                                <td>
+                                    505,052
+                                </td>
+                                <td>
+                                    249,878
+                                </td>
+                                <td>
+                                    249,878
+                                </td>
+                                <td>&nbsp;
+                                    13.9
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr24" onclick='kCod="2627349";tr_clk(24, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2627349: MEJORAMIENTO DEL SERVICIO DE TRANSITABILIDAD VIAL INTERURBANA EN EL CAMINO VECINAL LA-568 SECTOR MI PERÙ EN EL TRAMO DE LA PROGRESIVA 0+000 KM AL 3+595.82 KM, UBICADO EN EL CASERIO LOS BANCES DISTRITO DE PACORA DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    1,380,139
+                                </td>
+                                <td>
+                                    16,160
                                 </td>
                                 <td>
                                     0
@@ -1417,154 +1179,154 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr32" onclick='kCod="2650080";tr_clk(32, this)'
+                            <tr class="alt" id="tr25" onclick='kCod="2647798";tr_clk(25, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2650080: MEJORAMIENTO DEL SERVICIO DE ALCANTARILLADO EN LA URBANIZACION EL AMAUTA DEL DISTRITO DE CHICLAYO DE LA PROVINCIA DE CHICLAYO DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    2647798: REPARACION DE VIAS DE ACCESO; EN EL(LA) PRINCIPALES CALLES DEL PUEBLO JOVEN SAN MARTIN DEL DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    1,544,195
+                                    2,052,312
                                 </td>
                                 <td>
-                                    1,544,194
+                                    1,597,098
                                 </td>
                                 <td>
-                                    1,544,194
+                                    1,511,760
                                 </td>
                                 <td>
-                                    1,413,466
+                                    1,448,781
                                 </td>
                                 <td>
-                                    1,413,466
+                                    1,198,488
                                 </td>
                                 <td>
-                                    1,413,466
+                                    1,197,188
                                 </td>
                                 <td>&nbsp;
-                                    91.5
+                                    58.4
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr33" onclick='kCod="2701154";tr_clk(33, this)'
+                            <tr class="alt" id="tr26" onclick='kCod="2653025";tr_clk(26, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2701154: MEJORAMIENTO DEL SERVICIO DE MOVILIDAD URBANA EN LA AVENIDA JOSE QUIÑONES GONZALES DESDE LA CALLE VICENTE LA VEGA HASTA LA AVENIDA NICOLAS DE PIEROLA DISTRITO DE CHICLAYO DE LA PROVINCIA DE CHICLAYO DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    2653025: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE URBANO Y MEJORAMIENTO DEL SERVICIO DE ALCANTARILLADO EN LA ASOCIACION PRO VIVIENDA VIRGEN DE FATIMA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    7,143,012
+                                    1,752,530
                                 </td>
                                 <td>
-                                    6,651,390
+                                    1,752,529
                                 </td>
                                 <td>
-                                    6,402,389
+                                    1,659,254
                                 </td>
                                 <td>
-                                    4,264,323
+                                    0
                                 </td>
                                 <td>
-                                    4,258,323
+                                    0
                                 </td>
                                 <td>
-                                    4,258,323
+                                    0
                                 </td>
                                 <td>&nbsp;
-                                    59.6
+                                    0.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr34" onclick='kCod="2701220";tr_clk(34, this)'
+                            <tr class="alt" id="tr27" onclick='kCod="2655230";tr_clk(27, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2701220: REPARACION DE PISTA Y VEREDA; EN EL(LA) CALLES IQUITOS, SARGENTO LORESS, CALLE 18 Y CALLE HUALLAGA DE LA URBANIZACION QUIÑONES DEL DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
+                                    2655230: REPARACION DE CELDAS PARA RESIDUOS; EN EL(LA) CIUDAD DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    2,946,385
+                                    491,246
                                 </td>
                                 <td>
-                                    2,773,237
+                                    491,245
                                 </td>
                                 <td>
-                                    2,773,237
+                                    491,180
                                 </td>
                                 <td>
-                                    1,120,792
+                                    490,849
                                 </td>
                                 <td>
-                                    824,471
+                                    486,849
                                 </td>
                                 <td>
-                                    824,471
+                                    486,849
                                 </td>
                                 <td>&nbsp;
-                                    28.0
+                                    99.1
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr35" onclick='kCod="2701265";tr_clk(35, this)'
+                            <tr class="alt" id="tr28" onclick='kCod="2656036";tr_clk(28, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2701265: REPARACION DE PISTA Y VEREDA; EN EL(LA) CALLE ANDALUCIA, CALLE CADIZ, CALLE MANCO CAPAC, CALLE PEDRO RUIZ, CALLE CORDOVA Y CALLE TOLEDO EN LA URBANIZACION SAN JUAN DEL DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
+                                    2656036: REPARACION DE LOSA DEPORTIVA Y SARDINEL; ADQUISICION DE JUEGOS INFANTILES E INCLUSIVOS; CONSTRUCCION DE VEREDA; ADEMAS DE OTROS ACTIVOS EN EL(LA) PARQUE PRINCIPAL DEL PUEBLO JOVEN SAN MARTIN DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    0
+                                    449,183
                                 </td>
                                 <td>
-                                    5,875,751
+                                    1,198,443
                                 </td>
                                 <td>
-                                    5,858,750
+                                    1,121,878
                                 </td>
                                 <td>
-                                    5,858,750
+                                    32,000
                                 </td>
                                 <td>
-                                    3,100,514
+                                    32,000
                                 </td>
                                 <td>
-                                    3,081,014
+                                    32,000
                                 </td>
                                 <td>
-                                    2,608,968
+                                    32,000
                                 </td>
                                 <td>&nbsp;
-                                    52.4
+                                    2.7
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr36" onclick='kCod="2702788";tr_clk(36, this)'
+                            <tr class="alt" id="tr29" onclick='kCod="2664884";tr_clk(29, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2702788: REPARACION DE PISTA Y VEREDA; EN EL(LA) CALLE AREQUIPA NORTE, LA CALLE FRANCISCO CUNEO, CALLE MANUEL ARTEAGA Y JIRON PUNO EN EL DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
+                                    2664884: CREACION DEL SERVICIO DE SUMINISTRO ELECTRICO DOMICILIARIO EN ZONAS URBANAS EN AA.HH. LA ESTANCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
                                     
                                 </td>
                                 <td>
-                                    0
+                                    248,806
                                 </td>
                                 <td>
-                                    45,329
+                                    248,806
                                 </td>
                                 <td>
                                     0
@@ -1587,21 +1349,395 @@ body
                             </tr>
                             
                         
-                            <tr class="alt" id="tr37" onclick='kCod="2712476";tr_clk(37, this)'
+                            <tr class="alt" id="tr30" onclick='kCod="2666562";tr_clk(30, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    2712476: REMODELACION DE COBERTURA; EN EL(LA) MERCADO MODELO DISTRITO DE CHICLAYO, PROVINCIA CHICLAYO, DEPARTAMENTO LAMBAYEQUE
+                                    2666562: MEJORAMIENTO DEL SERVICIO DE AGUA POTABLE URBANO Y MEJORAMIENTO DEL SERVICIO DE ALCANTARILLADO EN A.A.H.H. LA ESTANCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    373,287
+                                </td>
+                                <td>
+                                    441,121
+                                </td>
+                                <td>
+                                    441,072
+                                </td>
+                                <td>
+                                    42,681
+                                </td>
+                                <td>
+                                    42,681
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr31" onclick='kCod="2682628";tr_clk(31, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2682628: CONSTRUCCION DE VESTUARIOS Y/O SSHH DE USUARIOS Y TOPICO DE EMERGENCIA; REMODELACION DE COBERTURA Y SALA DE TALLER; ADEMAS DE OTROS ACTIVOS EN EL(LA) COMPAÑIA DE BOMBEROS SALVADORA LAMBAYEQUE N°88 DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    265,184
+                                </td>
+                                <td>
+                                    286,484
+                                </td>
+                                <td>
+                                    21,300
+                                </td>
+                                <td>
+                                    21,300
+                                </td>
+                                <td>
+                                    21,300
+                                </td>
+                                <td>
+                                    21,300
+                                </td>
+                                <td>
+                                    21,300
+                                </td>
+                                <td>&nbsp;
+                                    7.4
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr32" onclick='kCod="2686876";tr_clk(32, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2686876: ADQUISICION DE TRIMOVIL; EN EL(LA) MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE PARA EL ABASTECIMIENTO DE AGUA POTABLE (TRIMOVIL CISTERNA), EN LOS DIFERENTES CENTROS POBLADOS RURALES DE LA PROVINCIA DE LAMBAYEQUE DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
                                     
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
-                                    1,895,215
+                                    768,000
                                 </td>
                                 <td>
-                                    1,726,240
+                                    768,000
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr33" onclick='kCod="2687760";tr_clk(33, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2687760: MEJORAMIENTO DEL SERVICIO DE MOVILIDAD URBANA EN LA UNIDAD VECINAL LA ESPERANZA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    2,727,426
+                                </td>
+                                <td>
+                                    2,727,425
+                                </td>
+                                <td>
+                                    2,591,054
+                                </td>
+                                <td>
+                                    461,833
+                                </td>
+                                <td>
+                                    461,833
+                                </td>
+                                <td>
+                                    461,833
+                                </td>
+                                <td>&nbsp;
+                                    16.9
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr34" onclick='kCod="2689944";tr_clk(34, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2689944: MEJORAMIENTO DE LOS SERVICIOS OPERATIVOS O MISIONALES INSTITUCIONALES EN EL ASENTAMIENTO HUMANO TORIBIA CASTRO CON LOCAL DE USOS MULTIPLES EN LA MZA A LOTE 13 DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>
+                                    28,400
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr35" onclick='kCod="2691828";tr_clk(35, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2691828: MEJORAMIENTO DE LOS SERVICIOS OPERATIVOS O MISIONALES INSTITUCIONALES EN EL ASENTAMIENTO HUMANO TORIBIA CASTRO CON LOCAL COMUNAL EN LA MZA I LOTE 18 DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    857,635
+                                </td>
+                                <td>
+                                    788,857
+                                </td>
+                                <td>
+                                    28,300
+                                </td>
+                                <td>
+                                    28,300
+                                </td>
+                                <td>
+                                    28,300
+                                </td>
+                                <td>
+                                    28,300
+                                </td>
+                                <td>&nbsp;
+                                    3.3
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr36" onclick='kCod="2691829";tr_clk(36, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2691829: MEJORAMIENTO DEL SERVICIO DE HABITABILIDAD INSTITUCIONAL EN EL LOCAL MUNICIPAL DEL CENTRO POBLADO COLAYA DISTRITO DE SALAS DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    386,216
+                                </td>
+                                <td>
+                                    386,216
+                                </td>
+                                <td>
+                                    386,203
+                                </td>
+                                <td>
+                                    131,631
+                                </td>
+                                <td>
+                                    61,405
+                                </td>
+                                <td>
+                                    51,733
+                                </td>
+                                <td>&nbsp;
+                                    15.9
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr37" onclick='kCod="2698879";tr_clk(37, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2698879: CREACION DEL SERVICIO DE AGUA POTABLE URBANO Y CREACION DEL SERVICIO DE ALCANTARILLADO EN LA H.U. SAN CARLOS DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    875,083
+                                </td>
+                                <td>
+                                    875,082
+                                </td>
+                                <td>
+                                    853,954
+                                </td>
+                                <td>
+                                    552,639
+                                </td>
+                                <td>
+                                    552,639
+                                </td>
+                                <td>
+                                    552,639
+                                </td>
+                                <td>&nbsp;
+                                    63.2
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr38" onclick='kCod="2701100";tr_clk(38, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2701100: ADQUISICION DE CAMION COMPACTADOR; EN EL(LA) SUB GERENCIA DE GESTION AMBIENTAL DE LA MUNICIPALIDAD DISTRITAL DE ILLIMO DISTRITO DE ILLIMO, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    620,000
+                                </td>
+                                <td>
+                                    560,000
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr39" onclick='kCod="2704562";tr_clk(39, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2704562: RENOVACION DE OBRAS EXTERIORES, AREA VERDE, EQUIPO DEPORTIVO - RECREATIVO Y LUMINARIA; ADEMAS DE OTROS ACTIVOS EN EL(LA) PARQUE INFANTIL VICTORIA MEJIA DE GARCIA DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    288,882
+                                </td>
+                                <td>
+                                    288,881
+                                </td>
+                                <td>
+                                    274,437
+                                </td>
+                                <td>
+                                    156,341
+                                </td>
+                                <td>
+                                    156,341
+                                </td>
+                                <td>
+                                    156,341
+                                </td>
+                                <td>&nbsp;
+                                    54.1
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr40" onclick='kCod="2715379";tr_clk(40, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2715379: MEJORAMIENTO Y AMPLIACION DEL SERVICIO DE MOVILIDAD URBANA EN URBANIZACION PROCERES DE LA INDEPENDENCIA DISTRITO DE LAMBAYEQUE DE LA PROVINCIA DE LAMBAYEQUE DEL DEPARTAMENTO DE LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>
+                                    31,500
+                                </td>
+                                <td>&nbsp;
+                                    100.0
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr41" onclick='kCod="2729444";tr_clk(41, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    2729444: REMODELACION DE LOSA Y SSHH DE ESPECTADORES; REPARACION DE COBERTURA DE INSTALACIONES DEPORTIVAS; ADQUISICION DE EQUIPO DEPORTIVO DE COMPETENCIA; ADEMAS DE OTROS ACTIVOS EN EL(LA) COLISEO CERRADO EDUARDO LACA BARRETO DEL DISTRITO DE LAMBAYEQUE, PROVINCIA LAMBAYEQUE, DEPARTAMENTO LAMBAYEQUE
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    644,164
+                                </td>
+                                <td>
+                                    621,666
                                 </td>
                                 <td>
                                     0

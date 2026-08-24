@@ -283,34 +283,34 @@ body
                     <tr align="right">
                         
                         <td align="left" style="font-size: 7pt; width: auto">
-                            Municipalidad 140101-301212: MUNICIPALIDAD PROVINCIAL DE CHICLAYO
+                            Municipalidad 140301-301238: MUNICIPALIDAD PROVINCIAL DE LAMBAYEQUE
                             
                             
                             
                             
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            24,788,128
+                            28,913,173
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            36,464,141
+                            58,702,916
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            32,219,387
+                            47,596,109
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            30,108,584
+                            32,009,772
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,451,217
+                            14,413,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            22,004,199
+                            12,549,028
                         </td>
                         <td align="right" style="width: 100px; white-space: nowrap">
-                            21,532,153
+                            12,503,656
                         </td>
-                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;60.3</td>
+                        <td align="right" style="width: 50px; white-space: nowrap">&nbsp;21.4</td>
                     </tr>
                 
                     </table>
@@ -337,28 +337,28 @@ body
                                     
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    1,711,308
+                                    2,376,148
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    1,913,103
+                                    2,376,148
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    1,068,079
+                                    2,172,240
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    1,068,079
+                                    2,172,240
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    1,022,440
+                                    2,166,103
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    913,202
+                                    2,166,003
                                 </td>
                                 <td style="white-space: nowrap; width: 100px">
-                                    913,202
+                                    2,166,003
                                 </td>
                                 <td style="white-space: nowrap; width: 50px">&nbsp;
-                                    47.7
+                                    91.2
                                 </td>
                             </tr>
                             
@@ -371,67 +371,101 @@ body
                                     
                                 </td>
                                 <td>
-                                    15,801,582
+                                    22,303,405
                                 </td>
                                 <td>
-                                    24,953,353
+                                    37,358,770
                                 </td>
                                 <td>
-                                    23,329,425
+                                    34,797,871
                                 </td>
                                 <td>
-                                    21,378,732
+                                    23,339,352
                                 </td>
                                 <td>
-                                    14,960,637
+                                    8,712,356
                                 </td>
                                 <td>
-                                    14,941,137
+                                    6,852,456
                                 </td>
                                 <td>
-                                    14,469,092
+                                    6,807,084
                                 </td>
                                 <td>&nbsp;
-                                    59.9
+                                    18.3
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr2" onclick='kCod="08";tr_clk(2, this)'
+                            <tr class="alt" id="tr2" onclick='kCod="09";tr_clk(2, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
-                                    08: IMPUESTOS MUNICIPALES
+                                    09: RECURSOS DIRECTAMENTE RECAUDADOS
                                     
                                 </td>
                                 <td>
-                                    7,211,545
+                                    0
                                 </td>
                                 <td>
-                                    8,887,276
+                                    7,000
                                 </td>
                                 <td>
-                                    7,274,943
+                                    7,000
                                 </td>
                                 <td>
-                                    7,147,722
+                                    7,000
                                 </td>
                                 <td>
-                                    5,983,226
+                                    7,000
                                 </td>
                                 <td>
-                                    5,664,945
+                                    7,000
                                 </td>
                                 <td>
-                                    5,664,945
+                                    7,000
                                 </td>
                                 <td>&nbsp;
-                                    63.7
+                                    100.0
                                 </td>
                             </tr>
                             
                         
-                            <tr class="alt" id="tr3" onclick='kCod="18";tr_clk(3, this)'
+                            <tr class="alt" id="tr3" onclick='kCod="13";tr_clk(3, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    13: DONACIONES Y TRANSFERENCIAS
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    6,000,000
+                                </td>
+                                <td>
+                                    3,036,720
+                                </td>
+                                <td>
+                                    3,036,720
+                                </td>
+                                <td>
+                                    3,036,720
+                                </td>
+                                <td>&nbsp;
+                                    50.6
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr4" onclick='kCod="18";tr_clk(4, this)'
                                 onmouseover="tr_over(this)" onmouseout="tr_out(this)">
                                 
                                 <td align="left">
@@ -439,28 +473,62 @@ body
                                     
                                 </td>
                                 <td>
-                                    63,693
+                                    4,233,620
                                 </td>
                                 <td>
-                                    710,409
+                                    8,274,386
                                 </td>
                                 <td>
-                                    546,939
+                                    491,245
                                 </td>
                                 <td>
-                                    514,050
+                                    491,180
                                 </td>
                                 <td>
-                                    484,915
+                                    490,849
                                 </td>
                                 <td>
-                                    484,915
+                                    486,849
                                 </td>
                                 <td>
-                                    484,915
+                                    486,849
                                 </td>
                                 <td>&nbsp;
-                                    68.3
+                                    5.9
+                                </td>
+                            </tr>
+                            
+                        
+                            <tr class="alt" id="tr5" onclick='kCod="19";tr_clk(5, this)'
+                                onmouseover="tr_over(this)" onmouseout="tr_out(this)">
+                                
+                                <td align="left">
+                                    19: RECURSOS POR OPERACIONES OFICIALES DE CREDITO
+                                    
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    4,686,612
+                                </td>
+                                <td>
+                                    4,127,752
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>&nbsp;
+                                    0.0
                                 </td>
                             </tr>
                             

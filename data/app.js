@@ -753,11 +753,15 @@ function renderB9() {
   const nula = () => new Array(labels.length).fill(null);
 
   // ── Gráfico Devengado (3 series) ──────────────────────────────
+  // Ambas ramas (roja "a la fecha" y dorada "proyección") nacen del
+  // MISMO punto 2025 y se bifurcan en Y hacia dos destinos distintos
+  // en el eje X — no es una cascada 2025→actual→proyección.
   const devReal = nula(), dev2026Linea = nula(), devProyLinea = nula();
   años.forEach((a, i) => { devReal[i] = B9_HIST[a].dev; });
-  if (años.length) dev2026Linea[años.length - 1] = B9_HIST[años[años.length - 1]].dev; // ancla en el último año real
+  const ultimoRealDev = años.length ? B9_HIST[años[años.length - 1]].dev : null;
+  if (ultimoRealDev !== null) dev2026Linea[años.length - 1] = ultimoRealDev;   // ancla en 2025
   if (dev2026 !== null) dev2026Linea[IDX_2026] = dev2026;
-  if (dev2026 !== null) devProyLinea[IDX_2026] = dev2026; // ancla
+  if (ultimoRealDev !== null) devProyLinea[años.length - 1] = ultimoRealDev;   // ancla en 2025 (misma bifurcación)
   if (devProy2026 !== null) devProyLinea[IDX_PROY] = devProy2026;
 
   const canvasDev = $("b9chartDev");

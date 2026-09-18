@@ -409,6 +409,18 @@ main{padding:20px 0 60px}
 }
 .hist-panel-tag.dev{background:var(--rojo-osc)}
 .hist-panel-tag.pim{background:var(--dorado-osc)}
+.hist-panel-head{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;flex:0 0 auto
+}
+.hist-legend{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hist-legend-item{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:"Barlow",system-ui,sans-serif;
+  font-size:12px;font-weight:700;color:var(--texto)
+}
+.hist-legend-item i{
+  display:inline-block;width:10px;height:10px;border-radius:50%;flex:0 0 auto
+}
 
 /* ════════════════════════════════════════════════════
    NOTAS
@@ -1145,13 +1157,25 @@ main{padding:20px 0 60px}
     </div>
     <div class="slide-body">
       <div class="hist-panel">
-        <div class="hist-panel-tag dev">Devengado</div>
+        <div class="hist-panel-head">
+          <div class="hist-panel-tag dev">Devengado</div>
+          <div class="hist-legend">
+            <span class="hist-legend-item"><i style="background:#7a1219"></i>Devengado Real</span>
+            <span class="hist-legend-item"><i style="background:#9a1820"></i>Devengado 2026 (a la fecha)</span>
+            <span class="hist-legend-item"><i style="background:#d9a000"></i>Proyección Dic 2026</span>
+          </div>
+        </div>
         <div class="chart-wrap" style="min-height:230px">
           <canvas id="b9chartDev"></canvas>
         </div>
       </div>
       <div class="hist-panel">
-        <div class="hist-panel-tag pim">PIM</div>
+        <div class="hist-panel-head">
+          <div class="hist-panel-tag pim">PIM</div>
+          <div class="hist-legend">
+            <span class="hist-legend-item"><i style="background:#d9a000"></i>PIM</span>
+          </div>
+        </div>
         <div class="chart-wrap" style="min-height:230px">
           <canvas id="b9chartPim"></canvas>
         </div>

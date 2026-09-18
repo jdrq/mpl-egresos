@@ -814,7 +814,16 @@ function renderB9() {
         interaction: { mode: "index", intersect: false },
         plugins: {
           legend: { display: false },
-          tooltip: { callbacks: { label: ctx => ctx.dataset.label + ": " + fmtNum(ctx.parsed.y) } }
+          tooltip: {
+            // En la columna 2025, dsReal/ds2026/dsProy comparten el mismo
+            // valor porque ds2026 y dsProy anclan ahí para poder bifurcar
+            // la línea — sin este filtro el tooltip mostraría "Devengado
+            // Real", "Devengado 2026" y "Proyección" repetidos con el
+            // mismo número. Solo se listan los datasets 2026/Proyección
+            // cuando el punto es el suyo propio (columna 2026).
+            filter: item => item.datasetIndex === 0 || item.dataIndex === IDX_2026,
+            callbacks: { label: ctx => ctx.dataset.label + ": " + fmtNum(ctx.parsed.y) }
+          }
         },
         scales: {
           x: { offset: true, grid: { display: false }, ticks: {

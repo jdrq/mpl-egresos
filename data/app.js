@@ -740,15 +740,16 @@ function renderB9() {
   const pim2026 = datos.rubro ? datos.rubro.pim : null;
   const devProy2026 = proyeccionLineal(dev2026);
 
-  // Índices del eje X: 0..N-1 = años históricos, N = "2026 (a la fecha)",
-  // N+1 = "Dic 2026 (proyección)"
+  // Índices del eje X: 0..N-1 = años históricos, N = 2026 (punto actual),
+  // N+1 = punto de proyección a diciembre. Ambos comparten la MISMA
+  // etiqueta visible "2026" en el eje — la última posición (proyección)
+  // queda sin texto propio, igual que en el modelo de referencia: el
+  // punto de proyección simplemente "flota" más a la derecha, después
+  // de la última línea de grilla, identificado por su color/leyenda,
+  // no por una segunda etiqueta de año.
   const IDX_2026 = años.length;
   const IDX_PROY = años.length + 1;
-  const labels = [
-    ...años.map(String),
-    ["2026", "(a la fecha)"],
-    ["Dic 2026", "(proyección)"]
-  ];
+  const labels = [...años.map(String), "2026", ""];
   const nula = () => new Array(labels.length).fill(null);
 
   // ── Gráfico Devengado (3 series) ──────────────────────────────

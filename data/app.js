@@ -760,6 +760,12 @@ function renderB9() {
   const labels = [...años.map(String), "2026"];
   const nula = () => new Array(labels.length).fill(null);
 
+  // Nota superior con valores en vivo (guiones si aún no se cargó rubro.xls)
+  const notaEl = $("b9nota");
+  if (notaEl) {
+    notaEl.innerHTML = `El año 2026 se actualiza en tiempo real: Devengado S/ ${dev2026 !== null ? fmtN(dev2026) : "----,----,---"} · PIM S/ ${pim2026 !== null ? fmtN(pim2026) : "---,---,---"}. Los datos 2016–2025 provienen de registros históricos de la Consulta Amigable MEF.`;
+  }
+
   // ── Gráfico Devengado (3 series) ──────────────────────────────
   // Las 3 ramas nacen del punto 2025 y convergen en la columna 2026:
   // "Devengado Real" llega hasta 2025; desde ahí se bifurcan
@@ -804,14 +810,14 @@ function renderB9() {
       data: { labels, datasets: [dsReal, ds2026, dsProy] },
       options: {
         responsive: true, maintainAspectRatio: false,
-        layout: { padding: { top: 18, bottom: 6 } },
+        layout: { padding: { top: 18, bottom: 6, right: 46, left: 4 } },
         interaction: { mode: "index", intersect: false },
         plugins: {
           legend: { display: false },
           tooltip: { callbacks: { label: ctx => ctx.dataset.label + ": " + fmtNum(ctx.parsed.y) } }
         },
         scales: {
-          x: { grid: { display: false }, ticks: {
+          x: { offset: true, grid: { display: false }, ticks: {
             font: { family: "'Barlow Condensed',sans-serif", size: 11, weight: "600" }, color: "#374151" } },
           y: { grid: { color: "#f3f4f6" }, ticks: {
             color: "#6b7280", font: { family: "Barlow,sans-serif", size: 10 }, callback: v => fmtCompacto(v) } }
@@ -846,14 +852,14 @@ function renderB9() {
       data: { labels, datasets: [dsPim] },
       options: {
         responsive: true, maintainAspectRatio: false,
-        layout: { padding: { top: 18, bottom: 6 } },
+        layout: { padding: { top: 18, bottom: 6, right: 46, left: 4 } },
         interaction: { mode: "index", intersect: false },
         plugins: {
           legend: { display: false },
           tooltip: { callbacks: { label: ctx => "PIM: " + fmtNum(ctx.parsed.y) } }
         },
         scales: {
-          x: { grid: { display: false }, ticks: {
+          x: { offset: true, grid: { display: false }, ticks: {
             font: { family: "'Barlow Condensed',sans-serif", size: 11, weight: "600" }, color: "#374151" } },
           y: { grid: { color: "#f3f4f6" }, ticks: {
             color: "#6b7280", font: { family: "Barlow,sans-serif", size: 10 }, callback: v => fmtCompacto(v) } }

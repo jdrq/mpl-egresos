@@ -630,9 +630,22 @@ function renderB7() {
 }
 
 // ══════════════════════════════════════════════════════════════
-// B8 — Histórico Ene–Sep (diseño mejorado)
+// B8 — Histórico acumulado Ene–(mes de corte)
 // ══════════════════════════════════════════════════════════════
+// ► ÚNICO lugar a cambiar cada mes: mes de corte del histórico (B8).
+//   Debe coincidir con el corte de data/historico_egresos.json.
+//   Ej. cierre de noviembre → { corto:"Nov", largo:"noviembre" }
+const B8_CORTE = { corto:"Oct", largo:"octubre" };
+
+function aplicarCorteB8() {
+  const t=$("b8titulo"), s=$("b8sub"), p=$("b8pie");
+  if(t) t.textContent=`Comparativo Histórico — Devengado Ene–${B8_CORTE.corto}`;
+  if(s) s.textContent=`Evolución del gasto acumulado enero–${B8_CORTE.largo} · Solo Proyectos`;
+  if(p) p.textContent=`Fuente: Consulta Amigable MEF 2021–2025: acumulado Ene–${B8_CORTE.corto} extraído de registros históricos · 2026: acumulado diario`;
+}
+
 function renderB8() {
+  aplicarCorteB8();
   const años=Object.keys(B8_HIST).map(Number).sort();
   const dev2026=datos.rubro?datos.rubro.dev:null;
   if(dev2026!==null) años.push(2026);
@@ -651,7 +664,7 @@ function renderB8() {
         vari=`<div class="hist-var" style="color:${col}">${sym} ${Math.abs(delta).toFixed(1)}% vs ${a-1}</div>`;
       }
       return `<div class="hist-card ${es2026?"cur":""}">
-        <div class="hist-label">${a}${es2026?" · Acum.":" · Ene–Sep"}</div>
+        <div class="hist-label">${a}${es2026?" · Acum.":" · Ene–"+B8_CORTE.corto}</div>
         <div class="hist-val">${fmtCompacto(v)}</div>
         ${vari}
       </div>`;

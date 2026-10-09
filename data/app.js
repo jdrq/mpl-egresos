@@ -804,7 +804,7 @@ function renderB8() {
 }
 
 // ══════════════════════════════════════════════════════════════
-// B9 — Comparativo histórico anual Devengado/PIM (Ene–Dic, 2016–2026)
+// B9 — Comparativo histórico anual Devengado/PIM (Ene–Dic, 2015–2026)
 // ══════════════════════════════════════════════════════════════
 // dir: "auto" (detecta valle/pico comparando con vecinos del mismo
 // dataset), "arriba" o "abajo" (fuerza el lado, para puntos ancla
@@ -860,7 +860,7 @@ function renderB9() {
   // Nota superior con valores en vivo (guiones si aún no se cargó rubro.xls)
   const notaEl = $("b9nota");
   if (notaEl) {
-    notaEl.innerHTML = `El año 2026 se actualiza en tiempo real: Devengado S/ ${dev2026 !== null ? fmtN(dev2026) : "----,----,---"} · PIM S/ ${pim2026 !== null ? fmtN(pim2026) : "---,---,---"}. Los datos 2016–2025 provienen de registros históricos de la Consulta Amigable MEF.`;
+    notaEl.innerHTML = `El año 2026 se actualiza en tiempo real: Devengado S/ ${dev2026 !== null ? fmtN(dev2026) : "----,----,---"} · PIM S/ ${pim2026 !== null ? fmtN(pim2026) : "---,---,---"}. Los datos 2015–2025 provienen de registros históricos de la Consulta Amigable MEF.`;
   }
 
   // ── Gráfico Devengado (3 series) ──────────────────────────────

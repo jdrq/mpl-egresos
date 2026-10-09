@@ -674,6 +674,23 @@ main{padding:20px 0 60px}
 /* Tabla columnas con fondo resaltado */
 .col-highlight{ background:rgba(255,200,120,.15) }
 
+
+/* ════════════════════════════════════════════════════
+   BLOQUE 10 — Ranking municipal histórico + línea MPL
+════════════════════════════════════════════════════ */
+.rk-tabs{display:flex;gap:6px;flex-wrap:wrap;flex:0 0 auto}
+.rk-tab{
+  font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.04em;padding:5px 15px;border:1px solid var(--linea);background:#fff;
+  color:var(--texto-mut);border-radius:6px;cursor:pointer
+}
+.rk-tab:hover{border-color:var(--rojo-osc);color:var(--rojo-osc)}
+.rk-tab.on{background:var(--rojo-osc);border-color:var(--rojo-osc);color:#fff}
+.rk-bar{height:14px;background:#eee;border-radius:3px;overflow:hidden;min-width:200px}
+.rk-bar i{display:block;height:100%;background:var(--rojo-osc);border-radius:3px}
+.mpl-row .rk-bar i{background:var(--dorado)}
+#b10bloque .hist-kpis{flex-wrap:wrap}
+
 </style>
 </head>
 <body>
@@ -1189,6 +1206,47 @@ main{padding:20px 0 60px}
     </div>
   </div>
 
+
+
+  <!-- ══════════════════════════════════════
+       SLIDE 10 — RANKING MUNICIPAL HISTÓRICO (por devengado, Ene–Oct) + LÍNEA MPL
+  ══════════════════════════════════════ -->
+  <div class="slide" id="b10bloque">
+    <div class="slide-header">
+      <div class="slide-titulo"><span class="slide-num">10</span>Ranking Municipal — Ejecución Presupuestal de Inversiones por Año</div>
+    </div>
+    <div class="slide-subband">
+      <span class="sb-label" id="b10sub">Por devengado en monto · acumulado enero–octubre · Dpto. Lambayeque · Solo Proyectos</span>
+      <span class="sb-fecha" id="sb10fecha">—</span>
+    </div>
+    <div class="slide-body">
+      <div class="rk-tabs" id="b10tabs"></div>
+      <div class="hist-kpis" id="b10kpis"></div>
+      <div class="tbl-wrap">
+        <table class="pdf-table">
+          <thead><tr>
+            <th class="ctr" style="width:44px">#</th>
+            <th class="left" style="min-width:260px">Municipalidad</th>
+            <th class="num">Devengado (S/)</th>
+            <th class="left" style="min-width:220px">Gráfico</th>
+          </tr></thead>
+          <tbody id="b10tbody"><tr><td colspan="4" class="vacio">Cargando ranking histórico…</td></tr></tbody>
+        </table>
+      </div>
+      <div class="hist-panel">
+        <div class="hist-panel-head">
+          <div class="hist-panel-tag dev">Gráfico lineal — Devengado MPL · Enero a Octubre</div>
+        </div>
+        <div class="chart-wrap" style="min-height:260px">
+          <canvas id="b10chart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="sf-fuente">Fuente: SIAF — Consulta Amigable MEF · Solo Proyectos · Devengado acumulado enero–octubre de cada año</span>
+      <span class="sf-logo">MPL · EGRESOS 2026</span>
+    </div>
+  </div>
 
 </div><!-- /wrap -->
 </main>

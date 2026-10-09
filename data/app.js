@@ -2,7 +2,8 @@
 // app.js — Dashboard MPL Egresos · Municipalidad Provincial de Lambayeque
 // Versión 2.0 — Julio 2026
 // Bloques: B1 KPIs+Donuts · B2 Ranking · B3 Top Proyectos · B4 Riesgo
-//          B5 Rubro · B6 Fuente · B7 Función · B8 Histórico
+//          B5 Rubro · B6 Fuente · B7 Función · B8 Histórico · B9 Anual
+//          B10 Ranking municipal histórico por año + línea MPL
 // Fuente: MEF Consulta Amigable de Gastos — Solo Proyectos
 // ============================================================
 "use strict";
@@ -43,7 +44,7 @@ function fechaHoy() {
 function rellenarFechas() {
   const f = fechaHoy();
   ["sb1fecha","sb2fecha","sb3fecha","sb4fecha",
-   "sb5fecha","sb6fecha","sb7fecha","sb8fecha","sb9fecha"].forEach(id=>{
+   "sb5fecha","sb6fecha","sb7fecha","sb8fecha","sb9fecha","sb10fecha"].forEach(id=>{
     const el=$(id); if(el) el.textContent=f;
   });
 }
@@ -97,6 +98,7 @@ let b8ChartInstance = null;
 let B8_HIST = {};
 let B9_HIST = {};
 let b9DevChart = null, b9PimChart = null;
+let B10_HIST = null, b10Anio = null, b10Manual = false, b10Chart = null;
 let donutInstances = {};
 
 const ARCHIVOS_ESPERADOS = [
@@ -232,7 +234,7 @@ function render() {
   });
   rellenarFechas();
   renderB1(); renderB2(); renderB3(); renderB4();
-  renderB5(); renderB6(); renderB7(); renderB8(); renderB9();
+  renderB5(); renderB6(); renderB7(); renderB8(); renderB9(); renderB10();
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -983,6 +985,133 @@ async function exportarPDF(){
   }
 }
 
+
+// ══════════════════════════════════════════════════════════════
+// B10 — Ranking municipal histórico (devengado Ene–Oct) + línea MPL
+// ══════════════════════════════════════════════════════════════
+// Años anteriores: data/ranking_historico.json (lo genera
+//   scripts/generar_ranking_historico.py a partir de historicos/<año>/).
+// Año en curso (2026): sale de xls/ranking.xls (acumulado diario).
+const B10_COD_MPL = "140301";
+
+function b10Nombre(s) {
+  return String(s).replace(/^\d{6}-\d{6}:\s*/,"").replace(/\uFFFD/g,"N");
+}
+
+// Devuelve {años:[...ordenados], lista:{año:[{pos,cod,nombre,dev}]}, actual:año|null}
+function b10Datos() {
+  if(!B10_HIST) return null;
+  const lista={}, años=[];
+  (B10_HIST["años"]||[]).forEach(a=>{
+    lista[a]=B10_HIST.ranking[String(a)].map(x=>({pos:x.pos,cod:x.cod,nombre:x.nombre,dev:x.dev}));
+    años.push(a);
+  });
+  let actual=null;
+  const reg=datos.ranking&&datos.ranking.registros;
+  if(reg&&reg.length){
+    actual=new Date().getFullYear();
+    // nombres con tilde/Ñ correctos tomados del histórico (misma municipalidad = mismo código)
+    const nomHist={};
+    años.forEach(a=>lista[a].forEach(x=>{nomHist[x.cod]=x.nombre;}));
+    const arr=reg.map(r=>{
+      const cod=((r.desc||"").match(/^(\d{6})-/)||[])[1]||"";
+      return {cod,nombre:nomHist[cod]||b10Nombre(r.desc||""),dev:r.dev||0};
+    }).sort((x,y)=>y.dev-x.dev||x.nombre.localeCompare(y.nombre));
+    let posPrev=0,devPrev=null;
+    arr.forEach((x,i)=>{ x.pos=(x.dev===devPrev)?posPrev:i+1; posPrev=x.pos; devPrev=x.dev; });
+    lista[actual]=arr;
+    if(!años.includes(actual)) años.push(actual);
+  }
+  años.sort((x,y)=>x-y);
+  return {años,lista,actual};
+}
+
+function b10Sel(a) { b10Anio=a; b10Manual=true; renderB10(); }
+
+function renderB10() {
+  const tbody=$("b10tbody"); if(!tbody) return;
+  const D=b10Datos();
+  if(!D||!D.años.length){
+    tbody.innerHTML=`<tr><td colspan="4" class="vacio">Sin datos: genera data/ranking_historico.json con scripts/generar_ranking_historico.py</td></tr>`;
+    return;
+  }
+  const {años,lista}=D;
+  // Abre en el año más reciente; solo respeta la elección si el usuario la hizo
+  if(!b10Manual||!años.includes(b10Anio)) b10Anio=años[años.length-1];
+  const filas=lista[b10Anio];
+
+  // Pestañas por año
+  $("b10tabs").innerHTML=años.map(a=>
+    `<button type="button" class="rk-tab ${a===b10Anio?"on":""}" onclick="b10Sel(${a})">${a}</button>`).join("");
+
+  // KPIs de la MPL en el año elegido
+  const mpl=filas.find(x=>x.cod===B10_COD_MPL);
+  const total=filas.reduce((s,x)=>s+x.dev,0);
+  const prevA=años[años.indexOf(b10Anio)-1];
+  const mplPrev=prevA?lista[prevA].find(x=>x.cod===B10_COD_MPL):null;
+  let vari="";
+  if(mpl&&mplPrev&&mplPrev.dev>0){
+    const d=(mpl.dev-mplPrev.dev)/mplPrev.dev*100, col=d>=0?"#2a7d46":"#c0392b";
+    vari=`<div class="hist-var" style="color:${col}">${d>=0?"▲":"▼"} ${Math.abs(d).toFixed(1)}% vs ${prevA} (puesto ${mplPrev.pos}°)</div>`;
+  }
+  $("b10kpis").innerHTML=`
+    <div class="hist-card cur"><div class="hist-label">MPL · Puesto ${b10Anio}</div>
+      <div class="hist-val">${mpl?mpl.pos+"° de "+filas.length:"—"}</div></div>
+    <div class="hist-card"><div class="hist-label">MPL · Devengado ${b10Anio}</div>
+      <div class="hist-val">${mpl?fmtCompacto(mpl.dev):"—"}</div>${vari}</div>
+    <div class="hist-card"><div class="hist-label">Total municipalidades</div>
+      <div class="hist-val">${fmtCompacto(total)}</div></div>
+    <div class="hist-card"><div class="hist-label">MPL · % del total</div>
+      <div class="hist-val">${mpl&&total>0?(mpl.dev/total*100).toFixed(1)+"%":"—"}</div></div>`;
+
+  // Ranking por monto devengado
+  const max=Math.max(...filas.map(x=>x.dev),1);
+  tbody.innerHTML=filas.map(x=>{
+    const esMPL=x.cod===B10_COD_MPL;
+    const posStyle=x.pos<=3?'style="color:var(--dorado-osc);font-weight:800"':'style="font-weight:700"';
+    const w=Math.max(0,x.dev/max*100).toFixed(1);
+    return `<tr ${esMPL?'class="mpl-row"':''}>
+      <td class="ctr" ${posStyle}>${x.pos}°</td>
+      <td style="font-size:.95em;font-weight:${esMPL?700:600}">${x.nombre}</td>
+      <td class="num">${fmtNum(x.dev)}</td>
+      <td><div class="rk-bar"><i style="width:${w}%"></i></div></td>
+    </tr>`;
+  }).join("");
+
+  // Gráfico lineal: devengado de la MPL, un punto por año
+  const canvas=$("b10chart"); if(!canvas) return;
+  if(b10Chart){ b10Chart.destroy(); b10Chart=null; }
+  const serie=años.map(a=>{const m=lista[a].find(x=>x.cod===B10_COD_MPL);return m?m.dev:null;});
+  const sel=años.indexOf(b10Anio);
+  const cfg=[{indices:años.map((_,i)=>i),dir:"auto",color:"#7a1219"}];
+  b10Chart=new Chart(canvas,{
+    type:"line",
+    data:{
+      labels:años.map(String),
+      datasets:[{
+        data:serie,borderColor:"#7a1219",backgroundColor:"rgba(122,18,25,.08)",fill:true,tension:.3,
+        borderWidth:2.5,
+        pointRadius:años.map((_,i)=>i===sel?8:5),
+        pointBackgroundColor:años.map((_,i)=>i===sel?"#FFC526":"#7a1219"),
+        pointBorderColor:años.map((_,i)=>i===sel?"#d9a000":"#7a1219"),
+        pointBorderWidth:2
+      }]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      layout:{padding:{top:26,right:40,left:24}},
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:c=>"Devengado: "+fmtNum(c.parsed.y)}}},
+      scales:{
+        x:{grid:{display:false},ticks:{color:"#374151",font:{family:"'Barlow Condensed',sans-serif",size:13,weight:"600"}}},
+        y:{beginAtZero:true,grace:"12%",grid:{color:"#f3f4f6"},
+           ticks:{color:"#6b7280",font:{family:"Barlow,sans-serif",size:11},callback:v=>fmtCompacto(v)}}
+      }
+    },
+    plugins:[makeLineLabelsPlugin(cfg)]
+  });
+}
+
 // ── Inicio ────────────────────────────────────────────────────
 rellenarFechas(); // fechas inmediatas al cargar la página
 fetch("data/historico_egresos.json?"+Date.now())
@@ -994,5 +1123,10 @@ fetch("data/historico_anual_mpl.json?"+Date.now())
   .then(r=>r.json())
   .then(data=>{B9_HIST=data;renderB9();})
   .catch(()=>console.warn("[MPL-EG] historico_anual_mpl.json no encontrado"));
+
+fetch("data/ranking_historico.json?"+Date.now())
+  .then(r=>{ if(!r.ok) throw 0; return r.json(); })
+  .then(data=>{B10_HIST=data;renderB10();})
+  .catch(()=>{ console.warn("[MPL-EG] ranking_historico.json no encontrado"); renderB10(); });
 
 autoCargar();

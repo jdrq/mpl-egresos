@@ -721,24 +721,35 @@ function renderB7() {
 //   Ej. cierre de noviembre → { corto:"Nov", largo:"noviembre" }
 const B8_CORTE = { corto:"Oct", largo:"octubre" };
 
-function aplicarCorteB8() {
+// Ene–Oct por año: historico_egresos.json manda (2021–2025); los años
+// anteriores (2015–2020) se completan con data/ranking_historico.json.
+function b8Serie() {
+  const h={...(B8_HIST||{})};
+  const m=(B2_HIST&&B2_HIST.mpl)||{};
+  Object.keys(m).forEach(a=>{ if(h[a]===undefined && m[a] && m[a].dev!=null) h[a]=m[a].dev; });
+  return h;
+}
+
+function aplicarCorteB8(anioIni) {
   const t=$("b8titulo"), s=$("b8sub"), p=$("b8pie");
   if(t) t.textContent=`Comparativo Histórico — Devengado Ene–${B8_CORTE.corto}`;
   if(s) s.textContent=`Evolución del gasto acumulado enero–${B8_CORTE.largo} · Solo Proyectos`;
-  if(p) p.textContent=`Fuente: Consulta Amigable MEF 2021–2025: acumulado Ene–${B8_CORTE.corto} extraído de registros históricos · 2026: acumulado diario`;
+  if(p) p.textContent=`Fuente: Consulta Amigable MEF ${anioIni}–2025: acumulado Ene–${B8_CORTE.corto} extraído de registros históricos · 2026: acumulado diario`;
 }
 
 function renderB8() {
-  aplicarCorteB8();
-  const años=Object.keys(B8_HIST).map(Number).sort();
+  const hist=b8Serie();
+  const años=Object.keys(hist).map(Number).sort((a,b)=>a-b);
+  aplicarCorteB8(años[0]||2021);
   const dev2026=datos.rubro?datos.rubro.dev:null;
   if(dev2026!==null) años.push(2026);
   const IDX_2026=años.length-1;
-  const valores=años.map(a=>a===2026?dev2026:(B8_HIST[a]??0));
+  const valores=años.map(a=>a===2026?dev2026:(hist[a]??0));
 
   // KPI cards
   const kpiWrap=$("b8kpis");
   if(kpiWrap) {
+    kpiWrap.classList.toggle("compacto", años.length>8);
     kpiWrap.innerHTML=años.map((a,i)=>{
       const v=valores[i], es2026=(a===2026);
       let vari="";
@@ -1081,7 +1092,7 @@ fetch("data/historico_anual_mpl.json?"+Date.now())
 
 fetch("data/ranking_historico.json?"+Date.now())
   .then(r=>{ if(!r.ok) throw 0; return r.json(); })
-  .then(data=>{B2_HIST=data;renderB2();})
+  .then(data=>{B2_HIST=data;renderB2();if(B8_HIST)renderB8();})
   .catch(()=>{ console.warn("[MPL-EG] ranking_historico.json no encontrado"); renderB2(); });
 
 autoCargar();

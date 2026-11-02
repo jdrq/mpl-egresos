@@ -6,23 +6,29 @@ generar_ranking_historico.py
 Lee los .xls de MEF Consulta Amigable guardados en  historicos/<año>/  y genera
 data/ranking_historico.json  (lo que consume el Bloque 10 del dashboard).
 
-Para cada año necesita 4 archivos (Sólo Proyectos, agrupado por Municipalidad):
-    1T_<año>.xls   -> Trimestre I
-    2T_<año>.xls   -> Trimestre II
-    3T_<año>.xls   -> Trimestre III
-    octubre_<año>.xls -> Mes 10 (octubre)
+Para cada año necesita (Sólo Proyectos, agrupado por Municipalidad):
+    1T_<año>.xls        -> Trimestre I
+    2T_<año>.xls        -> Trimestre II
+    3T_<año>.xls        -> Trimestre III
+    octubre_<año>.xls   -> Mes 10   (si el corte es >= octubre)
+    noviembre_<año>.xls -> Mes 11   (si el corte es >= noviembre)
+    diciembre_<año>.xls -> Mes 12   (si el corte es diciembre)
 Cada archivo trae SOLO el devengado de su periodo, por eso se SUMAN:
-    Devengado Ene–Oct = 1T + 2T + 3T + octubre
+    Devengado Ene–Nov = 1T + 2T + 3T + octubre + noviembre
+
+MES DE CORTE (lo único que cambia cada mes):  CORTE_MES  (9 = Ene–Set … 12 = Ene–Dic).
+Se puede fijar aquí abajo o pasar por argumento:  python scripts/generar_ranking_historico.py 12
+IMPORTANTE: cambiar también  CORTE  en data/app.js  y  data/historico_egresos.json.
 (PIA y PIM vienen vacíos en estos archivos; no se usan.)
 
 PIM por año (opcional): si existe  anual_<año>.xls  (Ene–Dic, Sólo Proyectos, por
 Municipalidad) se lee su PIA y PIM y se guardan junto a cada municipalidad. El dashboard
-calcula  Avance % = Devengado Ene–Oct / PIM anual.  El PIM es un valor "foto"
+calcula  Avance % = Devengado Ene–corte / PIM anual.  El PIM es un valor "foto"
 (stock): NUNCA se suma entre archivos. Si falta el anual de un año, esa columna
 queda en "—" para ese año.
 
 Solo usa la librería estándar de Python (no requiere pandas).
-Uso:   python scripts/generar_ranking_historico.py
+Uso:   python scripts/generar_ranking_historico.py [mes_de_corte]
 """
 import json, re, sys, html, datetime
 from pathlib import Path
@@ -32,8 +38,17 @@ HIST = BASE / "historicos"
 SALIDA = BASE / "data" / "ranking_historico.json"
 CONTROL = BASE / "data" / "historico_egresos.json"   # totales MPL ya conocidos (control cruzado)
 
-PERIODOS = [("1T", "Trimestre I:"), ("2T", "Trimestre II:"),
-            ("3T", "Trimestre III:"), ("octubre", "Mes 10")]
+CORTE_MES = 11              # ◄ ÚNICO valor a cambiar cada mes (9=Set, 10=Oct, 11=Nov, 12=Dic)
+MESES = {10: "octubre", 11: "noviembre", 12: "diciembre"}
+ABREV = {9: "Set", 10: "Oct", 11: "Nov", 12: "Dic"}
+LARGO = {9: "setiembre", 10: "octubre", 11: "noviembre", 12: "diciembre"}
+if len(sys.argv) > 1:
+    CORTE_MES = int(sys.argv[1])
+if CORTE_MES not in ABREV:
+    sys.exit("mes de corte inválido: usa 9, 10, 11 o 12")
+ETIQ_CORTE = "Ene–" + ABREV[CORTE_MES]                 # p. ej. "Ene–Nov"
+PERIODOS = [("1T", "Trimestre I:"), ("2T", "Trimestre II:"), ("3T", "Trimestre III:")] + \
+           [(MESES[m], f"Mes {m}") for m in range(10, CORTE_MES + 1)]
 COD_MPL = "140301"          # Municipalidad Provincial de Lambayeque
 IDX_PIA = 1
 IDX_PIM = 2
@@ -168,10 +183,10 @@ def main():
                 for x in lista:
                     x["pim"] = pims.get(x["cod"], (0, 0, 0))[0]
                     x["pia"] = pims.get(x["cod"], (0, 0, 0))[2]
-                    # control: lo devengado Ene–Oct no puede superar lo devengado Ene–Dic
+                    # control: lo devengado hasta el corte no puede superar lo devengado Ene–Dic
                     dev_anual = pims.get(x["cod"], (0, 0, 0))[1]
                     if x["dev"] > dev_anual + TOL_CONTROL:
-                        avisos.append(f"{a}: {x['nombre']} Ene–Oct S/ {x['dev']:,} > anual S/ {dev_anual:,}")
+                        avisos.append(f"{a}: {x['nombre']} {ETIQ_CORTE} S/ {x['dev']:,} > anual S/ {dev_anual:,}")
         else:
             avisos.append(f"{a}: sin anual_{a}.xls -> PIM y Avance % no disponibles ese año")
         ranking[str(a)] = lista
@@ -185,8 +200,9 @@ def main():
     salida = {
         "version": 1,
         "generado": datetime.datetime.now().isoformat(timespec="seconds"),
-        "corte": "Ene–Oct",
-        "criterio": "Devengado acumulado enero–octubre (1T+2T+3T+octubre) · Sólo Proyectos · Dpto. Lambayeque",
+        "corte": ETIQ_CORTE,
+        "corte_mes": CORTE_MES,
+        "criterio": f"Devengado acumulado enero–{LARGO[CORTE_MES]} ({'+'.join(c for c, _ in PERIODOS)}) · Sólo Proyectos · Dpto. Lambayeque",
         "años": ok,
         "años_con_pim": pim_ok,
         "ranking": ranking,
@@ -194,6 +210,7 @@ def main():
     }
     SALIDA.write_text(json.dumps(salida, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    print(f"Corte: {ETIQ_CORTE} (mes {CORTE_MES})  |  periodos sumados: {[c for c, _ in PERIODOS]}")
     print(f"Años generados: {ok}")
     for a in ok:
         m = mpl[str(a)]

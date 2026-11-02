@@ -3,10 +3,19 @@
 // Versión 2.0 — Julio 2026
 // Bloques: B1 KPIs+Donuts · B2 Ranking · B3 Top Proyectos · B4 Riesgo
 //          B5 Rubro · B6 Fuente · B7 Función · B8 Histórico
-// B2 = ranking municipal por año (devengado Ene–Oct) + gráfico lineal MPL
+// B2 = ranking municipal por año (devengado Ene–Nov, ver CORTE) + gráfico lineal MPL
 // Fuente: MEF Consulta Amigable de Gastos — Solo Proyectos
 // ============================================================
 "use strict";
+
+// ══════════════════════════════════════════════════════════════
+// ► ÚNICO lugar a cambiar cada mes: mes de corte de los históricos
+//   (slide 2 ranking + gráfico, slide 8). Debe coincidir con:
+//     · data/historico_egresos.json      (Ene–<corte> de 2021–2025)
+//     · data/ranking_historico.json      (python scripts/generar_ranking_historico.py <mes>)
+//   Ej. cierre de diciembre → { mes:12, corto:"Dic", largo:"diciembre" }
+// ══════════════════════════════════════════════════════════════
+const CORTE = { mes:11, corto:"Nov", largo:"noviembre" };
 
 // ── Utilidades ───────────────────────────────────────────────
 const $ = id => document.getElementById(id);
@@ -347,6 +356,7 @@ function fechaLarga() {
 
 function renderB2() {
   const tbody=$("b2tbody"); if(!tbody) return;
+  const ct=$("b2charttit"); if(ct) ct.textContent=`Gráfico lineal — Devengado en monto · Enero a ${CORTE.largo.charAt(0).toUpperCase()+CORTE.largo.slice(1)}`;
   const f=$("b2fechaTxt"); if(f) f.textContent=fechaLarga();
   const D=b2Datos();
   if(!D||!D.años.length){
@@ -365,7 +375,7 @@ function renderB2() {
   if(nota){
     nota.style.display="";
     nota.textContent=esActual?"Dato diario acumulado · PIA y PIM vigentes"
-                            :"Devengado acumulado Ene–Oct · PIA y PIM del año";
+                            :`Devengado acumulado Ene–${CORTE.corto} · PIA y PIM del año`;
   }
   // Columnas (todos los años): PIA · PIM · Devengado · Avance %
   const th=$("b2thead");
@@ -398,7 +408,7 @@ function renderB2() {
     </tr>`;
   }).join("");
 
-  // Gráfico lineal: devengado de la MPL, un punto por año (Ene–Oct)
+  // Gráfico lineal: devengado de la MPL, un punto por año (Ene–corte)
   const canvas=$("b2chart"); if(!canvas) return;
   if(b2Chart){ b2Chart.destroy(); b2Chart=null; }
   const serie=años.map(a=>{const m=lista[a].find(x=>x.cod===B2_COD_MPL);return m?m.dev:null;});
@@ -406,7 +416,7 @@ function renderB2() {
   b2Chart=new Chart(canvas,{
     type:"line",
     data:{
-      labels:años.map(a=>a===actual?a+" (año en curso)":"Ene-Oct "+a),
+      labels:años.map(a=>a===actual?a+" (año en curso)":"Ene-"+CORTE.corto+" "+a),
       datasets:[{
         data:serie,borderColor:"#7a1219",backgroundColor:"rgba(122,18,25,.07)",fill:true,tension:.3,
         borderWidth:2,
@@ -738,12 +748,8 @@ function renderB7() {
 // ══════════════════════════════════════════════════════════════
 // B8 — Histórico acumulado Ene–(mes de corte)
 // ══════════════════════════════════════════════════════════════
-// ► ÚNICO lugar a cambiar cada mes: mes de corte del histórico (B8).
-//   Debe coincidir con el corte de data/historico_egresos.json.
-//   Ej. cierre de noviembre → { corto:"Nov", largo:"noviembre" }
-const B8_CORTE = { corto:"Oct", largo:"octubre" };
-
-// Ene–Oct por año: historico_egresos.json manda (2021–2025); los años
+// (El mes de corte se define arriba, en la constante CORTE.)
+// Acumulado Ene–corte por año: historico_egresos.json manda (2021–2025); los años
 // anteriores (2015–2020) se completan con data/ranking_historico.json.
 function b8Serie() {
   const h={...(B8_HIST||{})};
@@ -754,9 +760,9 @@ function b8Serie() {
 
 function aplicarCorteB8(anioIni) {
   const t=$("b8titulo"), s=$("b8sub"), p=$("b8pie");
-  if(t) t.textContent=`Comparativo Histórico — Devengado Ene–${B8_CORTE.corto}`;
-  if(s) s.textContent=`Evolución del gasto acumulado enero–${B8_CORTE.largo} · Solo Proyectos`;
-  if(p) p.textContent=`Fuente: Consulta Amigable MEF ${anioIni}–2025: acumulado Ene–${B8_CORTE.corto} extraído de registros históricos · 2026: acumulado diario`;
+  if(t) t.textContent=`Comparativo Histórico — Devengado Ene–${CORTE.corto}`;
+  if(s) s.textContent=`Evolución del gasto acumulado enero–${CORTE.largo} · Solo Proyectos`;
+  if(p) p.textContent=`Fuente: Consulta Amigable MEF ${anioIni}–2025: acumulado Ene–${CORTE.corto} extraído de registros históricos · 2026: acumulado diario`;
 }
 
 function renderB8() {
@@ -781,7 +787,7 @@ function renderB8() {
         vari=`<div class="hist-var" style="color:${col}">${sym} ${Math.abs(delta).toFixed(1)}% vs ${a-1}</div>`;
       }
       return `<div class="hist-card ${es2026?"cur":""}">
-        <div class="hist-label">${a}${es2026?" · Acum.":" · Ene–"+B8_CORTE.corto}</div>
+        <div class="hist-label">${a}${es2026?" · Acum.":" · Ene–"+CORTE.corto}</div>
         <div class="hist-val">${fmtCompacto(v)}</div>
         ${vari}
       </div>`;
@@ -1114,7 +1120,11 @@ fetch("data/historico_anual_mpl.json?"+Date.now())
 
 fetch("data/ranking_historico.json?"+Date.now())
   .then(r=>{ if(!r.ok) throw 0; return r.json(); })
-  .then(data=>{B2_HIST=data;renderB2();if(B8_HIST)renderB8();})
+  .then(data=>{
+    B2_HIST=data;
+    if(data.corte_mes!==undefined && data.corte_mes!==CORTE.mes)
+      console.warn(`[MPL-EG] DESFASE DE CORTE: ranking_historico.json es del mes ${data.corte_mes} y app.js dice ${CORTE.mes}. Regenera el JSON o ajusta CORTE.`);
+    renderB2();if(B8_HIST)renderB8();})
   .catch(()=>{ console.warn("[MPL-EG] ranking_historico.json no encontrado"); renderB2(); });
 
 autoCargar();
